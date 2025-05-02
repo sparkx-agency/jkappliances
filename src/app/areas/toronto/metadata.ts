@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   title: 'Toronto Appliance Repair | Same-Day Service | JK Appliances',
   description: 'Professional appliance repair in Toronto and surrounding areas. Expert technicians, same-day service, and competitive pricing for all major brands and models.',
   alternates: {
-    canonical: generateCanonicalUrl('/areas/toronto'),
+    canonical: generateCanonicalUrl('/appliance-repair-toronto'),
   },
   openGraph: {
     title: 'Toronto Appliance Repair Services | JK Appliances',
     description: 'Fast, reliable appliance repair in Toronto. Our certified technicians service all brands including Samsung, LG, Whirlpool, and more with same-day appointments available.',
-    url: generateCanonicalUrl('/areas/toronto'),
+    url: generateCanonicalUrl('/appliance-repair-toronto'),
     siteName: 'JK Appliances',
     locale: 'en_CA',
     type: 'website',

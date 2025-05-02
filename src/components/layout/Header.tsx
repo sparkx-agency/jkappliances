@@ -44,8 +44,8 @@ const Header = () => {
                 <Image
                   src="/images/appliances-logo.svg"
                   alt="JK Appliances"
-                  width={250}
-                  height={67}
+                  width={200}
+                  height={60}
                   priority
                   className="h-auto"
                 />

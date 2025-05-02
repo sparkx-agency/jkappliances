@@ -99,7 +99,7 @@ const ServicesSectionArea: React.FC<ServicesSectionAreaProps> = ({ areaName }) =
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-10 sm:gap-y-12"
         >
           {services.map((service) => (
             <motion.div
@@ -109,19 +109,19 @@ const ServicesSectionArea: React.FC<ServicesSectionAreaProps> = ({ areaName }) =
               transition={{ duration: 0.3 }}
             >
               <Link href={service.href} className="block group">
-                <div className="bg-white rounded-3xl p-8 transition-all hover:shadow-lg h-full flex flex-col">
-                  <div className="relative h-64 w-full mb-8 overflow-hidden">
+                <div className="bg-white rounded-3xl p-4 sm:p-6 md:p-8 transition-all hover:shadow-lg h-full flex flex-col">
+                  <div className="relative h-48 sm:h-56 md:h-64 w-full mb-4 sm:mb-6 md:mb-8 overflow-hidden">
                     <Image
                       src={service.imageSrc}
                       alt={`${service.name} in ${areaName}`}
                       fill
                       style={{ objectFit: 'contain' }}
                       className="transition-transform group-hover:scale-105 duration-500"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <h3 className="text-2xl font-medium text-gray-900 mb-3">{service.name} in {areaName}</h3>
-                  <p className="text-gray-500 mb-4 font-light">{service.description}</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-gray-900 mb-2 sm:mb-3">{service.name} in {areaName}</h3>
+                  <p className="text-sm sm:text-base text-gray-500 mb-4 font-light">{service.description}</p>
                   <div className="mt-auto">
                     <span className="text-black font-medium inline-flex items-center group-hover:underline">
                       Learn more

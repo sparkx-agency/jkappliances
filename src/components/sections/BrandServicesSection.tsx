@@ -42,8 +42,8 @@ const BrandServicesSection: React.FC<BrandServicesSectionProps> = ({ brandName, 
         </motion.div>
 
         {/* Tabs Navigation - Apple-style horizontal scrolling tabs */}
-        <div className="flex justify-center mb-12">
-          <div className="max-w-full overflow-x-auto py-4 no-scrollbar">
+        <div className="flex justify-center mb-6">
+          <div className="max-w-full overflow-x-auto py-3 no-scrollbar">
             <ul className="flex space-x-1 sm:space-x-2 px-1">
               {services.map((service) => (
                 <li key={service.id} className="flex-shrink-0">
@@ -159,11 +159,11 @@ const BrandServicesSection: React.FC<BrandServicesSectionProps> = ({ brandName, 
         >
           <Link 
             href="/services"
-            className="inline-flex items-center text-blue-600 font-medium hover:underline"
+            className="inline-flex items-center px-8 py-4 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors shadow-sm text-lg"
           >
             View All Our Services
-            <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
         </motion.div>

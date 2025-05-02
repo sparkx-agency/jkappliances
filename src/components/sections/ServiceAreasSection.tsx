@@ -5,41 +5,42 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
 // Service areas data
 const serviceAreas = [
-  { id: 'ajax', name: 'Ajax'},
-  { id: 'aurora', name: 'Aurora'},
-  { id: 'bowmanville', name: 'Bowmanville'},
-  { id: 'brampton', name: 'Brampton'},
-  { id: 'burlington', name: 'Burlington'},
-  { id: 'caledon', name: 'Caledon'},
-  { id: 'claremont', name: 'Claremont'},
-  { id: 'clarington', name: 'Clarington'},
-  { id: 'downtown-toronto', name: 'Downtown (Toronto)'},
-  { id: 'east-york', name: 'East York'},
-  { id: 'etobicoke', name: 'Etobicoke'},
-  { id: 'georgetown', name: 'Georgetown'},
-  { id: 'georgina', name: 'Georgina'},
-  { id: 'halton-hills', name: 'Halton Hills'},
-  { id: 'king-city', name: 'King City'},
-  { id: 'kleinburg', name: 'Kleinburg'},
-  { id: 'markham', name: 'Markham'},
-  { id: 'milton', name: 'Milton'},
-  { id: 'mississauga', name: 'Mississauga'},
-  { id: 'newmarket', name: 'Newmarket'},
-  { id: 'north-york', name: 'North York'},
-  { id: 'oakville', name: 'Oakville'},
-  { id: 'oshawa', name: 'Oshawa'},
-  { id: 'pickering', name: 'Pickering'},
-  { id: 'richmond-hill', name: 'Richmond Hill'},
-  { id: 'scarborough', name: 'Scarborough'},
-  { id: 'stouffville', name: 'Stouffville'},
-  { id: 'thornhill', name: 'Thornhill'},
-  { id: 'toronto', name: 'Toronto'},
-  { id: 'vaughan', name: 'Vaughan'},
-  { id: 'whitby', name: 'Whitby'},
-  { id: 'woodbridge', name: 'Woodbridge'},
-  { id: 'york', name: 'York'}
+  { id: 'ajax', name: 'Ajax', link: '/appliance-repair-ajax' },
+  { id: 'aurora', name: 'Aurora', link: '/appliance-repair-aurora' },
+  { id: 'bowmanville', name: 'Bowmanville', link: '/appliance-repair-bowmanville' },
+  { id: 'brampton', name: 'Brampton', link: '/appliance-repair-brampton' },
+  { id: 'burlington', name: 'Burlington', link: '/appliance-repair-burlington' },
+  { id: 'caledon', name: 'Caledon', link: '/appliance-repair-caledon' },
+  { id: 'claremont', name: 'Claremont', link: '/appliance-repair-claremont' },
+  { id: 'clarington', name: 'Clarington', link: '/appliance-repair-clarington' },
+  { id: 'downtown-toronto', name: 'Downtown (Toronto)', link: '/appliance-repair-downtown-toronto' },
+  { id: 'east-york', name: 'East York', link: '/appliance-repair-east-york' },
+  { id: 'etobicoke', name: 'Etobicoke', link: '/appliance-repair-etobicoke' },
+  { id: 'georgetown', name: 'Georgetown', link: '/appliance-repair-georgetown' },
+  { id: 'georgina', name: 'Georgina', link: '/appliance-repair-georgina' },
+  { id: 'halton-hills', name: 'Halton Hills', link: '/appliance-repair-halton-hills' },
+  { id: 'king-city', name: 'King City', link: '/appliance-repair-king-city' },
+  { id: 'kleinburg', name: 'Kleinburg', link: '/appliance-repair-kleinburg' },
+  { id: 'markham', name: 'Markham', link: '/appliance-repair-markham' },
+  { id: 'milton', name: 'Milton', link: '/appliance-repair-milton' },
+  { id: 'mississauga', name: 'Mississauga', link: '/appliance-repair-mississauga' },
+  { id: 'newmarket', name: 'Newmarket', link: '/appliance-repair-newmarket' },
+  { id: 'north-york', name: 'North York', link: '/appliance-repair-north-york' },
+  { id: 'oakville', name: 'Oakville', link: '/appliance-repair-oakville' },
+  { id: 'oshawa', name: 'Oshawa', link: '/appliance-repair-oshawa' },
+  { id: 'pickering', name: 'Pickering', link: '/appliance-repair-pickering' },
+  { id: 'richmond-hill', name: 'Richmond Hill', link: '/appliance-repair-richmond-hill' },
+  { id: 'scarborough', name: 'Scarborough', link: '/appliance-repair-scarborough' },
+  { id: 'stouffville', name: 'Stouffville', link: '/appliance-repair-stouffville' },
+  { id: 'thornhill', name: 'Thornhill', link: '/appliance-repair-thornhill' },
+  { id: 'toronto', name: 'Toronto', link: '/areas/toronto' },
+  { id: 'vaughan', name: 'Vaughan', link: '/appliance-repair-vaughan' },
+  { id: 'whitby', name: 'Whitby', link: '/appliance-repair-whitby' },
+  { id: 'woodbridge', name: 'Woodbridge', link: '/appliance-repair-woodbridge' },
+  { id: 'york', name: 'York', link: '/appliance-repair-york' }
 ];
 
 // Group the areas into columns for better visual display
@@ -120,14 +121,16 @@ const ServiceAreasSection = () => {
                           onMouseLeave={() => setActiveArea(null)}
                           className="py-3 border-b border-gray-100 group cursor-pointer"
                         >
-                          <div className="flex items-center">
-                            <div className={`mr-3 w-2 h-2 rounded-full transition-all duration-300 ${activeArea === area.id ? 'bg-blue-500 scale-150' : 'bg-gray-300 group-hover:bg-gray-400'}`}></div>
-                            <div>
-                              <p className={`text-lg transition-colors duration-200 ${activeArea === area.id ? 'text-black font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
-                                {area.name}
-                              </p>
+                          <Link href={area.link}>
+                            <div className="flex items-center">
+                              <div className={`mr-3 w-2 h-2 rounded-full transition-all duration-300 ${activeArea === area.id ? 'bg-blue-500 scale-150' : 'bg-gray-300 group-hover:bg-gray-400'}`}></div>
+                              <div>
+                                <p className={`text-lg transition-colors duration-200 ${activeArea === area.id ? 'text-black font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                                  {area.name}
+                                </p>
+                              </div>
                             </div>
-                          </div>
+                          </Link>
                         </motion.div>
                       ))}
                     </div>
@@ -146,14 +149,16 @@ const ServiceAreasSection = () => {
                           onMouseLeave={() => setActiveArea(null)}
                           className="py-3 border-b border-gray-100 group cursor-pointer"
                         >
-                          <div className="flex items-center">
-                            <div className={`mr-3 w-2 h-2 rounded-full transition-all duration-300 ${activeArea === area.id ? 'bg-blue-500 scale-150' : 'bg-gray-300 group-hover:bg-gray-400'}`}></div>
-                            <div>
-                              <p className={`text-lg transition-colors duration-200 ${activeArea === area.id ? 'text-black font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
-                                {area.name}
-                              </p>
+                          <Link href={area.link}>
+                            <div className="flex items-center">
+                              <div className={`mr-3 w-2 h-2 rounded-full transition-all duration-300 ${activeArea === area.id ? 'bg-blue-500 scale-150' : 'bg-gray-300 group-hover:bg-gray-400'}`}></div>
+                              <div>
+                                <p className={`text-lg transition-colors duration-200 ${activeArea === area.id ? 'text-black font-medium' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                                  {area.name}
+                                </p>
+                              </div>
                             </div>
-                          </div>
+                          </Link>
                         </motion.div>
                       ))}
                     </div>
