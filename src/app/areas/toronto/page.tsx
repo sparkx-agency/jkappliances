@@ -11,6 +11,7 @@ import AreaServicesSection from '@/components/sections/AreaServicesSection';
 import type { AreaServiceItem } from '@/components/sections/AreaServicesSection';
 import BrandsSliderSection from '@/components/sections/BrandsSliderSection';
 import type { BrandItem } from '@/components/sections/BrandsSliderSection';
+import BlogSection from '@/components/sections/BlogSection';
 
 // Toronto area data
 const torontoData = {
@@ -18,7 +19,7 @@ const torontoData = {
   name: 'Toronto',
   fullName: 'Toronto, Ontario',
   description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
+  heroImage: '/images/toronto-skyline.svg',
   neighborhoodImage: '/images/toronto-map.jpg',
   mapImage: '/images/toronto.jpg',
   
@@ -426,6 +427,16 @@ export default function TorontoAreaPage() {
         mapImage={torontoData.neighborhoodImage}
         companyName="JK"
         companyAddress={torontoData.address.street}
+      />
+      
+      {/* Blog Section */}
+      <BlogSection 
+        title="Appliance Tips for Toronto Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
+        areaId="toronto"
+        showCategories={true}
+        limit={3}
+        viewAllLink={true}
       />
       
       {/* Booking Section */}

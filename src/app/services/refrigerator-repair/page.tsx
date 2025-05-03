@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import BlogSection from '@/components/sections/BlogSection';
 
 
 // Problems data with icons
@@ -749,6 +750,15 @@ export default function RefrigeratorRepairPage() {
         </div>
       </section>
       
+    
+      {/* Blog Section */}
+      <BlogSection 
+        areaId="refrigerator-repair"
+        showCategories={true}
+        limit={3}
+        viewAllLink={true}
+      />
+
       {/* CTA Section */}
       <section className="py-24 bg-[#0071e3]">
         <div className="container mx-auto px-6 max-w-5xl">

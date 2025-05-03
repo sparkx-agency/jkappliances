@@ -7,6 +7,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import NeighborhoodSection, { AreaData } from '@/components/sections/NeighborhoodSection';
 import ServicesSectionArea from '@/components/sections/ServicesSectionArea';
+import BlogSection from '../sections/BlogSection';
 
 // Dynamic imports for below-the-fold sections
 const BookingSection = dynamic(() => import('@/components/sections/BookingSection'), {
@@ -394,6 +395,14 @@ const ServiceAreaTemplate: React.FC<ServiceAreaTemplateProps> = ({ areaData }) =
       
       {/* Booking Section */}
       <BookingSection />
+
+      {/*Blog Section*/}
+      <BlogSection 
+        areaId={areaData.id}
+        showCategories={true}
+        limit={3}
+        viewAllLink={true}
+      />
     </div>
   );
 };
