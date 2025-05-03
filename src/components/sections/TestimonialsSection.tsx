@@ -4,12 +4,23 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 
+export type TestimonialItem = {
+  id?: number;
+  name: string;
+  location: string;
+  rating: number;
+  text: string;
+  date?: string;
+  image?: string;
+  author?: string; // For backward compatibility
+};
+
 // Sample testimonial data
-const testimonials = [
+const defaultTestimonials: TestimonialItem[] = [
   {
     id: 1,
     text: "The technician arrived promptly and fixed our refrigerator the same day. Excellent service and very professional. I'll definitely use their services again.",
-    author: "Sarah Thompson",
+    name: "Sarah Thompson",
     location: "Toronto",
     rating: 5,
     image: "/images/testimonials/avatar-1.png",
@@ -17,7 +28,7 @@ const testimonials = [
   {
     id: 2,
     text: "I was impressed with how quickly they diagnosed the issue with my washing machine. The repair was completed efficiently and it's working perfectly now.",
-    author: "Michael Rodriguez",
+    name: "Michael Rodriguez",
     location: "Mississauga",
     rating: 5,
     image: "/images/testimonials/avatar-2.png",
@@ -25,7 +36,7 @@ const testimonials = [
   {
     id: 3,
     text: "Professional, knowledgeable, and courteous service. The technician thoroughly explained what was wrong with our dryer and fixed it at a reasonable price.",
-    author: "Jennifer Lee",
+    name: "Jennifer Lee",
     location: "Markham",
     rating: 5,
     image: "/images/testimonials/avatar-3.png",
@@ -33,14 +44,24 @@ const testimonials = [
   {
     id: 4,
     text: "I've used their services for both my refrigerator and dishwasher, and each time they've exceeded my expectations. Highly recommended!",
-    author: "David Wilson",
+    name: "David Wilson",
     location: "Scarborough",
     rating: 5,
     image: "/images/testimonials/avatar-4.png",
   },
 ];
 
-const TestimonialsSection = () => {
+interface TestimonialsSectionProps {
+  title?: string;
+  subtitle?: string;
+  testimonials?: TestimonialItem[];
+}
+
+const TestimonialsSection = ({ 
+  title = "What Our Customers Say", 
+  subtitle = "Read genuine feedback from customers who have experienced our appliance repair services",
+  testimonials = defaultTestimonials
+}: TestimonialsSectionProps) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
 
@@ -53,7 +74,7 @@ const TestimonialsSection = () => {
     }, 6000);
     
     return () => clearInterval(interval);
-  }, [autoplay]);
+  }, [autoplay, testimonials.length]);
 
   // Pause autoplay on hover/focus
   const pauseAutoplay = () => setAutoplay(false);
@@ -65,6 +86,17 @@ const TestimonialsSection = () => {
     // Resume autoplay after user interaction
     setTimeout(() => setAutoplay(true), 10000);
   };
+
+  // Ensure testimonials have the required fields
+  const processedTestimonials = testimonials.map((testimonial, index) => ({
+    id: testimonial.id || index + 1,
+    text: testimonial.text,
+    author: testimonial.name,
+    name: testimonial.name,
+    location: testimonial.location,
+    rating: testimonial.rating,
+    image: testimonial.image || "/images/testimonials/avatar-1.png"
+  }));
 
   return (
     <section className="py-32 bg-white" onMouseEnter={pauseAutoplay} onMouseLeave={resumeAutoplay}>
@@ -78,10 +110,10 @@ const TestimonialsSection = () => {
         >
           <span className="text-sm uppercase tracking-widest text-gray-500 font-medium">Testimonials</span>
           <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mt-3 mb-6">
-            What Our Customers Say
+            {title}
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto font-light">
-            Read genuine feedback from customers who have experienced our appliance repair services
+            {subtitle}
           </p>
         </motion.div>
         
@@ -103,22 +135,22 @@ const TestimonialsSection = () => {
                 </div>
                 
                 <p className="text-gray-700 mb-6 italic font-light leading-relaxed">
-                  &quot;{testimonials[activeIndex].text}&quot;
+                  &quot;{processedTestimonials[activeIndex].text}&quot;
                 </p>
                 
                 <div className="flex items-center mb-6">
                   <div className="h-16 w-16 rounded-full overflow-hidden mr-4">
                     <Image 
-                      src={testimonials[activeIndex].image}
-                      alt={testimonials[activeIndex].author}
+                      src={processedTestimonials[activeIndex].image}
+                      alt={processedTestimonials[activeIndex].author}
                       width={64}
                       height={64}
                       className="object-cover"
                     />
                   </div>
                   <div className="text-left">
-                    <p className="text-lg font-medium text-gray-900">{testimonials[activeIndex].author}</p>
-                    <p className="text-gray-500">{testimonials[activeIndex].location}</p>
+                    <p className="text-lg font-medium text-gray-900">{processedTestimonials[activeIndex].author}</p>
+                    <p className="text-gray-500">{processedTestimonials[activeIndex].location}</p>
                   </div>
                 </div>
                 
@@ -126,7 +158,7 @@ const TestimonialsSection = () => {
                   {[...Array(5)].map((_, i) => (
                     <svg 
                       key={i} 
-                      className={`w-5 h-5 ${i < testimonials[activeIndex].rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+                      className={`w-5 h-5 ${i < processedTestimonials[activeIndex].rating ? 'text-yellow-400' : 'text-gray-300'}`} 
                       fill="currentColor" 
                       viewBox="0 0 20 20"
                     >
@@ -140,7 +172,7 @@ const TestimonialsSection = () => {
           
           {/* Navigation dots */}
           <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
+            {processedTestimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}

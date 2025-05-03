@@ -14,15 +14,15 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Bowmanville area data
+const bowmanvilleData = {
+  id: 'bowmanville',
+  name: 'Bowmanville',
+  fullName: 'Bowmanville, Ontario',
+  description: 'From historic downtown to suburban neighborhoods, our appliance repair technicians provide prompt service throughout Bowmanville with same-day appointments available.',
+  heroImage: '/images/bowmanville-skyline.jpg',
+  neighborhoodImage: '/images/bowmanville-map.jpg',
+  mapImage: '/images/bowmanville.jpg',
   
   // Location information
   address: {
@@ -33,33 +33,31 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '20',
+  responseTime: 'Same-day service available in most Bowmanville neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Downtown Bowmanville',
+    'Port Darlington',
+    'Bowmanville East',
+    'Bowmanville West',
+    'Bowmanville North',
+    'Darlington',
+    'Hampton',
+    'Maple Grove',
+    'Wilmot Creek',
+    'Haydon',
+    'Enniskillen',
+    'Tyrone',
+    'Concession Street',
+    'King Street East',
+    'King Street West',
+    'Bowmanville Ave',
+    'Liberty Street',
+    'Waverly Road',
+    'Longworth Ave',
+    'Mearns Ave'
   ],
   
   // Most common services in this area
@@ -68,87 +66,87 @@ const torontoData = {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
       image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      description: 'Expert refrigerator repair for all major brands in Bowmanville.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
       image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      description: 'Professional washing machine repairs for homes throughout Bowmanville.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
       image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      description: 'Fast, reliable dryer repair services throughout Bowmanville.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
       image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      description: 'Expert dishwasher technicians serving the Bowmanville area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Retail Complex Appliance Service',
+      location: 'Downtown Bowmanville',
+      description: 'Complete commercial kitchen equipment maintenance for multiple restaurants in the downtown shopping district.',
+      image: '/images/projects/bowmanville-commercial.jpg'
     },
     {
-      title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      title: 'New Development Installation',
+      location: 'North Bowmanville',
+      description: 'Appliance setup and installation in a new housing development in the growing north end.',
+      image: '/images/projects/bowmanville-development.jpg'
     },
     {
-      title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      title: 'Historic Home Renovation',
+      location: 'King Street East, Bowmanville',
+      description: 'Specialized appliance integration for a century home renovation project, preserving historic features while adding modern amenities.',
+      image: '/images/projects/bowmanville-heritage.jpg'
     }
   ],
   
   // Testimonials specific to this area
   testimonials: [
     {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
+      text: "JK Appliance repaired our refrigerator quickly and professionally. They arrived on time and had the parts needed right on their truck.",
+      author: "Daniel W.",
+      location: "Downtown Bowmanville",
       rating: 5
     },
     {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
+      text: "After our dryer stopped working, JK Appliance came the same day. The technician diagnosed the problem immediately and fixed it on the spot. Excellent service!",
+      author: "Michelle P.",
+      location: "Liberty Street, Bowmanville",
       rating: 5
     },
     {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
+      text: "We've used JK Appliance for all our repairs since moving to Bowmanville. Their technicians are always friendly, knowledgeable, and efficient.",
+      author: "Robert T.",
+      location: "North Bowmanville",
       rating: 5
     }
   ],
   
-  // Local information - can be tailored per service area
+  // Local information - tailored for Bowmanville
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Bowmanville residents live in a mix of historic homes, established neighborhoods, and newer developments. This diversity means our technicians encounter everything from brand new smart appliances to classic models that require specialized knowledge.",
+    commonIssues: "In Bowmanville, we frequently address issues with refrigeration systems and laundry appliances. The town's mix of older homes and new developments means we encounter both vintage appliances requiring special care and the latest models with advanced technology.",
+    serviceNotes: "Our Bowmanville technicians are familiar with all neighborhoods from the historic downtown to the newer northern developments. We maintain a specialized inventory for both modern and older appliance models to ensure fast, efficient service anywhere in Bowmanville."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Bowmanville
+const bowmanvilleServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
     image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    description: 'Our Bowmanville refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Bowmanville neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -162,7 +160,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'washer-repair',
     name: 'Washer Repair',
     image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    description: 'Our washer repair services in Bowmanville cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Bowmanville home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -176,7 +174,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dryer-repair',
     name: 'Dryer Repair',
     image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    description: 'When your dryer stops working properly in Bowmanville, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Bowmanville team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -190,7 +188,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
     image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    description: 'Our Bowmanville dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Bowmanville, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -204,7 +202,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
     image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    description: 'For oven and stove repairs in Bowmanville, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Bowmanville area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,8 +214,8 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Bowmanville
+const bowmanvilleBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
@@ -280,11 +278,11 @@ const torontoBrands: BrandItem[] = [
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Custom Bowmanville page that includes both the standard sections and our new area services section
+export default function BowmanvilleAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = bowmanvilleData.neighborhoods.map((name, index) => ({
+    id: `${bowmanvilleData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +299,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {bowmanvilleData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {bowmanvilleData.name} with same-day service available. Serving all neighborhoods in the {bowmanvilleData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +328,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={bowmanvilleData.heroImage}
+                  alt={`${bowmanvilleData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +342,20 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={bowmanvilleData.name} />
       
       {/* Our new AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Bowmanville"
+        services={bowmanvilleServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Bowmanville technicians are experienced in repairing all major appliance brands"
+        brands={bowmanvilleBrands}
+        locationName="Bowmanville"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +371,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={bowmanvilleData.mapImage}
+                    alt={`${bowmanvilleData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +386,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {bowmanvilleData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {bowmanvilleData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {bowmanvilleData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {bowmanvilleData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {bowmanvilleData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +408,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {bowmanvilleData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -422,24 +420,24 @@ export default function TorontoAreaPage() {
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${bowmanvilleData.name} Neighborhoods We Serve`}
+        description={`From historic downtown to suburban communities, our technicians provide prompt, reliable service throughout ${bowmanvilleData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={bowmanvilleData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={bowmanvilleData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Bowmanville Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Bowmanville"
         mainCoupons={[
           {
             amount: "30",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "BWNEW30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +446,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "BWRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +455,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "BWSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +465,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "For Downtown Area",
+            code: "BWFRIDGE35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +474,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "North Bowmanville Residents",
+            code: "BWWASH25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +485,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Bowmanville Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Bowmanville homeowners and residents"
+        areaId="bowmanville"
         showCategories={true}
         limit={3}
         viewAllLink={true}

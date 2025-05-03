@@ -44,6 +44,7 @@ const BookingSection = () => {
     preferredDate: '',
     preferredTime: '',
     urgentRepair: false,
+    couponCode: '',
   });
   
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -52,8 +53,47 @@ const BookingSection = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
-  // Comment out unused variables on line 55
-  // const [selectedTime, setSelectedTime] = useState<string>('');
+  const [originalPrice, setOriginalPrice] = useState<number | null>(null);
+  const [discount, setDiscount] = useState<number | null>(null);
+  const [isCouponValid, setIsCouponValid] = useState(false);
+  const [isCouponLoading, setIsCouponLoading] = useState(false);
+  const [couponMessage, setCouponMessage] = useState('');
+  
+  // Sample coupon codes
+  const validCoupons = [
+    { code: 'NEW30', amount: 30, type: 'flat' },
+    { code: 'RETURN15', amount: 15, type: 'flat' },
+    { code: 'SENIOR30', amount: 30, type: 'flat' },
+    { code: 'TRNEW30', amount: 30, type: 'flat' },
+    { code: 'TRRETURN15', amount: 15, type: 'flat' },
+    { code: 'TRSENIOR30', amount: 30, type: 'flat' },
+    { code: 'TRFRIDGE35', amount: 35, type: 'flat', applianceType: 'refrigerator' },
+    { code: 'TRWASH25', amount: 25, type: 'flat', applianceType: 'washer' },
+    { code: 'FRIDGE35', amount: 35, type: 'flat', applianceType: 'refrigerator' },
+    { code: 'WASH25', amount: 25, type: 'flat', applianceType: 'washer' },
+    { code: 'SAVE10', amount: 10, type: 'percentage' },
+  ];
+
+  // Check for coupon code in URL query parameters
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const couponParam = params.get('coupon');
+      
+      if (couponParam) {
+        setFormData(prev => ({
+          ...prev,
+          couponCode: couponParam
+        }));
+        
+        // Wait for next render cycle to ensure formData is updated
+        setTimeout(() => {
+          validateCoupon(couponParam);
+        }, 0);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Calculate estimated price based on appliance type and urgent repair
   useEffect(() => {
@@ -76,11 +116,68 @@ const BookingSection = () => {
         price += 50;
       }
       
+      setOriginalPrice(price);
+      
+      // Apply discount if valid coupon
+      if (isCouponValid && discount) {
+        if (validCoupons.find(c => c.code === formData.couponCode)?.type === 'percentage') {
+          price = price * (1 - discount / 100);
+        } else {
+          price = Math.max(0, price - discount);
+        }
+      }
+      
       setEstimatedPrice(price);
     } else {
       setEstimatedPrice(null);
+      setOriginalPrice(null);
     }
-  }, [formData.appliance, formData.urgentRepair]);
+  }, [formData.appliance, formData.urgentRepair, isCouponValid, discount, formData.couponCode]);
+
+  // Validate coupon code
+  const validateCoupon = (codeOverride?: string) => {
+    const appliance = formData.appliance;
+    const couponCode = codeOverride || formData.couponCode;
+    
+    if (!couponCode) {
+      setCouponMessage('');
+      setIsCouponValid(false);
+      setDiscount(null);
+      return;
+    }
+    
+    setIsCouponLoading(true);
+    
+    // Simulate API call to validate coupon
+    setTimeout(() => {
+      const coupon = validCoupons.find(c => c.code.toLowerCase() === couponCode.toLowerCase());
+      
+      if (!coupon) {
+        setCouponMessage('Invalid coupon code');
+        setIsCouponValid(false);
+        setDiscount(null);
+      } else if (coupon.applianceType && appliance && coupon.applianceType !== appliance) {
+        setCouponMessage(`This coupon is only valid for ${coupon.applianceType} repairs`);
+        setIsCouponValid(false);
+        setDiscount(null);
+      } else if (coupon.applianceType && !appliance) {
+        // If coupon requires specific appliance but none selected yet
+        setCouponMessage('Please select an appliance type first');
+        setIsCouponValid(false);
+        setDiscount(null);
+      } else {
+        setCouponMessage(coupon.type === 'percentage' ? `Coupon applied! ${coupon.amount}% off` : `Coupon applied! $${coupon.amount} off`);
+        setIsCouponValid(true);
+        setDiscount(coupon.amount);
+      }
+      
+      setIsCouponLoading(false);
+    }, 500);
+  };
+  
+  const handleCouponApply = () => {
+    validateCoupon();
+  };
 
   const validateField = (name: string, value: string | boolean): string => {
     if (typeof value === 'boolean') return '';
@@ -127,6 +224,8 @@ const BookingSection = () => {
         return '';
       case 'preferredTime':
         if (!value && touched.preferredTime) return 'Please select a preferred time';
+        return '';
+      case 'couponCode':
         return '';
       default:
         return '';
@@ -251,6 +350,7 @@ const BookingSection = () => {
         preferredDate: '',
         preferredTime: '',
         urgentRepair: false,
+        couponCode: '',
       });
       
       setCurrentStep(1);
@@ -413,11 +513,63 @@ const BookingSection = () => {
         </div>
       </div>
       
+      {/* Coupon System */}
+      <div className="mt-8 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+        <h4 className="font-medium text-gray-900 text-lg">Have a Coupon?</h4>
+        <div className="mt-3 flex flex-col sm:flex-row gap-3">
+          <div className="flex-grow">
+            <input
+              type="text"
+              id="couponCode"
+              name="couponCode"
+              value={formData.couponCode}
+              onChange={handleChange}
+              placeholder="Enter coupon code"
+              className="w-full px-4 py-3 text-base rounded-xl border border-gray-300 focus:ring-[#0071e3] focus:border-[#0071e3] outline-none transition-all shadow-sm"
+            />
+          </div>
+          <button
+            type="button"
+            onClick={handleCouponApply}
+            disabled={isCouponLoading || !formData.couponCode}
+            className={`px-6 py-3 rounded-xl font-medium text-white transition-all shadow-sm whitespace-nowrap ${
+              isCouponLoading || !formData.couponCode
+                ? 'bg-blue-300 cursor-not-allowed'
+                : 'bg-[#0071e3] hover:bg-blue-600'
+            }`}
+          >
+            {isCouponLoading ? 'Applying...' : 'Apply Coupon'}
+          </button>
+        </div>
+        
+        {couponMessage && (
+          <p className={`mt-2 text-sm ${isCouponValid ? 'text-green-600' : 'text-red-600'}`}>
+            {couponMessage}
+          </p>
+        )}
+      </div>
+      
       {estimatedPrice && (
         <div className="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-100">
           <h4 className="font-medium text-gray-900 text-lg">Estimated Service Fee</h4>
           <p className="text-gray-600">Based on your selection, the estimated cost is:</p>
+          
+          {isCouponValid && discount ? (
+            <div className="mt-2">
+              <p className="text-gray-600 line-through">${originalPrice?.toFixed(2)}</p>
+              <div className="flex items-center">
+                <p className="text-gray-900 font-semibold text-2xl">${estimatedPrice.toFixed(2)}</p>
+                <span className="ml-2 px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                  {validCoupons.find(c => c.code.toLowerCase() === formData.couponCode.toLowerCase())?.type === 'percentage'
+                    ? `${discount}% OFF`
+                    : `$${discount} OFF`}
+                </span>
+              </div>
+            </div>
+          ) : (
           <p className="text-gray-900 font-semibold text-2xl mt-2">${estimatedPrice.toFixed(2)}</p>
+          )}
+          
           <p className="text-xs text-gray-500 mt-3">Note: Final pricing may vary based on the actual diagnosis.</p>
         </div>
       )}

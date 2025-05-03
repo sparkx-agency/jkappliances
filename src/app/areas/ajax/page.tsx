@@ -14,15 +14,15 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Ajax area data
+const ajaxData = {
+  id: 'ajax',
+  name: 'Ajax',
+  fullName: 'Ajax, Ontario',
+  description: 'From lakeside homes to new developments, our appliance repair technicians provide prompt service throughout Ajax with same-day appointments available.',
+  heroImage: '/images/ajax-skyline.jpg',
+  neighborhoodImage: '/images/ajax-map.jpg',
+  mapImage: '/images/ajax.jpg',
   
   // Location information
   address: {
@@ -33,33 +33,28 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '15',
+  responseTime: 'Same-day service available in most Ajax neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Downtown Ajax',
+    'South Ajax',
+    'Central Ajax',
+    'North Ajax',
+    'Pickering Beach',
+    'Applecroft',
+    'Carruthers Creek',
+    'Nottingham',
+    'Memorial Village',
+    'Discovery Bay',
+    'Westney Heights',
+    'Lakeside',
+    'Duffins Bay',
+    'Salem',
+    'Hermitage',
+    'Deer Creek',
+    'Audley'
   ],
   
   // Most common services in this area
@@ -68,87 +63,87 @@ const torontoData = {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
       image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      description: 'Expert refrigerator repair for all major brands in Ajax.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
       image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      description: 'Professional washing machine repairs for homes in Ajax.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
       image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      description: 'Fast, reliable dryer repair services throughout Ajax.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
       image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      description: 'Expert dishwasher technicians serving the Ajax area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Multi-Home Appliance Service',
+      location: 'Westney Heights, Ajax',
+      description: 'Regular maintenance program for appliances in a new housing development.',
+      image: '/images/projects/ajax-housing.jpg'
     },
     {
-      title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      title: 'Restaurant Equipment Installation',
+      location: 'Downtown Ajax',
+      description: 'Commercial kitchen equipment installation and setup for a new restaurant.',
+      image: '/images/projects/ajax-restaurant.jpg'
     },
     {
-      title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      title: 'Energy Efficiency Upgrades',
+      location: 'Lakeside, Ajax',
+      description: 'Upgraded appliances to energy-efficient models for several lakeside properties.',
+      image: '/images/projects/ajax-energy.jpg'
     }
   ],
   
   // Testimonials specific to this area
   testimonials: [
     {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
+      text: "Incredibly quick response time. They fixed my washing machine the same day I called and the price was very reasonable.",
+      author: "Emily R.",
+      location: "Westney Heights, Ajax",
       rating: 5
     },
     {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
+      text: "I've used JK for several appliance issues in our new home. Always professional and thorough with their repairs.",
+      author: "David M.",
+      location: "Carruthers Creek, Ajax",
       rating: 5
     },
     {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
+      text: "The technician arrived right on time and fixed our refrigerator quickly. Great service and fair pricing.",
+      author: "Jennifer T.",
+      location: "Downtown Ajax",
       rating: 5
     }
   ],
   
-  // Local information - can be tailored per service area
+  // Local information - tailored to Ajax
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Ajax residents typically own newer appliances due to the recent housing developments in the area. Many homes feature energy-efficient models and smart appliances that require specialized service knowledge.",
+    commonIssues: "In Ajax, we commonly address issues related to hard water damage in dishwashers and washing machines. The lakeside locations also often experience humidity-related problems with refrigerators and freezers, especially during summer months.",
+    serviceNotes: "Our Ajax technicians are familiar with all neighborhoods and can provide quick service throughout the town. We maintain parts inventory for the most common appliance brands found in Ajax homes."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Ajax
+const ajaxServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
     image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    description: 'Our Ajax refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Ajax neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -162,7 +157,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'washer-repair',
     name: 'Washer Repair',
     image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    description: 'Our washer repair services in Ajax cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Ajax home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -176,7 +171,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dryer-repair',
     name: 'Dryer Repair',
     image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    description: 'When your dryer stops working properly in Ajax, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Ajax team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -190,7 +185,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
     image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    description: 'Our Ajax dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Ajax, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -204,7 +199,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
     image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    description: 'For oven and stove repairs in Ajax, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Ajax area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,8 +211,8 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Ajax
+const ajaxBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
@@ -280,11 +275,11 @@ const torontoBrands: BrandItem[] = [
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Custom Ajax page that includes both the standard sections and our new area services section
+export default function AjaxAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = ajaxData.neighborhoods.map((name, index) => ({
+    id: `${ajaxData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +296,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {ajaxData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {ajaxData.name} with same-day service available. Serving all neighborhoods in the {ajaxData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +325,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={ajaxData.heroImage}
+                  alt={`${ajaxData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +339,20 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={ajaxData.name} />
       
       {/* Our new AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Ajax"
+        services={ajaxServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Ajax technicians are experienced in repairing all major appliance brands"
+        brands={ajaxBrands}
+        locationName="Ajax"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +368,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={ajaxData.mapImage}
+                    alt={`${ajaxData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +383,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {ajaxData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {ajaxData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {ajaxData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {ajaxData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {ajaxData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +405,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {ajaxData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -422,24 +417,24 @@ export default function TorontoAreaPage() {
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${ajaxData.name} Neighborhoods We Serve`}
+        description={`From downtown to lakeside communities, our technicians provide prompt, reliable service throughout ${ajaxData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={ajaxData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={ajaxData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Ajax Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Ajax"
         mainCoupons={[
           {
             amount: "30",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "AJNEW30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +443,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "AJRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +452,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "AJSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +462,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "For Ajax Residents",
+            code: "AJFRIDGE35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +471,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "Lakeside Area Homes",
+            code: "AJWASH25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +482,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Ajax Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Ajax homeowners and residents"
+        areaId="ajax"
         showCategories={true}
         limit={3}
         viewAllLink={true}

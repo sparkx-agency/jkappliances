@@ -14,15 +14,15 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Aurora area data
+const auroraData = {
+  id: 'aurora',
+  name: 'Aurora',
+  fullName: 'Aurora, Ontario',
+  description: 'From historic downtown to growing suburban areas, our appliance repair technicians provide prompt service throughout Aurora with same-day appointments available.',
+  heroImage: '/images/aurora-skyline.jpg',
+  neighborhoodImage: '/images/aurora-map.jpg',
+  mapImage: '/images/aurora.jpg',
   
   // Location information
   address: {
@@ -33,33 +33,31 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '25',
+  responseTime: 'Same-day service available in most Aurora neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Downtown Aurora',
+    'Highland Gate',
+    'Bayview Northeast',
+    'Bayview Southeast',
+    'Bayview Wellington',
+    'Bayview Southwest',
+    'Aurora Heights',
+    'Regency Acres',
+    'Aurora Grove',
+    'Temperance Street',
+    'Town Centre',
+    "Sheppard's Bush",
+    "St. Andrew's Village",
+    'Aurora Highlands',
+    'Aurora Estates',
+    "St. John's Sideroad",
+    'Vandorf Sideroad',
+    'Wellington East',
+    'Wellington West',
+    'Oak Ridges'
   ],
   
   // Most common services in this area
@@ -68,87 +66,87 @@ const torontoData = {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
       image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      description: 'Expert refrigerator repair for all major brands in Aurora.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
       image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      description: 'Professional washing machine repairs for homes throughout Aurora.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
       image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      description: 'Fast, reliable dryer repair services throughout Aurora.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
       image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      description: 'Expert dishwasher technicians serving the Aurora area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Heritage Home Appliance Update',
+      location: 'Downtown Aurora',
+      description: 'Modernization of appliances in a century home while preserving historical integrity.',
+      image: '/images/projects/aurora-heritage.jpg'
     },
     {
-      title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      title: 'New Development Installation',
+      location: 'Highland Gate, Aurora',
+      description: 'Complete appliance installation package for a new neighborhood development.',
+      image: '/images/projects/aurora-development.jpg'
     },
     {
-      title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      title: 'Community Center Equipment',
+      location: 'Aurora Community Centre',
+      description: 'Commercial kitchen equipment maintenance for local community facilities.',
+      image: '/images/projects/aurora-community.jpg'
     }
   ],
   
   // Testimonials specific to this area
   testimonials: [
     {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
+      text: "JK Appliance had my refrigerator running like new in just one visit. Their technician was knowledgeable and efficient.",
+      author: "Emma L.",
+      location: "Downtown Aurora",
       rating: 5
     },
     {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
+      text: "After my washing machine flooded, JK Appliance came the same day and fixed the issue. Would definitely recommend them to anyone in Aurora.",
+      author: "Michael T.",
+      location: "Aurora Highlands",
       rating: 5
     },
     {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
+      text: "The service was excellent for our dishwasher repair. The technician explained everything clearly and the pricing was fair.",
+      author: "Sarah K.",
+      location: "St. Andrew's Village, Aurora",
       rating: 5
     }
   ],
   
-  // Local information - can be tailored per service area
+  // Local information - tailored for Aurora
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Aurora residents have a mix of heritage homes with updated appliances and new developments with modern smart home technology. The growing population means many homes have newer, high-efficiency appliances that require specialized service.",
+    commonIssues: "In Aurora, we frequently address issues with refrigeration systems and smart appliances. Heritage homes in downtown Aurora often require specialized knowledge for integrating modern appliances into older electrical systems.",
+    serviceNotes: "Our Aurora technicians are familiar with both the century homes in established neighborhoods and the latest appliances in newer developments. We maintain inventory specifically for the most common brands and models found in Aurora homes."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Aurora
+const auroraServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
     image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    description: 'Our Aurora refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Aurora neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -162,7 +160,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'washer-repair',
     name: 'Washer Repair',
     image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    description: 'Our washer repair services in Aurora cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Aurora home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -176,7 +174,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dryer-repair',
     name: 'Dryer Repair',
     image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    description: 'When your dryer stops working properly in Aurora, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Aurora team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -190,7 +188,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
     image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    description: 'Our Aurora dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Aurora, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -204,7 +202,7 @@ const torontoServices: AreaServiceItem[] = [
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
     image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    description: 'For oven and stove repairs in Aurora, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Aurora area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,8 +214,8 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Aurora
+const auroraBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
@@ -280,11 +278,11 @@ const torontoBrands: BrandItem[] = [
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Custom Aurora page that includes both the standard sections and our new area services section
+export default function AuroraAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = auroraData.neighborhoods.map((name, index) => ({
+    id: `${auroraData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +299,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {auroraData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {auroraData.name} with same-day service available. Serving all neighborhoods in the {auroraData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +328,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={auroraData.heroImage}
+                  alt={`${auroraData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +342,20 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={auroraData.name} />
       
       {/* Our new AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Aurora"
+        services={auroraServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Aurora technicians are experienced in repairing all major appliance brands"
+        brands={auroraBrands}
+        locationName="Aurora"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +371,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={auroraData.mapImage}
+                    alt={`${auroraData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +386,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {auroraData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {auroraData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {auroraData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {auroraData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {auroraData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +408,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {auroraData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -422,24 +420,24 @@ export default function TorontoAreaPage() {
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${auroraData.name} Neighborhoods We Serve`}
+        description={`From historic downtown to newer developments, our technicians provide prompt, reliable service throughout ${auroraData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={auroraData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={auroraData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Aurora Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Aurora"
         mainCoupons={[
           {
             amount: "30",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "ARNEW30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +446,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "ARRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +455,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "ARSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +465,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "For Downtown Area",
+            code: "ARFRIDGE35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +474,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "Aurora Highlands Residents",
+            code: "ARWASH25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +485,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Aurora Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Aurora homeowners and residents"
+        areaId="aurora"
         showCategories={true}
         limit={3}
         viewAllLink={true}
