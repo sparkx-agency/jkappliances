@@ -226,12 +226,13 @@ export default function DryerRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/Dryer-repair.jpg"
+                  src="/images/services/Dryer-repair.webp"
                   alt="Dryer Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
@@ -327,11 +328,12 @@ export default function DryerRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/Dryer-technician.jpg" 
+                  src="/images/services/Dryer-technician.webp" 
                   alt="Dryer repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
             </motion.div>
@@ -423,11 +425,12 @@ export default function DryerRepairPage() {
                 These popular models (including French door and side-by-side styles) often experience issues with internal temperature regulation and door mechanisms. Our technicians have the specialized equipment needed to diagnose and repair these problems quickly.
               </p>
               <Image 
-                src="/images/services/free-standing-fridge.jpg" 
+                src="/images/services/free-standing-fridge.webp" 
                 alt="Free-standing Dryer"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
+                style={{ objectFit: "contain" }}
               />
             </motion.div>
             
@@ -443,11 +446,12 @@ export default function DryerRepairPage() {
                 These integrated models can be challenging to repair due to their installation complexity and top-mounted compressors that are prone to overheating. Our specialists have the expertise to access and repair these units without damaging surrounding cabinetry.
               </p>
               <Image 
-                src="/images/services/built-in-fridge.jpg" 
+                src="/images/services/built-in-fridge.webp" 
                 alt="Built-in Dryer"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
+                style={{ objectFit: "contain" }}
               />
             </motion.div>
             
@@ -463,11 +467,12 @@ export default function DryerRepairPage() {
                 Standalone freezers require precise temperature control for food preservation. We can repair or replace thermostats, control units, temperature sensors, motors, and diagnose compressor failures to keep your frozen foods safely preserved.
               </p>
               <Image 
-                src="/images/services/freezer.jpg" 
+                src="/images/services/freezer.webp" 
                 alt="Standalone freezer"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
+                style={{ objectFit: "contain" }}
               />
             </motion.div>
             
@@ -483,11 +488,12 @@ export default function DryerRepairPage() {
                 These specialized refrigeration units have unique components like wine-specific thermostats and ice production systems. Our technicians are trained to address their unique cooling requirements and repair complex dispensing mechanisms.
               </p>
               <Image 
-                src="/images/services/wine-cooler.jpg" 
+                src="/images/services/wine-cooler.webp" 
                 alt="Wine cooler"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
+                style={{ objectFit: "contain" }}
               />
             </motion.div>
           </div>
@@ -750,31 +756,31 @@ export default function DryerRepairPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Fix Your Dryer?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Fix Your Dryer?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
-              Our expert technicians are standing by to provide fast, reliable Dryer repair services.
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
+              Our expert technicians are standing by to provide fast, reliable dryer repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

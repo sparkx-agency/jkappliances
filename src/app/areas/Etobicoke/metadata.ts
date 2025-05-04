@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/etobicoke-og.jpg',
+        url: '/images/areas/etobicoke-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Etobicoke'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Etobicoke | JK Appliances',
     description: 'Professional appliance repair throughout Etobicoke. Same-day service, certified technicians, and expertise for lakefront condos to single-family homes.',
-    images: ['/images/areas/etobicoke-twitter.jpg']
+    images: ['/images/areas/etobicoke-twitter.webp']
   },
   keywords: [
     'Etobicoke appliance repair', 

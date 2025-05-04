@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/appliance-maintenance.jpg',
+          url: '/images/services/appliance-maintenance.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician performing appliance maintenance',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Professional Appliance Maintenance Services | JK Appliances',
       description: 'Expert appliance maintenance with comprehensive care plans. We service refrigerators, washers, dryers, dishwashers, and more to prevent breakdowns.',
-      images: ['/images/services/appliance-maintenance.jpg'],
+      images: ['/images/services/appliance-maintenance.webp'],
     },
     keywords: 'appliance maintenance, preventative maintenance, appliance tune-up, refrigerator maintenance, washer maintenance, dryer maintenance, dishwasher maintenance, appliance service plans, Toronto appliance maintenance, GTA appliance maintenance, appliance efficiency, extend appliance life',
   };

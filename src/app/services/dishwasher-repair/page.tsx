@@ -258,13 +258,13 @@ export default function DishwasherRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/dishwasher-repair.jpg"
+                  src="/images/services/dishwasher-repair.webp"
                   alt="Dishwasher Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -359,12 +359,12 @@ export default function DishwasherRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/dishwasher-technician.jpg" 
+                  src="/images/services/dishwasher-technician.webp" 
                   alt="Dishwasher repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
@@ -455,12 +455,12 @@ export default function DishwasherRepairPage() {
                 The most common type of dishwasher that ergonomically fits into kitchen cabinetry. These units often require careful extraction for repair as improper handling can damage supply or drain hoses. Our technicians have the specialized tools and knowledge to safely access and repair these integrated units.
               </p>
               <Image 
-                src="/images/services/built-in-dishwasher.jpg" 
+                src="/images/services/built-in-dishwasher.webp" 
                 alt="Built-in dishwasher"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -475,12 +475,12 @@ export default function DishwasherRepairPage() {
                 These standalone units with wheels can be placed anywhere near plumbing connections. While easier to access for repairs, their unique construction requires specialized knowledge. We're experienced with the specific drain systems and water connections these units use.
               </p>
               <Image 
-                src="/images/services/portable-dishwasher.jpg" 
+                src="/images/services/portable-dishwasher.webp" 
                 alt="Portable dishwasher"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -495,12 +495,12 @@ export default function DishwasherRepairPage() {
                 These systems often feature two independent drawers that can operate separately. Issues like drawer jamming from oversized dishes can be complicated to resolve without damaging the unit. Our technicians understand the complex mechanics of these systems and can repair them safely.
               </p>
               <Image 
-                src="/images/services/drawer-dishwasher.jpg" 
+                src="/images/services/drawer-dishwasher.webp" 
                 alt="Drawer dishwasher"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -515,12 +515,12 @@ export default function DishwasherRepairPage() {
                 These compact units are popular in smaller kitchens. Despite their size, they contain all the same components as full-sized models, just in miniature form. We're experienced in the precise work needed to repair these space-saving appliances without damaging their compact components.
               </p>
               <Image 
-                src="/images/services/countertop-dishwasher.jpg" 
+                src="/images/services/countertop-dishwasher.webp" 
                 alt="Countertop dishwasher"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/caledon-og.jpg',
+        url: '/images/areas/caledon-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Caledon'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Caledon | JK Appliances',
     description: 'Professional appliance repair throughout Bolton, Caledon Village, Belfountain, and all of Caledon. Same-day service, certified technicians, and expertise in both rural and urban properties.',
-    images: ['/images/areas/caledon-twitter.jpg']
+    images: ['/images/areas/caledon-twitter.webp']
   },
   keywords: [
     'Caledon appliance repair', 

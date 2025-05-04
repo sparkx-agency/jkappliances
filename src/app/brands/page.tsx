@@ -10,7 +10,7 @@ const brandsData = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     description: 'From refrigerators to washing machines, we repair all Samsung home appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: true,
@@ -18,7 +18,7 @@ const brandsData = [
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     description: 'Expert repair services for all LG kitchen and laundry appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: true,
@@ -26,7 +26,7 @@ const brandsData = [
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     description: 'Specialized repair services for all Whirlpool appliance models.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: true,
@@ -34,7 +34,7 @@ const brandsData = [
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     description: 'Comprehensive repair solutions for all GE appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: true,
@@ -42,7 +42,7 @@ const brandsData = [
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     description: 'Reliable repairs for all Maytag appliances by our certified technicians.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers'],
     popular: true,
@@ -50,7 +50,7 @@ const brandsData = [
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     description: 'Quality repair services for all Frigidaire home appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: false,
@@ -58,7 +58,7 @@ const brandsData = [
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchenaid.webp',
     description: 'Expert repairs for KitchenAid appliances and mixers.',
     categories: ['refrigerators', 'dishwashers', 'ovens', 'mixers'],
     popular: false,
@@ -66,7 +66,7 @@ const brandsData = [
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     description: 'Professional repair services for premium Bosch appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: false,
@@ -74,7 +74,7 @@ const brandsData = [
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     description: 'Specialized repairs for all Electrolux appliance models.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: false,
@@ -82,7 +82,7 @@ const brandsData = [
   {
     id: 'kenmore',
     name: 'Kenmore',
-    logo: '/images/brands/kenmore.svg',
+    logo: '/images/brands/kenmore.webp',
     description: 'Reliable repair solutions for all Kenmore appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: false,
@@ -90,7 +90,7 @@ const brandsData = [
   {
     id: 'sub-zero',
     name: 'Sub-Zero',
-    logo: '/images/brands/sub-zero.svg',
+    logo: '/images/brands/sub-zero.webp',
     description: 'Premium repair services for high-end Sub-Zero refrigeration units.',
     categories: ['refrigerators', 'freezers'],
     popular: false,
@@ -98,7 +98,7 @@ const brandsData = [
   {
     id: 'wolf',
     name: 'Wolf',
-    logo: '/images/brands/wolf.svg',
+    logo: '/images/brands/wolf.webp',
     description: 'Specialized repairs for professional-grade Wolf cooking appliances.',
     categories: ['ovens', 'ranges', 'cooktops'],
     popular: false,
@@ -106,7 +106,7 @@ const brandsData = [
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     description: 'Expert repair services for premium Miele appliances.',
     categories: ['washers', 'dryers', 'dishwashers', 'ovens', 'vacuum-cleaners'],
     popular: false,
@@ -114,7 +114,7 @@ const brandsData = [
   {
     id: 'thermador',
     name: 'Thermador',
-    logo: '/images/brands/thermador.svg',
+    logo: '/images/brands/thermador.webp',
     description: 'Professional repairs for luxury Thermador kitchen appliances.',
     categories: ['refrigerators', 'dishwashers', 'ovens', 'ranges', 'cooktops'],
     popular: false,
@@ -122,7 +122,7 @@ const brandsData = [
   {
     id: 'amana',
     name: 'Amana',
-    logo: '/images/brands/amana.svg',
+    logo: '/images/brands/amana.webp',
     description: 'Affordable repair solutions for all Amana appliance models.',
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
     popular: false,
@@ -130,7 +130,7 @@ const brandsData = [
   {
     id: 'haier',
     name: 'Haier',
-    logo: '/images/brands/haier.svg',
+    logo: '/images/brands/haier.webp',
     description: 'Complete repair services for Haier home appliances.',
     categories: ['refrigerators', 'washers', 'dryers', 'air-conditioners'],
     popular: false,
@@ -354,45 +354,42 @@ export default function BrandsPage() {
         </div>
       )}
 
-      {/* CTA Section - Clean, bold call to action */}
-      <section className="py-32 bg-black text-white">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-5xl font-semibold mb-8"
-            >
-              Don&apos;t see your brand?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light"
-            >
+      {/* CTA Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
+          >
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Don't see your brand?
+            </h2>
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
               We service most major appliance brands, even if not listed above. Contact us with your specific needs.
-            </motion.p>
-            <div className="flex flex-wrap justify-center gap-6">
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-10 py-5 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="/contact" 
-                className="px-10 py-5 bg-transparent border border-white text-white rounded-full hover:bg-white/10 transition-colors text-lg font-medium"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Contact Us
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
+     
+
+     
     </div>
   );
 } 

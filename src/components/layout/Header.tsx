@@ -8,16 +8,18 @@ import { PhoneIcon, ShoppingBagIcon, MagnifyingGlassIcon } from '@heroicons/reac
 import { usePathname } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import MegaMenu from '@/components/navigation/MegaMenu';
+import MobileNavigation from '@/components/navigation/MobileNavigation';
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const phoneNumber = "647-560-8966";
 
   const navItems = [
     // { name: 'Home', href: '/' }, // Removed Home link
     // Removed Services link as it will be replaced with MegaMenu
     { name: 'Brands', href: '/brands' },
-    { name: 'Service Areas', href: '/areas' },
+    // Removed Service Areas from desktop navigation
+    { name: 'Reviews', href: '/reviews' },
     // Removed About Us from regular links as it will be replaced with MegaMenu
     { name: 'Store', href: '/store' },
   ];
@@ -159,7 +161,7 @@ const Header = () => {
   ];
 
   const applianceServicesFeaturedImage = {
-    src: "/images/services/refrigerator-repair-hero.webp",
+    src: "/images/header-img.webp",
     alt: "Appliance repair technician fixing a refrigerator",
     title: "Same-Day Repairs Available",
     description: "Our certified technicians can fix most appliance issues on the first visit.",
@@ -277,14 +279,12 @@ const Header = () => {
   ];
 
   const aboutUsFeaturedImage = {
-    src: "/images/blog/refrigerator-not-cooling.jpg",
+    src: "/images/header-img.webp",
     alt: "Appliance repair technician at work",
     title: "Expert Appliance Repair",
     description: "Our certified technicians can fix any appliance issue, from refrigerators to ovens.",
     href: "/book"
   };
-
-  const phoneNumber = '647-560-8966';
 
   return (
     <motion.header 
@@ -304,13 +304,13 @@ const Header = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <Image
-                  src="/images/appliances-logo.svg"
+                  src="/images/appliances-logo.webp"
                   alt="JK Appliances"
                   width={200}
                   height={60}
                   priority
                   className="h-auto"
-                />
+                  style={{ objectFit: "contain" }} />
               </motion.div>
             </Link>
           </div>
@@ -396,136 +396,11 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button 
-            className="md:hidden rounded-full p-2 bg-white text-blue-600 hover:bg-blue-50 shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+          <div className="md:hidden">
+            <MobileNavigation phoneNumber={phoneNumber} />
+          </div>
         </div>
       </div>
-
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100"
-          >
-            <nav className="px-4 pt-4 pb-6 space-y-1">
-              <div className="relative px-2 pb-4">
-                <div className="relative group">
-                  <input 
-                    type="search"
-                    placeholder="Enter City or Neighborhood..."
-                    className="w-full py-3 pl-12 pr-4 text-sm text-gray-700 bg-gray-50 border-0 rounded-lg shadow-sm ring-1 ring-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
-                  />
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3.5">
-                    <MagnifyingGlassIcon className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors duration-200" />
-                  </div>
-                  <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none opacity-0 group-focus-within:opacity-100 transition-opacity duration-200">
-                    <span className="text-xs font-medium text-gray-400">Type to search</span>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Add Appliance Service link for mobile (not using MegaMenu here) */}
-              <Link
-                href="/services"
-                className={`block px-4 py-3 rounded-md text-base font-medium uppercase tracking-wider transition-colors ${ 
-                  pathname === '/services' 
-                    ? 'text-blue-600 bg-blue-50' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Appliance Service
-              </Link>
-              
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block px-4 py-3 rounded-md text-base font-medium uppercase tracking-wider transition-colors ${ 
-                    pathname === item.href 
-                      ? 'text-blue-600 bg-blue-50' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-
-              {/* About Us section in mobile menu */}
-              <Link
-                href="/about"
-                className={`block px-4 py-3 rounded-md text-base font-medium uppercase tracking-wider transition-colors ${ 
-                  pathname === '/about' 
-                    ? 'text-blue-600 bg-blue-50' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About Us
-              </Link>
-              
-              {/* Add Blog and Contact links in the mobile menu */}
-              <Link
-                href="/blog"
-                className={`block px-4 py-3 rounded-md text-base font-medium uppercase tracking-wider transition-colors ${ 
-                  pathname === '/blog' 
-                    ? 'text-blue-600 bg-blue-50' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              
-              <Link
-                href="/contact"
-                className={`block px-4 py-3 rounded-md text-base font-medium uppercase tracking-wider transition-colors ${ 
-                  pathname === '/contact' 
-                    ? 'text-blue-600 bg-blue-50' 
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
-                }`}
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-
-              <div className="pt-4 space-y-3 border-t border-gray-100 mt-2">
-                  <a 
-                    href={`tel:${phoneNumber.replace(/-/g, '')}`}
-                    className="flex items-center px-4 py-3 text-blue-600 rounded-md hover:bg-blue-50 font-medium"
-                  >
-                    <PhoneIcon className="h-5 w-5 mr-3" />
-                    <span>Call {phoneNumber}</span>
-                  </a>
-                  <Link 
-                      href="/book" 
-                      className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"
-                      onClick={() => setMobileMenuOpen(false)}
-                  >
-                      Book a Repair Now
-                  </Link>
-              </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.header>
   );
 };

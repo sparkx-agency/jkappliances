@@ -6,7 +6,7 @@ export default function LGPage() {
 const brandData = {
   id: 'lg',
   name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     description: 'LG is a global leader in home appliance technology, known for innovative designs and reliability.',
     tagline: "Life's Good with LG Appliances",
     overview: 'LG appliances combine cutting-edge technology with sleek designs, offering consumers reliable and innovative products for their homes.',
@@ -18,7 +18,7 @@ const brandData = {
     {
         id: 'refrigerator',
         name: 'Refrigerator Repair',
-      image: '/images/services/lg-refrigerator.jpg',
+      image: '/images/services/lg-refrigerator.webp',
         description: 'Expert repair for all LG refrigerator models, including French door, side-by-side, and smart refrigerators.',
         icon: 'refrigerator',
       commonIssues: [
@@ -32,7 +32,7 @@ const brandData = {
       {
         id: 'washer',
         name: 'Washer Repair',
-      image: '/images/services/lg-washer.jpg',
+      image: '/images/services/lg-washer.webp',
         description: 'Professional repair services for front-load, top-load, and combination LG washer models.',
         icon: 'washer',
       commonIssues: [
@@ -46,7 +46,7 @@ const brandData = {
       {
         id: 'dryer',
         name: 'Dryer Repair',
-      image: '/images/services/lg-dryer.jpg',
+      image: '/images/services/lg-dryer.webp',
         description: 'Comprehensive repair solutions for electric, gas, and heat pump LG dryers.',
         icon: 'dryer',
       commonIssues: [
@@ -60,7 +60,7 @@ const brandData = {
       {
         id: 'dishwasher',
         name: 'Dishwasher Repair',
-      image: '/images/services/lg-dishwasher.jpg',
+      image: '/images/services/lg-dishwasher.webp',
         description: 'Expert repairs for all LG dishwasher models, including smart and built-in units.',
         icon: 'dishwasher',
       commonIssues: [
@@ -74,7 +74,7 @@ const brandData = {
       {
         id: 'oven',
         name: 'Oven Repair',
-      image: '/images/services/lg-oven.jpg',
+      image: '/images/services/lg-oven.webp',
         description: 'Specialized repair services for LG electric, gas, and combination ovens and ranges.',
         icon: 'oven',
       commonIssues: [
@@ -88,7 +88,7 @@ const brandData = {
       {
         id: 'microwave',
         name: 'Microwave Repair',
-      image: '/images/services/lg-microwave.jpg',
+      image: '/images/services/lg-microwave.webp',
         description: 'Professional repair for countertop, built-in, and over-the-range LG microwaves.',
         icon: 'microwave',
       commonIssues: [

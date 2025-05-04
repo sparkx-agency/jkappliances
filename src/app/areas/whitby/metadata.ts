@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/toronto-og.jpg',
+        url: '/images/areas/toronto-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Toronto'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Toronto | JK Appliances',
     description: 'Professional appliance repair throughout Toronto. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/toronto-twitter.jpg']
+    images: ['/images/areas/toronto-twitter.webp']
   },
   keywords: [
     'Toronto appliance repair', 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/georgetown-og.jpg',
+        url: '/images/areas/georgetown-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Georgetown'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Georgetown | JK Appliances',
     description: 'Professional appliance repair throughout Georgetown. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/georgetown-twitter.jpg']
+    images: ['/images/areas/georgetown-twitter.webp']
   },
   keywords: [
     'Georgetown appliance repair', 

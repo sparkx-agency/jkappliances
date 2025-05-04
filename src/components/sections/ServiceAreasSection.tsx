@@ -36,7 +36,7 @@ const serviceAreas = [
   { id: 'scarborough', name: 'Scarborough', link: '/appliance-repair-scarborough' },
   { id: 'stouffville', name: 'Stouffville', link: '/appliance-repair-stouffville' },
   { id: 'thornhill', name: 'Thornhill', link: '/appliance-repair-thornhill' },
-  { id: 'toronto', name: 'Toronto', link: '/areas/toronto' },
+  { id: 'toronto', name: 'Toronto', link: '/appliance-repair-toronto' },
   { id: 'vaughan', name: 'Vaughan', link: '/appliance-repair-vaughan' },
   { id: 'whitby', name: 'Whitby', link: '/appliance-repair-whitby' },
   { id: 'woodbridge', name: 'Woodbridge', link: '/appliance-repair-woodbridge' },
@@ -191,7 +191,7 @@ const ServiceAreasSection = () => {
             <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[600px] relative">
               {/* This would be replaced with an actual Google Maps integration */}
               <Image 
-                src="/images/toronto-map.jpg" 
+                src="/images/toronto-map.webp" 
                 alt="Toronto Service Areas Map"
                 fill
                 style={{ objectFit: 'cover' }}

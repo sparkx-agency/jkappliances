@@ -20,9 +20,9 @@ const auroraData = {
   name: 'Aurora',
   fullName: 'Aurora, Ontario',
   description: 'From historic downtown to growing suburban areas, our appliance repair technicians provide prompt service throughout Aurora with same-day appointments available.',
-  heroImage: '/images/aurora-skyline.jpg',
-  neighborhoodImage: '/images/aurora-map.jpg',
-  mapImage: '/images/aurora.jpg',
+  heroImage: '/images/aurora-skyline.webp',
+  neighborhoodImage: '/images/aurora-map.webp',
+  mapImage: '/images/aurora.webp',
   
   // Location information
   address: {
@@ -65,25 +65,25 @@ const auroraData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
+      image: '/images/services/refrigerator-repair.webp',
       description: 'Expert refrigerator repair for all major brands in Aurora.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
+      image: '/images/services/washer-repair.webp',
       description: 'Professional washing machine repairs for homes throughout Aurora.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
+      image: '/images/services/dryer-repair.webp',
       description: 'Fast, reliable dryer repair services throughout Aurora.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
+      image: '/images/services/dishwasher-repair.webp',
       description: 'Expert dishwasher technicians serving the Aurora area.'
     }
   ],
@@ -94,19 +94,19 @@ const auroraData = {
       title: 'Heritage Home Appliance Update',
       location: 'Downtown Aurora',
       description: 'Modernization of appliances in a century home while preserving historical integrity.',
-      image: '/images/projects/aurora-heritage.jpg'
+      image: '/images/projects/aurora-heritage.webp'
     },
     {
       title: 'New Development Installation',
       location: 'Highland Gate, Aurora',
       description: 'Complete appliance installation package for a new neighborhood development.',
-      image: '/images/projects/aurora-development.jpg'
+      image: '/images/projects/aurora-development.webp'
     },
     {
       title: 'Community Center Equipment',
       location: 'Aurora Community Centre',
       description: 'Commercial kitchen equipment maintenance for local community facilities.',
-      image: '/images/projects/aurora-community.jpg'
+      image: '/images/projects/aurora-community.webp'
     }
   ],
   
@@ -145,7 +145,7 @@ const auroraServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
+    image: '/images/services/refrigerator-repair.webp',
     description: 'Our Aurora refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Aurora neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
@@ -159,7 +159,7 @@ const auroraServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
+    image: '/images/services/washer-repair.webp',
     description: 'Our washer repair services in Aurora cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Aurora home.',
     commonServices: [
       'Drum and agitator problems',
@@ -173,7 +173,7 @@ const auroraServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
+    image: '/images/services/dryer-repair.webp',
     description: 'When your dryer stops working properly in Aurora, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Aurora team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
@@ -187,7 +187,7 @@ const auroraServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
+    image: '/images/services/dishwasher-repair.webp',
     description: 'Our Aurora dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Aurora, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
@@ -201,7 +201,7 @@ const auroraServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
+    image: '/images/services/oven-repair.webp',
     description: 'For oven and stove repairs in Aurora, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Aurora area.',
     commonServices: [
       'Heating element replacements',
@@ -219,61 +219,61 @@ const auroraBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];

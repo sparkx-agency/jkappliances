@@ -243,13 +243,13 @@ export default function WashingMachineRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/washing-machine-repair.jpg"
+                  src="/images/services/washing-machine-repair.webp"
                   alt="Washing Machine Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -344,12 +344,12 @@ export default function WashingMachineRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/washing-machine-technician.jpg" 
+                  src="/images/services/washing-machine-technician.webp" 
                   alt="Washing Machine repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
@@ -440,12 +440,12 @@ export default function WashingMachineRepairPage() {
                 These popular models often experience issues with water leakage, excessive vibration, and draining problems. Our technicians have the specialized equipment needed to diagnose and repair these problems quickly.
               </p>
               <Image 
-                src="/images/services/top-loading-washing-machine.jpg" 
+                src="/images/services/top-loading-washing-machine.webp" 
                 alt="Top-loading washing machine"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -460,12 +460,12 @@ export default function WashingMachineRepairPage() {
                 These integrated models can be challenging to repair due to their installation complexity and top-mounted motors that are prone to overheating. Our specialists have the expertise to access and repair these units without damaging surrounding cabinetry.
               </p>
               <Image 
-                src="/images/services/front-loading-washing-machine.jpg" 
+                src="/images/services/front-loading-washing-machine.webp" 
                 alt="Front-loading washing machine"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -480,12 +480,12 @@ export default function WashingMachineRepairPage() {
                 These specialized washing machines have unique components like water level sensors and detergent dispensers. Our technicians are trained to address their unique cooling requirements and repair complex dispensing mechanisms.
               </p>
               <Image 
-                src="/images/services/high-efficiency-washing-machine.jpg" 
+                src="/images/services/high-efficiency-washing-machine.webp" 
                 alt="High-efficiency washing machine"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>
@@ -747,31 +747,31 @@ export default function WashingMachineRepairPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Fix Your Washing Machine?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Fix Your Washing Machine?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
               Our expert technicians are standing by to provide fast, reliable washing machine repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

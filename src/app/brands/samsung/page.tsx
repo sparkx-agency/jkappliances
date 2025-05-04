@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/BrandServicesSection';
 const samsungInfo: BrandInfo = {
   id: 'samsung',
   name: 'Samsung',
-  logo: '/images/brands/samsung-logo.png',
+  logo: '/images/brands/samsung.webp',
   description: 'Samsung is a global leader in home appliances, renowned for their innovative features and reliable performance. From state-of-the-art refrigerators to high-efficiency washing machines, Samsung appliances combine cutting-edge technology with elegant design.',
   history: 'Founded in 1938, Samsung has grown from a small trading company to one of the world\'s largest electronics manufacturers. Their appliance division has been at the forefront of smart home technology, continuously pushing the boundaries of what home appliances can do.',
   expertise: 'Our technicians are certified and regularly trained on the latest Samsung appliance models and technologies. We have extensive experience with all Samsung product lines, including their smart home appliances, and we use only genuine Samsung replacement parts to ensure optimal performance and longevity.'

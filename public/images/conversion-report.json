@@ -1,0 +1,462 @@
+{
+  "timestamp": "2025-05-04T15:42:36.703Z",
+  "config": {
+    "quality": 100,
+    "lossless": true,
+    "resize": false,
+    "width": 0,
+    "recursive": true,
+    "force": false,
+    "extensions": [
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".gif",
+      ".svg"
+    ],
+    "excludeFiles": [
+      "badge-4.svg"
+    ],
+    "skipErrors": true,
+    "timeout": 60000
+  },
+  "results": {
+    "successful": 0,
+    "skipped": 108,
+    "failed": 0,
+    "files": [
+      {
+        "path": "washer-repair-og.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "washer-repair-hero.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "toronto.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "toronto-skyline.svg",
+        "status": "exists"
+      },
+      {
+        "path": "toronto-skyline.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "toronto-map.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "thumb-1920-828252.png",
+        "status": "exists"
+      },
+      {
+        "path": "technician-repairing.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "refrigerator-repair-hero.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "logo.png",
+        "status": "exists"
+      },
+      {
+        "path": "hero-image.png",
+        "status": "exists"
+      },
+      {
+        "path": "header-img.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "badge-4.svg",
+        "status": "excluded"
+      },
+      {
+        "path": "badge-3.svg",
+        "status": "exists"
+      },
+      {
+        "path": "badge-2.svg",
+        "status": "exists"
+      },
+      {
+        "path": "badge-1.svg",
+        "status": "exists"
+      },
+      {
+        "path": "appliances-logo.svg",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-6.png",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-5.png",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-4.png",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-3.png",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-2.png",
+        "status": "exists"
+      },
+      {
+        "path": "testimonials\\avatar-1.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\wine-cooler.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\washer-repair.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\upright-freezer.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\Stove-Repair.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\Refrigerator-Repair.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\refrigerator-repair.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\portable-dishwasher.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\Oven-Repair.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\oven-repair.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\freezer.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\free-standing-fridge.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\dryer-repair.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\drawer-dishwasher.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\Dishwasher-Repair.png",
+        "status": "exists"
+      },
+      {
+        "path": "services\\countertop-dishwasher.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\chest-freezer.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\built-in-fridge.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "services\\built-in-dishwasher.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\yelp.svg",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\homestars.svg",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\homestars.jpg",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\google.svg",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\google.png",
+        "status": "exists"
+      },
+      {
+        "path": "logos\\facebook.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\washer.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\washer.png",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\stove.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\stove.png",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\fridge.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\fridge.png",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\dryer.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\dryer.png",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\dishwasher.svg",
+        "status": "exists"
+      },
+      {
+        "path": "icons\\dishwasher.png",
+        "status": "exists"
+      },
+      {
+        "path": "coupon-icons\\qr-code.svg",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Wolf.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Whirlpool.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Westinghouse.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Viking.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Thor.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Thermador.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Sub-zero.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Speed-queen.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Sharp.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Samsung.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Panasonic.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Monogram.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Moffat.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Miele.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Maytag.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Magic-chef.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Liebherr.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\LG.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Kitchenaid.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Kenwood.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Kenmore.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Jennair.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Inglis.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Huebsch.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Hotpoint.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Hobart.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Hisense.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Heartland.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Haier.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\GE.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Garland.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Gaggenau.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Frigidaire.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Forno.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Fisher-paykel.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Fagor.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Electrolux.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Danby.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Dacor.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Capital.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Bosch.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Bluestar.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Blomberg.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Avanti.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Asko.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Ariston.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Amana.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\AGA.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\AEG.png",
+        "status": "exists"
+      },
+      {
+        "path": "brands\\Admiral.png",
+        "status": "exists"
+      }
+    ]
+  }
+}

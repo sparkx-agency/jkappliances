@@ -23,7 +23,7 @@ const defaultTestimonials: TestimonialItem[] = [
     name: "Sarah Thompson",
     location: "Toronto",
     rating: 5,
-    image: "/images/testimonials/avatar-1.png",
+    image: "/images/testimonials/avatar-1.webp",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const defaultTestimonials: TestimonialItem[] = [
     name: "Michael Rodriguez",
     location: "Mississauga",
     rating: 5,
-    image: "/images/testimonials/avatar-2.png",
+    image: "/images/testimonials/avatar-2.webp",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const defaultTestimonials: TestimonialItem[] = [
     name: "Jennifer Lee",
     location: "Markham",
     rating: 5,
-    image: "/images/testimonials/avatar-3.png",
+    image: "/images/testimonials/avatar-3.webp",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const defaultTestimonials: TestimonialItem[] = [
     name: "David Wilson",
     location: "Scarborough",
     rating: 5,
-    image: "/images/testimonials/avatar-4.png",
+    image: "/images/testimonials/avatar-4.webp",
   },
 ];
 
@@ -95,7 +95,7 @@ const TestimonialsSection = ({
     name: testimonial.name,
     location: testimonial.location,
     rating: testimonial.rating,
-    image: testimonial.image || "/images/testimonials/avatar-1.png"
+    image: testimonial.image || "/images/testimonials/avatar-1.webp"
   }));
 
   return (

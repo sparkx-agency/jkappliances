@@ -13,16 +13,17 @@ import BrandsSliderSection from '@/components/sections/BrandsSliderSection';
 import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
+import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Woodbridge area data
+const woodbridgeData = {
+  id: 'woodbridge',
+  name: 'Woodbridge',
+  fullName: 'Woodbridge, Vaughan',
+  description: 'From historic homes in Old Woodbridge to modern developments in Vellore Village, our appliance repair technicians provide prompt service throughout Woodbridge with same-day appointments available.',
+  heroImage: '/images/woodbridge-skyline.webp',
+  neighborhoodImage: '/images/woodbridge-map.webp',
+  mapImage: '/images/woodbridge.webp',
   
   // Location information
   address: {
@@ -33,33 +34,33 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '25',
+  responseTime: 'Same-day service available in all Woodbridge neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Woodbridge',
+    'Islington Woods',
+    'Vellore Village',
+    'Weston Downs',
+    'Pine Grove',
+    'Sonoma Heights',
+    'Tuscany',
+    'Woodbridge Highlands',
+    'Market Lane',
+    'Vaughan Valley',
+    'Vaughan Chase',
+    'West Woodbridge',
+    'East Woodbridge',
+    'Woodbridge Acres',
+    'Boyd Conservation',
+    'Kortright',
+    'Clarence',
+    'Woodbridge North',
+    'Brownridge',
+    'Foxwood',
+    'Sunset Ridge',
+    'Chancellor District'
   ],
   
   // Most common services in this area
@@ -67,88 +68,66 @@ const torontoData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      image: '/images/services/refrigerator-repair.webp',
+      description: 'Expert refrigerator repair for all major brands in Woodbridge.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      image: '/images/services/washer-repair.webp',
+      description: 'Professional washing machine repairs for homes throughout Woodbridge.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      image: '/images/services/dryer-repair.webp',
+      description: 'Fast, reliable dryer repair services throughout Woodbridge.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      image: '/images/services/dishwasher-repair.webp',
+      description: 'Expert dishwasher technicians serving the Woodbridge area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Luxury Home Appliance Installation',
+      location: 'Islington Woods, Woodbridge',
+      description: 'Complete high-end appliance installation for a newly built luxury home in the prestigious Islington Woods area.',
+      image: '/images/projects/woodbridge-luxury.webp'
     },
     {
       title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      location: 'Market Lane, Woodbridge',
+      description: 'Commercial kitchen equipment repair for a popular restaurant in Woodbridge\'s vibrant Market Lane district.',
+      image: '/images/projects/woodbridge-restaurant.webp'
     },
     {
       title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      location: 'Vellore Village, Woodbridge',
+      description: 'Installation and configuration of connected smart appliances throughout a newly renovated family home in Vellore Village.',
+      image: '/images/projects/woodbridge-smarthome.webp'
     }
   ],
   
-  // Testimonials specific to this area
-  testimonials: [
-    {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
-      rating: 5
-    },
-    {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
-      rating: 5
-    },
-    {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
-      rating: 5
-    }
-  ],
-  
-  // Local information - can be tailored per service area
+  // Local information - tailored for Woodbridge
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Woodbridge features a mix of older established neighborhoods like Old Woodbridge and Pine Grove, alongside modern developments in areas like Vellore Village and Sonoma Heights. Our technicians are experienced with both traditional appliances in older homes and advanced smart systems in newer properties.",
+    commonIssues: "In Woodbridge's established neighborhoods, we frequently address maintenance issues with longer-lasting traditional appliances. In newer developments like Vellore Village and Sonoma Heights, we often service high-efficiency smart appliances and integrated systems popular in modern family homes.",
+    serviceNotes: "Our Woodbridge technicians are familiar with the area's unique blend of historic charm and modern development, providing excellent service across all neighborhoods with specialized knowledge of both traditional and cutting-edge appliances."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Woodbridge
+const woodbridgeServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    image: '/images/services/refrigerator-repair.webp',
+    description: 'Our Woodbridge refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Woodbridge neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -161,8 +140,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    image: '/images/services/washer-repair.webp',
+    description: 'Our washer repair services in Woodbridge cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Woodbridge home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -175,8 +154,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    image: '/images/services/dryer-repair.webp',
+    description: 'When your dryer stops working properly in Woodbridge, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Woodbridge team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -189,8 +168,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    image: '/images/services/dishwasher-repair.webp',
+    description: 'Our Woodbridge dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Woodbridge, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -203,8 +182,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    image: '/images/services/oven-repair.webp',
+    description: 'For oven and stove repairs in Woodbridge, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Woodbridge area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,75 +195,107 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Woodbridge
+const woodbridgeBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Woodbridge testimonials
+const woodbridgeTestimonials: TestimonialItem[] = [
+  {
+    name: "Marco C.",
+    location: "Islington Woods, Woodbridge",
+    rating: 5,
+    text: "JK Appliance provided exceptional service for our built-in refrigerator and wine cooler. Their technician knew exactly what was wrong and had both appliances working perfectly in no time. Very professional and clean service.",
+    date: "May 2023"
+  },
+  {
+    name: "Sofia A.",
+    location: "Vellore Village, Woodbridge",
+    rating: 5,
+    text: "When our dishwasher stopped draining, JK Appliance sent a technician the same day. He diagnosed the issue quickly, had the parts on hand, and completed the repair efficiently. No more hand washing dishes for our family of five!",
+    date: "April 2023"
+  },
+  {
+    name: "Robert L.",
+    location: "Market Lane, Woodbridge",
+    rating: 5,
+    text: "We've used JK Appliance for both our home and business appliances. Their technicians are always knowledgeable, prompt, and provide reliable service every time. They're our first call whenever we need appliance repairs.",
+    date: "June 2023"
+  },
+  {
+    name: "Olivia M.",
+    location: "Sonoma Heights, Woodbridge",
+    rating: 5,
+    text: "Our smart washer and dryer were having connectivity issues that affected their performance. JK Appliance sent a technician who understood both the appliances and their technology. Fixed everything and even helped reconfigure our smart home settings.",
+    date: "March 2023"
+  }
+];
+
+// Custom Woodbridge page
+export default function WoodbridgeAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = woodbridgeData.neighborhoods.map((name, index) => ({
+    id: `${woodbridgeData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +312,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {woodbridgeData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {woodbridgeData.name} with same-day service available. Serving all neighborhoods in the {woodbridgeData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +341,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={woodbridgeData.heroImage}
+                  alt={`${woodbridgeData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +355,92 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={woodbridgeData.name} />
       
-      {/* Our new AreaServicesSection */}
+      {/* Woodbridge Areas Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+                Serving All Woodbridge Communities
+              </h2>
+              <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+                From historic Old Woodbridge to modern planned neighborhoods, we provide expert appliance repair throughout Woodbridge
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Historic & Established Areas */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/woodbridge-historic.webp"
+                    alt="Historic Woodbridge"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Historic & Established Areas</h3>
+                  <p className="text-gray-600">
+                    We provide specialized service to Old Woodbridge, Pine Grove, and other established neighborhoods, with expertise in maintaining appliances in older homes while respecting their character and unique features.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Premium Communities */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/woodbridge-premium.webp"
+                    alt="Premium Woodbridge Communities"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Premium Communities</h3>
+                  <p className="text-gray-600">
+                    Our technicians service Islington Woods, Weston Downs, Woodbridge Highlands, and other upscale communities, providing expert repairs for premium appliances found in these desirable Woodbridge neighborhoods.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Modern Developments */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/woodbridge-modern.webp"
+                    alt="Modern Woodbridge Developments"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Modern Developments</h3>
+                  <p className="text-gray-600">
+                    We provide prompt, reliable service to Vellore Village, Sonoma Heights, and other newer neighborhoods, with technicians specially trained to work with smart appliances and integrated systems in contemporary homes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Woodbridge"
+        services={woodbridgeServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Woodbridge technicians are experienced in repairing all major appliance brands"
+        brands={woodbridgeBrands}
+        locationName="Woodbridge"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +456,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={woodbridgeData.mapImage}
+                    alt={`${woodbridgeData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +471,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {woodbridgeData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {woodbridgeData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {woodbridgeData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {woodbridgeData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {woodbridgeData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +493,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {woodbridgeData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -419,27 +502,33 @@ export default function TorontoAreaPage() {
         </div>
       </section>
       
+      {/* Testimonials Section */}
+      <TestimonialsSection
+        title="What Our Woodbridge Customers Say"
+        subtitle="Read testimonials from satisfied customers across Woodbridge neighborhoods"
+        testimonials={woodbridgeTestimonials}
+      />
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${woodbridgeData.name} Neighborhoods We Serve`}
+        description={`From historic areas to modern planned communities, our technicians provide prompt, reliable service throughout ${woodbridgeData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={woodbridgeData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={woodbridgeData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Woodbridge Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Woodbridge"
         mainCoupons={[
           {
-            amount: "30",
+            amount: "25",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "WDB25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +537,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "WDBRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +546,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "WDBSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +556,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "Islington Woods Residents",
+            code: "WDBISLINGTON35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +565,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "Vellore Village Residents",
+            code: "WDBVELLORE25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +576,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Woodbridge Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Woodbridge homeowners and residents"
+        areaId="woodbridge"
         showCategories={true}
         limit={3}
         viewAllLink={true}

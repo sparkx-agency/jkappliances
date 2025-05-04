@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/ajax-og.jpg',
+        url: '/images/areas/ajax-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Ajax'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Ajax | JK Appliances',
     description: 'Professional appliance repair throughout Ajax. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/ajax-twitter.jpg']
+    images: ['/images/areas/ajax-twitter.webp']
   },
   keywords: [
     'Ajax appliance repair', 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/refrigerator-repair.jpg',
+          url: '/images/services/refrigerator-repair.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician repairing a refrigerator',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Expert Refrigerator Repair Services | JK Appliances',
       description: 'Professional refrigerator repair with same-day service. We fix cooling issues, water leaks, ice makers, and more with guaranteed results.',
-      images: ['/images/services/refrigerator-repair.jpg'],
+      images: ['/images/services/refrigerator-repair.webp'],
     },
     keywords: 'refrigerator repair, fridge repair, appliance repair, Samsung refrigerator repair, LG refrigerator repair, Whirlpool repair, fridge not cooling, refrigerator service, same-day repair, Toronto refrigerator repair',
   };

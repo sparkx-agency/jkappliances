@@ -226,12 +226,13 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/freezer-repair.jpg"
+                  src="/images/services/freezer-repair.webp"
                   alt="Freezer Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
@@ -327,11 +328,12 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/freezer-technician.jpg" 
+                  src="/images/services/freezer-technician.webp" 
                   alt="Freezer repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
             </motion.div>
@@ -452,11 +454,12 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/upright-freezer.png" 
+                  src="/images/services/upright-freezer.webp" 
                   alt="Upright Freezer Repair"
                   width={600}
                   height={450}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="p-8">
@@ -498,11 +501,12 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/chest-freezer.jpg" 
+                  src="/images/services/chest-freezer.webp" 
                   alt="Chest Freezer Repair"
                   width={600}
                   height={450}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="p-8">
@@ -544,11 +548,12 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/built-in-freezer.jpg" 
+                  src="/images/services/built-in-freezer.webp" 
                   alt="Built-in Freezer Repair"
                   width={600}
                   height={450}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="p-8">
@@ -590,11 +595,12 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/freezer-refrigerator.jpg" 
+                  src="/images/services/freezer-refrigerator.webp" 
                   alt="Refrigerator Freezer Combination Repair"
                   width={600}
                   height={450}
                   className="w-full h-full object-cover"
+                  style={{ objectFit: "contain" }}
                 />
               </div>
               <div className="p-8">

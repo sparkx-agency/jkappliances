@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/clarington-og.jpg',
+        url: '/images/areas/clarington-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Clarington'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Clarington | JK Appliances',
     description: 'Professional appliance repair throughout Clarington. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/clarington-twitter.jpg']
+    images: ['/images/areas/clarington-twitter.webp']
   },
   keywords: [
     'Clarington appliance repair', 

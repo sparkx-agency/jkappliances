@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/cambridge-og.jpg',
+        url: '/images/areas/cambridge-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Cambridge'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Cambridge | JK Appliances',
     description: 'Professional appliance repair throughout Cambridge. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/cambridge-twitter.jpg']
+    images: ['/images/areas/cambridge-twitter.webp']
   },
   keywords: [
     'Cambridge appliance repair', 

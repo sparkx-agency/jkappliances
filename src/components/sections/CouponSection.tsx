@@ -48,12 +48,12 @@ const Coupon: React.FC<CouponProps> = ({
           
           <div className="bg-gray-50 rounded-xl overflow-hidden shadow-sm group-hover:shadow transition-shadow duration-300">
             <Image 
-              src="/images/coupon-icons/qr-code.svg"
+              src="/images/coupon-icons/qr-code.webp"
               alt="QR Code"
               width={80}
               height={80}
               className="opacity-90 group-hover:opacity-100 transition-opacity"
-            />
+              style={{ objectFit: "contain" }} />
           </div>
         </div>
 

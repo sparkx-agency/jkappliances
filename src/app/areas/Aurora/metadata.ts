@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/aurora-og.jpg',
+        url: '/images/areas/aurora-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Aurora'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Aurora | JK Appliances',
     description: 'Professional appliance repair throughout Aurora. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/aurora-twitter.jpg']
+    images: ['/images/areas/aurora-twitter.webp']
   },
   keywords: [
     'Aurora appliance repair', 

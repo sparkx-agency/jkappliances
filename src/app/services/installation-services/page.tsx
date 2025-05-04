@@ -226,13 +226,13 @@ export default function InstallationServicesPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/appliance-installation.jpg"
+                  src="/images/services/appliance-installation.webp"
                   alt="Appliance Installation Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -327,12 +327,12 @@ export default function InstallationServicesPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/installation-technician.jpg" 
+                  src="/images/services/installation-technician.webp" 
                   alt="Appliance installation technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
@@ -423,12 +423,12 @@ export default function InstallationServicesPage() {
                 We install all types of refrigeration units including standard refrigerators, French door models, side-by-side designs, built-in refrigerators, and standalone freezers. Our service includes water line connection, leveling, and door alignment.
               </p>
               <Image 
-                src="/images/services/refrigerator-installation.jpg" 
+                src="/images/services/refrigerator-installation.webp" 
                 alt="Refrigerator installation"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -443,12 +443,12 @@ export default function InstallationServicesPage() {
                 From standard top-loading washers to front-loading machines and stackable units, we provide expert installation including water and drain connections, vent hookups, and proper leveling to minimize vibration and noise.
               </p>
               <Image 
-                src="/images/services/washer-installation.jpg" 
+                src="/images/services/washer-installation.webp" 
                 alt="Washer and dryer installation"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -463,12 +463,12 @@ export default function InstallationServicesPage() {
                 Our technicians are experienced in installing both built-in and portable dishwashers, connecting water and drain lines, ensuring proper electrical connections, and testing for leaks and proper operation.
               </p>
               <Image 
-                src="/images/services/dishwasher-installation.jpg" 
+                src="/images/services/dishwasher-installation.webp" 
                 alt="Dishwasher installation"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -483,12 +483,12 @@ export default function InstallationServicesPage() {
                 We install all types of cooking appliances including freestanding ranges, built-in ovens, cooktops, and range hoods. Our services include gas line connection, electrical wiring, and ventilation system setup.
               </p>
               <Image 
-                src="/images/services/stove-installation.jpg" 
+                src="/images/services/stove-installation.webp" 
                 alt="Range and oven installation"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>
@@ -750,31 +750,31 @@ export default function InstallationServicesPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Install Your New Appliance?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Install Your Appliance?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
               Our expert technicians are standing by to provide fast, reliable appliance installation services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book Installation
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

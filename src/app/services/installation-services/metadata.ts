@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/appliance-installation.jpg',
+          url: '/images/services/appliance-installation.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician installing an appliance',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Professional Appliance Installation Services | JK Appliances',
       description: 'Expert appliance installation with same-day service. We install refrigerators, washers, dryers, dishwashers, and more with guaranteed results.',
-      images: ['/images/services/appliance-installation.jpg'],
+      images: ['/images/services/appliance-installation.webp'],
     },
     keywords: 'appliance installation, refrigerator installation, washer installation, dryer installation, dishwasher installation, stove installation, oven installation, range installation, Toronto appliance installation, GTA appliance installation, same-day appliance installation',
   };

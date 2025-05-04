@@ -21,9 +21,9 @@ const georgetownData = {
   name: 'Georgetown',
   fullName: 'Georgetown, Halton Hills',
   description: 'From historic downtown to newer suburban neighborhoods, our appliance repair technicians provide prompt service throughout Georgetown with same-day appointments available.',
-  heroImage: '/images/georgetown-skyline.jpg',
-  neighborhoodImage: '/images/georgetown-map.jpg',
-  mapImage: '/images/georgetown.jpg',
+  heroImage: '/images/georgetown-skyline.webp',
+  neighborhoodImage: '/images/georgetown-map.webp',
+  mapImage: '/images/georgetown.webp',
   
   // Location information
   address: {
@@ -58,25 +58,25 @@ const georgetownData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
+      image: '/images/services/refrigerator-repair.webp',
       description: 'Expert refrigerator repair for all major brands in Georgetown.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
+      image: '/images/services/washer-repair.webp',
       description: 'Professional washing machine repairs for Georgetown homes.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
+      image: '/images/services/dryer-repair.webp',
       description: 'Fast, reliable dryer repair services throughout Georgetown.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
+      image: '/images/services/dishwasher-repair.webp',
       description: 'Expert dishwasher technicians serving the Georgetown area.'
     }
   ],
@@ -87,19 +87,19 @@ const georgetownData = {
       title: 'Home Appliance Overhaul',
       location: 'Downtown Georgetown',
       description: 'Complete appliance maintenance for a historic home in Georgetown\'s downtown core.',
-      image: '/images/projects/georgetown-home.jpg'
+      image: '/images/projects/georgetown-home.webp'
     },
     {
       title: 'Restaurant Equipment Repair',
       location: 'Main Street, Georgetown',
       description: 'Commercial kitchen equipment repair for a popular restaurant in downtown Georgetown.',
-      image: '/images/projects/georgetown-restaurant.jpg'
+      image: '/images/projects/georgetown-restaurant.webp'
     },
     {
       title: 'Multi-Unit Home Service',
       location: 'Georgetown South',
       description: 'Regular maintenance program for appliances in a multi-unit residential property in Georgetown South.',
-      image: '/images/projects/georgetown-multiunit.jpg'
+      image: '/images/projects/georgetown-multiunit.webp'
     }
   ],
   
@@ -116,7 +116,7 @@ const georgetownServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
+    image: '/images/services/refrigerator-repair.webp',
     description: 'Our Georgetown refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Georgetown neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
@@ -130,7 +130,7 @@ const georgetownServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
+    image: '/images/services/washer-repair.webp',
     description: 'Our washer repair services in Georgetown cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Georgetown home.',
     commonServices: [
       'Drum and agitator problems',
@@ -144,7 +144,7 @@ const georgetownServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
+    image: '/images/services/dryer-repair.webp',
     description: 'When your dryer stops working properly in Georgetown, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Georgetown team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
@@ -158,7 +158,7 @@ const georgetownServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
+    image: '/images/services/dishwasher-repair.webp',
     description: 'Our Georgetown dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Georgetown, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
@@ -172,7 +172,7 @@ const georgetownServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
+    image: '/images/services/oven-repair.webp',
     description: 'For oven and stove repairs in Georgetown, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Georgetown area.',
     commonServices: [
       'Heating element replacements',
@@ -190,61 +190,61 @@ const georgetownBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];
@@ -365,7 +365,7 @@ export default function GeorgetownAreaPage() {
               <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                 <div className="relative h-64">
                   <Image 
-                    src="/images/georgetown-downtown.jpg"
+                    src="/images/georgetown-downtown.webp"
                     alt="Historic Downtown Georgetown"
                     fill
                     style={{ objectFit: 'cover' }}
@@ -383,7 +383,7 @@ export default function GeorgetownAreaPage() {
               <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                 <div className="relative h-64">
                   <Image 
-                    src="/images/georgetown-established.jpg"
+                    src="/images/georgetown-established.webp"
                     alt="Established Georgetown Neighborhoods"
                     fill
                     style={{ objectFit: 'cover' }}
@@ -401,7 +401,7 @@ export default function GeorgetownAreaPage() {
               <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                 <div className="relative h-64">
                   <Image 
-                    src="/images/georgetown-south.jpg"
+                    src="/images/georgetown-south.webp"
                     alt="Georgetown South"
                     fill
                     style={{ objectFit: 'cover' }}

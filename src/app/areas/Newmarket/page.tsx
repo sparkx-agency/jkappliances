@@ -13,16 +13,17 @@ import BrandsSliderSection from '@/components/sections/BrandsSliderSection';
 import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
+import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Newmarket area data
+const newmarketData = {
+  id: 'newmarket',
+  name: 'Newmarket',
+  fullName: 'Newmarket, Ontario',
+  description: 'From historic homes in Old Newmarket to modern developments in Stonehaven, our appliance repair technicians provide prompt service throughout Newmarket with same-day appointments available.',
+  heroImage: '/images/newmarket-skyline.webp',
+  neighborhoodImage: '/images/newmarket-map.webp',
+  mapImage: '/images/newmarket.webp',
   
   // Location information
   address: {
@@ -33,33 +34,33 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '25',
+  responseTime: 'Same-day service available in all Newmarket neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Old Newmarket',
+    'Glenway',
+    'Stonehaven',
+    'Woodland Hills',
+    'Summerhill',
+    'College Manor',
+    'Armitage',
+    'Bristol',
+    'Central Newmarket',
+    'Gorham',
+    'Huron Heights',
+    'Leslie Valley',
+    'Copper Hills',
+    'Maple Leaf',
+    'Quaker Village',
+    'Crossland',
+    'Fernbank',
+    'Beechwood',
+    'Bogarttown',
+    'Longford',
+    'Maryfield',
+    'Newmarket Heights'
   ],
   
   // Most common services in this area
@@ -67,88 +68,66 @@ const torontoData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      image: '/images/services/refrigerator-repair.webp',
+      description: 'Expert refrigerator repair for all major brands in Newmarket.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      image: '/images/services/washer-repair.webp',
+      description: 'Professional washing machine repairs for homes throughout Newmarket.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      image: '/images/services/dryer-repair.webp',
+      description: 'Fast, reliable dryer repair services throughout Newmarket.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      image: '/images/services/dishwasher-repair.webp',
+      description: 'Expert dishwasher technicians serving the Newmarket area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Historic Home Appliance Service',
+      location: 'Old Newmarket',
+      description: 'Complete appliance restoration and integration in a century home in Newmarket\'s historic district.',
+      image: '/images/projects/newmarket-historic.webp'
     },
     {
       title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      location: 'Main Street, Newmarket',
+      description: 'Commercial kitchen equipment repair for a popular restaurant in downtown Newmarket.',
+      image: '/images/projects/newmarket-restaurant.webp'
     },
     {
       title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      location: 'Stonehaven, Newmarket',
+      description: 'Installation and configuration of connected smart appliances for a modern family home in Stonehaven.',
+      image: '/images/projects/newmarket-smarthome.webp'
     }
   ],
   
-  // Testimonials specific to this area
-  testimonials: [
-    {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
-      rating: 5
-    },
-    {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
-      rating: 5
-    },
-    {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
-      rating: 5
-    }
-  ],
-  
-  // Local information - can be tailored per service area
+  // Local information - tailored for Newmarket
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Newmarket features a mix of historic homes in areas like Old Newmarket and Quaker Village, alongside family-friendly neighborhoods like Stonehaven and Woodland Hills. Our technicians are experienced with both vintage appliances in heritage homes and modern systems in newer properties.",
+    commonIssues: "In Newmarket's established neighborhoods, we frequently address maintenance issues with well-maintained appliances in older homes. In newer communities like Stonehaven and Copper Hills, we often service higher-efficiency systems and smart appliances popular in modern family homes.",
+    serviceNotes: "Our Newmarket technicians understand the town's blend of heritage charm and contemporary living. We provide reliable service to all neighborhoods from the historic downtown to the newer northern developments, with expertise in both traditional and modern appliances."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Newmarket
+const newmarketServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    image: '/images/services/refrigerator-repair.webp',
+    description: 'Our Newmarket refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Newmarket neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -161,8 +140,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    image: '/images/services/washer-repair.webp',
+    description: 'Our washer repair services in Newmarket cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Newmarket home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -175,8 +154,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    image: '/images/services/dryer-repair.webp',
+    description: 'When your dryer stops working properly in Newmarket, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Newmarket team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -189,8 +168,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    image: '/images/services/dishwasher-repair.webp',
+    description: 'Our Newmarket dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Newmarket, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -203,8 +182,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    image: '/images/services/oven-repair.webp',
+    description: 'For oven and stove repairs in Newmarket, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Newmarket area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,75 +195,107 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Newmarket
+const newmarketBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Newmarket testimonials
+const newmarketTestimonials: TestimonialItem[] = [
+  {
+    name: "Linda S.",
+    location: "Old Newmarket",
+    rating: 5,
+    text: "JK Appliance provided exceptional service for our historic home. The technician understood the challenges of integrating modern appliances with our heritage kitchen and provided solutions that preserved the character of our home.",
+    date: "May 2023"
+  },
+  {
+    name: "David R.",
+    location: "Stonehaven, Newmarket",
+    rating: 5,
+    text: "When our refrigerator stopped cooling right before hosting a family gathering, JK Appliance sent a technician within hours. They diagnosed the problem quickly, had the parts on hand, and fixed it on the spot. Saved our weekend!",
+    date: "April 2023"
+  },
+  {
+    name: "Jennifer T.",
+    location: "Woodland Hills, Newmarket",
+    rating: 5,
+    text: "We've used JK Appliance for our family's washer, dryer, and dishwasher repairs. Their service is always reliable, honest, and their technicians are knowledgeable and professional. Our go-to for all appliance repairs in Newmarket.",
+    date: "June 2023"
+  },
+  {
+    name: "Matthew P.",
+    location: "Copper Hills, Newmarket",
+    rating: 5,
+    text: "Our new smart home had connectivity issues with the appliances. JK Appliance sent a technician who really understood both the tech and the appliances. He got everything working seamlessly and took time to show us how to optimize settings.",
+    date: "March 2023"
+  }
+];
+
+// Custom Newmarket page
+export default function NewmarketAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = newmarketData.neighborhoods.map((name, index) => ({
+    id: `${newmarketData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +312,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {newmarketData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {newmarketData.name} with same-day service available. Serving all neighborhoods in the {newmarketData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +341,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={newmarketData.heroImage}
+                  alt={`${newmarketData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +355,92 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={newmarketData.name} />
       
-      {/* Our new AreaServicesSection */}
+      {/* Newmarket Areas Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+                Serving All Newmarket Communities
+              </h2>
+              <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+                From historic downtown to family neighborhoods, we provide expert appliance repair throughout Newmarket
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Historic & Downtown Areas */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/newmarket-historic.webp"
+                    alt="Historic Newmarket"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Historic & Downtown Areas</h3>
+                  <p className="text-gray-600">
+                    We provide specialized service to Old Newmarket, Quaker Village, and Central Newmarket, with expertise in maintaining appliances in heritage homes while respecting their historic character and unique requirements.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Established Neighborhoods */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/newmarket-established.webp"
+                    alt="Established Newmarket Neighborhoods"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Established Neighborhoods</h3>
+                  <p className="text-gray-600">
+                    Our technicians service Glenway, Armitage, Gorham, and other established communities, providing expert repairs for family homes in these well-developed residential areas of Newmarket.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Newer Developments */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/newmarket-newer.webp"
+                    alt="New Newmarket Developments"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Newer Developments</h3>
+                  <p className="text-gray-600">
+                    We provide prompt, reliable service to Stonehaven, Copper Hills, Woodland Hills, and other newer neighborhoods, with technicians specially trained to work with smart appliances and high-efficiency systems in modern homes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Newmarket"
+        services={newmarketServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Newmarket technicians are experienced in repairing all major appliance brands"
+        brands={newmarketBrands}
+        locationName="Newmarket"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +456,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={newmarketData.mapImage}
+                    alt={`${newmarketData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +471,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {newmarketData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {newmarketData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {newmarketData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {newmarketData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {newmarketData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +493,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {newmarketData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -419,27 +502,33 @@ export default function TorontoAreaPage() {
         </div>
       </section>
       
+      {/* Testimonials Section */}
+      <TestimonialsSection
+        title="What Our Newmarket Customers Say"
+        subtitle="Read testimonials from satisfied customers across Newmarket neighborhoods"
+        testimonials={newmarketTestimonials}
+      />
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${newmarketData.name} Neighborhoods We Serve`}
+        description={`From historic downtown to modern developments, our technicians provide prompt, reliable service throughout ${newmarketData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={newmarketData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={newmarketData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Newmarket Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Newmarket"
         mainCoupons={[
           {
-            amount: "30",
+            amount: "25",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "NM25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +537,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "NMRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +546,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "NMSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +556,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "Old Newmarket Residents",
+            code: "NMOLD35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +565,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "Stonehaven Residents",
+            code: "NMSTONE25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +576,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Newmarket Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Newmarket homeowners and residents"
+        areaId="newmarket"
         showCategories={true}
         limit={3}
         viewAllLink={true}

@@ -226,13 +226,13 @@ export default function StoveRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/stove-repair.jpg"
+                  src="/images/services/stove-repair.webp"
                   alt="Stove Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -327,12 +327,12 @@ export default function StoveRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/stove-technician.jpg" 
+                  src="/images/services/stove-technician.webp" 
                   alt="Stove repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
@@ -423,12 +423,12 @@ export default function StoveRepairPage() {
                 Electric models often experience issues with heating elements and temperature control boards. Our technicians have specialized testing equipment to diagnose electronic issues quickly and provide efficient repairs for all electric cooking appliances.
               </p>
               <Image 
-                src="/images/services/electric-stove.jpg" 
+                src="/images/services/electric-stove.webp" 
                 alt="Electric stove"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -443,12 +443,12 @@ export default function StoveRepairPage() {
                 Gas models can develop ignition problems, gas flow issues, and safety valve malfunctions. Our certified technicians are trained to safely repair gas appliances, ensuring both proper function and safety for your home.
               </p>
               <Image 
-                src="/images/services/gas-stove.jpg" 
+                src="/images/services/gas-stove.webp" 
                 alt="Gas stove"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>
@@ -710,31 +710,31 @@ export default function StoveRepairPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Fix Your Stove?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Fix Your Stove or Cooktop?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
-              Our expert technicians are standing by to provide fast, reliable stove repair services.
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
+              Our expert technicians are standing by to provide fast, reliable stove and cooktop repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

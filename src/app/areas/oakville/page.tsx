@@ -13,16 +13,17 @@ import BrandsSliderSection from '@/components/sections/BrandsSliderSection';
 import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
+import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
 
-// Toronto area data
-const torontoData = {
-  id: 'toronto',
-  name: 'Toronto',
-  fullName: 'Toronto, Ontario',
-  description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+// Oakville area data
+const oakvilleData = {
+  id: 'oakville',
+  name: 'Oakville',
+  fullName: 'Oakville, Ontario',
+  description: 'From lakefront estates in Old Oakville to family homes in Glen Abbey, our appliance repair technicians provide prompt service throughout Oakville with same-day appointments available.',
+  heroImage: '/images/oakville-skyline.webp',
+  neighborhoodImage: '/images/oakville-map.webp',
+  mapImage: '/images/oakville.webp',
   
   // Location information
   address: {
@@ -33,33 +34,33 @@ const torontoData = {
   },
   
   // Service radius and coverage details
-  serviceRadius: '30',
-  responseTime: 'Same-day service available in most Toronto neighborhoods',
+  serviceRadius: '25',
+  responseTime: 'Same-day service available in all Oakville neighborhoods',
   
   // Neighborhoods served
   neighborhoods: [
-    'Downtown Core',
-    'Yorkville',
-    'Liberty Village',
-    'The Beaches',
-    'Leslieville',
-    'The Annex',
-    'Kensington Market',
-    'Chinatown',
-    'Little Italy',
-    'Greektown',
-    'Forest Hill',
-    'Rosedale',
-    'Cabbagetown',
-    'Harbourfront',
-    'Entertainment District',
-    'Financial District',
-    'Queen West',
-    'King West',
-    'Yonge & Eglinton',
-    'North York',
-    'Scarborough',
-    'Etobicoke'
+    'Old Oakville',
+    'Bronte',
+    'Glen Abbey',
+    'West Oak Trails',
+    'River Oaks',
+    'Clearview',
+    'College Park',
+    'Iroquois Ridge North',
+    'Iroquois Ridge South',
+    'Upper Glen Abbey',
+    'Eastlake',
+    'Joshua Creek',
+    'Wedgewood Creek',
+    'Falgarwood',
+    'Morrison',
+    'Kerr Village',
+    'Bronte Creek',
+    'Westmount',
+    'Palermo',
+    'West Oak Trails',
+    'Glenorchy',
+    'Uptown Core'
   ],
   
   // Most common services in this area
@@ -67,88 +68,66 @@ const torontoData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
-      description: 'Expert refrigerator repair for all major brands in Toronto.'
+      image: '/images/services/refrigerator-repair.webp',
+      description: 'Expert refrigerator repair for all major brands in Oakville.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
-      description: 'Professional washing machine repairs for condos and homes.'
+      image: '/images/services/washer-repair.webp',
+      description: 'Professional washing machine repairs for homes throughout Oakville.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
-      description: 'Fast, reliable dryer repair services throughout Toronto.'
+      image: '/images/services/dryer-repair.webp',
+      description: 'Fast, reliable dryer repair services throughout Oakville.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
-      description: 'Expert dishwasher technicians serving the Toronto area.'
+      image: '/images/services/dishwasher-repair.webp',
+      description: 'Expert dishwasher technicians serving the Oakville area.'
     }
   ],
   
   // Recent projects in this area
   recentProjects: [
     {
-      title: 'Condo Complex Appliance Service',
-      location: 'Downtown Toronto',
-      description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      title: 'Luxury Home Appliance Service',
+      location: 'Lakefront, Oakville',
+      description: 'Complete high-end appliance installation and maintenance for a luxury waterfront estate in Old Oakville.',
+      image: '/images/projects/oakville-luxury.webp'
     },
     {
       title: 'Restaurant Equipment Repair',
-      location: 'Financial District',
-      description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      location: 'Downtown Oakville',
+      description: 'Commercial kitchen equipment repair for a popular restaurant in Oakville\'s vibrant downtown district.',
+      image: '/images/projects/oakville-restaurant.webp'
     },
     {
       title: 'Smart Home Integration',
-      location: 'Rosedale',
-      description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      location: 'Joshua Creek, Oakville',
+      description: 'Installation and configuration of connected smart appliances for a newly built custom home in Joshua Creek.',
+      image: '/images/projects/oakville-smarthome.webp'
     }
   ],
   
-  // Testimonials specific to this area
-  testimonials: [
-    {
-      text: "The technician arrived within the promised window and fixed my refrigerator quickly. Very professional service.",
-      author: "Michael J.",
-      location: "Downtown Toronto",
-      rating: 5
-    },
-    {
-      text: "I needed an emergency washer repair and they came same-day. Excellent service and fair pricing.",
-      author: "Sarah L.",
-      location: "North York, Toronto",
-      rating: 5
-    },
-    {
-      text: "They've been servicing our apartment building for years - always reliable and thorough.",
-      author: "David T.",
-      location: "Harbourfront, Toronto",
-      rating: 5
-    }
-  ],
-  
-  // Local information - can be tailored per service area
+  // Local information - tailored for Oakville
   localInfo: {
-    applianceUsage: "Toronto residents, especially in condos and apartments, rely heavily on efficient appliances. The city's diverse housing stock includes a mix of newer buildings with smart appliances and older homes with classic models.",
-    commonIssues: "In Toronto's downtown core, we frequently address issues related to compact appliances in condos. Older neighborhoods often need service for legacy models, while luxury homes in areas like Rosedale typically require high-end appliance expertise.",
-    serviceNotes: "Our Toronto technicians are familiar with building access protocols for condos and apartments, ensuring smooth service calls in multi-unit buildings."
+    applianceUsage: "Oakville features a mix of historic homes in Old Oakville and Bronte, spacious executive homes in areas like Glen Abbey and Joshua Creek, and newer family-friendly developments in River Oaks and Iroquois Ridge. Our technicians are experienced with both premium appliance brands common in Oakville's luxury homes and quality family-oriented models.",
+    commonIssues: "In Oakville's luxury lakefront neighborhoods, we frequently service high-end European appliances and built-in systems. In family-focused communities like Glen Abbey and River Oaks, we commonly address issues with high-capacity washers, dryers, and refrigerators designed for active households.",
+    serviceNotes: "Our Oakville technicians are familiar with all areas from the historic lakefront neighborhoods to newer northern developments, providing exceptional service with specialized knowledge of both premium brands and everyday appliances in this prestigious community."
   }
 };
 
-// Sample services data for Toronto
-const torontoServices: AreaServiceItem[] = [
+// Sample services data for Oakville
+const oakvilleServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
-    description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
+    image: '/images/services/refrigerator-repair.webp',
+    description: 'Our Oakville refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Oakville neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
       'Ice maker repairs',
@@ -161,8 +140,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
-    description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
+    image: '/images/services/washer-repair.webp',
+    description: 'Our washer repair services in Oakville cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Oakville home.',
     commonServices: [
       'Drum and agitator problems',
       'Drainage and pump issues',
@@ -175,8 +154,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
-    description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
+    image: '/images/services/dryer-repair.webp',
+    description: 'When your dryer stops working properly in Oakville, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Oakville team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
       'Drum and belt repairs',
@@ -189,8 +168,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
-    description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
+    image: '/images/services/dishwasher-repair.webp',
+    description: 'Our Oakville dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Oakville, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
       'Pump and motor servicing',
@@ -203,8 +182,8 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
-    description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
+    image: '/images/services/oven-repair.webp',
+    description: 'For oven and stove repairs in Oakville, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Oakville area.',
     commonServices: [
       'Heating element replacements',
       'Temperature sensor calibration',
@@ -216,75 +195,107 @@ const torontoServices: AreaServiceItem[] = [
   }
 ];
 
-// Brand data for Toronto
-const torontoBrands: BrandItem[] = [
+// Brand data for Oakville
+const oakvilleBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];
 
-// Custom Toronto page that includes both the standard sections and our new area services section
-export default function TorontoAreaPage() {
+// Oakville testimonials
+const oakvilleTestimonials: TestimonialItem[] = [
+  {
+    name: "Victoria L.",
+    location: "Old Oakville",
+    rating: 5,
+    text: "JK Appliance provided exceptional service when our Sub-Zero refrigerator stopped working. The technician was knowledgeable about our high-end appliances and fixed the issue quickly. Very professional and respectful of our home.",
+    date: "May 2023"
+  },
+  {
+    name: "Robert K.",
+    location: "Glen Abbey, Oakville",
+    rating: 5,
+    text: "When our family's washer and dryer both had issues in the same week, JK Appliance came through with fast service. The technician was friendly, efficient, and explained everything clearly. Highly recommend for Oakville residents!",
+    date: "April 2023"
+  },
+  {
+    name: "Jennifer P.",
+    location: "Bronte, Oakville",
+    rating: 5,
+    text: "I've used JK Appliance for our heritage home's kitchen appliances. They understand the challenges of integrating modern appliance technology with older homes and always provide excellent solutions and service.",
+    date: "June 2023"
+  },
+  {
+    name: "Thomas G.",
+    location: "River Oaks, Oakville",
+    rating: 5,
+    text: "Our smart oven was having connection issues that other companies couldn't resolve. JK Appliance sent a technician who understood both the appliance and the technology. Problem solved on the first visit!",
+    date: "March 2023"
+  }
+];
+
+// Custom Oakville page
+export default function OakvilleAreaPage() {
   // Convert string neighborhoods to AreaData format for NeighborhoodSection
-  const neighborhoodAreas: AreaData[] = torontoData.neighborhoods.map((name, index) => ({
-    id: `${torontoData.id}-neighborhood-${index}`,
+  const neighborhoodAreas: AreaData[] = oakvilleData.neighborhoods.map((name, index) => ({
+    id: `${oakvilleData.id}-neighborhood-${index}`,
     name
   }));
   
@@ -301,10 +312,10 @@ export default function TorontoAreaPage() {
               className="text-center mb-20"
             >
               <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
-                Appliance Repair in {torontoData.name}
+                Appliance Repair in {oakvilleData.name}
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-                Fast, reliable appliance repair services throughout {torontoData.name} with same-day service available. Serving all neighborhoods in the {torontoData.fullName} area.
+                Fast, reliable appliance repair services throughout {oakvilleData.name} with same-day service available. Serving all neighborhoods in the {oakvilleData.fullName} area.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link 
@@ -330,8 +341,8 @@ export default function TorontoAreaPage() {
             >
               <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src={torontoData.heroImage}
-                  alt={`${torontoData.name} Appliances`}
+                  src={oakvilleData.heroImage}
+                  alt={`${oakvilleData.name} Appliances`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="transition-transform hover:scale-105 duration-700"
@@ -344,20 +355,92 @@ export default function TorontoAreaPage() {
       </section>
       
       {/* Services Section */}
-      <ServicesSectionArea areaName={torontoData.name} />
+      <ServicesSectionArea areaName={oakvilleData.name} />
       
-      {/* Our new AreaServicesSection */}
+      {/* Oakville Areas Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+                Serving All Oakville Communities
+              </h2>
+              <p className="text-xl text-gray-500 max-w-3xl mx-auto">
+                From historic lakefront estates to family-friendly northern neighborhoods, we provide expert appliance repair throughout Oakville
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Lakefront & Heritage Areas */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/oakville-historic.webp"
+                    alt="Historic Oakville"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Lakefront & Heritage Areas</h3>
+                  <p className="text-gray-600">
+                    We provide specialized service to Old Oakville, Bronte, and other lakefront communities, with expertise in maintaining high-end appliances in heritage homes and luxury waterfront estates that require custom solutions.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Established Family Neighborhoods */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/oakville-established.webp"
+                    alt="Established Oakville Neighborhoods"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Established Neighborhoods</h3>
+                  <p className="text-gray-600">
+                    Our technicians service Glen Abbey, College Park, Morrison, and other established communities, providing expert repairs for a wide range of quality appliances in these well-developed residential areas.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Newer Northern Communities */}
+              <div className="bg-[#f5f5f7] rounded-3xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                <div className="relative h-64">
+                  <Image 
+                    src="/images/oakville-newer.webp"
+                    alt="New Oakville Developments"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">Northern Communities</h3>
+                  <p className="text-gray-600">
+                    We provide prompt, reliable service to River Oaks, Joshua Creek, Iroquois Ridge, and other newer northern neighborhoods, with technicians specially trained to work with smart appliances and high-efficiency systems in modern homes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Our AreaServicesSection */}
       <AreaServicesSection 
-        areaName="Toronto"
-        services={torontoServices}
+        areaName="Oakville"
+        services={oakvilleServices}
       />
       
       {/* Brand Slider Section */}
       <BrandsSliderSection
         title="Top Appliance Brands We Fix"
-        subtitle="Our certified Toronto technicians are experienced in repairing all major appliance brands"
-        brands={torontoBrands}
-        locationName="Toronto"
+        subtitle="Our certified Oakville technicians are experienced in repairing all major appliance brands"
+        brands={oakvilleBrands}
+        locationName="Oakville"
       />
       
       {/* Service Area Overview */}
@@ -373,8 +456,8 @@ export default function TorontoAreaPage() {
               >
                 <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
                   <Image
-                    src={torontoData.mapImage}
-                    alt={`${torontoData.name} Service Area Map`}
+                    src={oakvilleData.mapImage}
+                    alt={`${oakvilleData.name} Service Area Map`}
                     width={600}
                     height={450}
                     className="w-full h-full object-cover"
@@ -388,18 +471,18 @@ export default function TorontoAreaPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {torontoData.name} Coverage</h3>
+                <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {oakvilleData.name} Coverage</h3>
                 <p className="text-[#424245] mb-6 leading-relaxed">
-                  {torontoData.localInfo.applianceUsage}
+                  {oakvilleData.localInfo.applianceUsage}
                 </p>
                 <p className="text-[#424245] mb-8 leading-relaxed">
-                  {torontoData.localInfo.commonIssues}
+                  {oakvilleData.localInfo.commonIssues}
                 </p>
                 
                 <div className="bg-[#f5f5f7] rounded-2xl p-6 mb-8">
-                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {torontoData.name} Service</h4>
+                  <h4 className="text-xl font-medium text-[#1d1d1f] mb-3">About Our {oakvilleData.name} Service</h4>
                   <p className="text-[#424245]">
-                    {torontoData.localInfo.serviceNotes}
+                    {oakvilleData.localInfo.serviceNotes}
                   </p>
                 </div>
                 
@@ -410,7 +493,7 @@ export default function TorontoAreaPage() {
                     </svg>
                   </div>
                   <p className="text-[#1d1d1f] font-medium">
-                    {torontoData.responseTime}
+                    {oakvilleData.responseTime}
                   </p>
                 </div>
               </motion.div>
@@ -419,27 +502,33 @@ export default function TorontoAreaPage() {
         </div>
       </section>
       
+      {/* Testimonials Section */}
+      <TestimonialsSection
+        title="What Our Oakville Customers Say"
+        subtitle="Read testimonials from satisfied customers across Oakville neighborhoods"
+        testimonials={oakvilleTestimonials}
+      />
 
       {/* Neighborhoods Section */}
       <NeighborhoodSection 
-        title={`${torontoData.name} Neighborhoods We Serve`}
-        description={`From downtown to the suburbs, our technicians provide prompt, reliable service throughout ${torontoData.name}.`}
+        title={`${oakvilleData.name} Neighborhoods We Serve`}
+        description={`From lakefront estates to northern family neighborhoods, our technicians provide prompt, reliable service throughout ${oakvilleData.name}.`}
         areas={neighborhoodAreas}
-        mapImage={torontoData.neighborhoodImage}
+        mapImage={oakvilleData.neighborhoodImage}
         companyName="JK"
-        companyAddress={torontoData.address.street}
+        companyAddress={oakvilleData.address.street}
       />
       
       {/* Coupon Section */}
       <CouponSection 
-        title="Special Offers for Toronto Residents"
-        subtitle="Use these exclusive coupons for same-day appliance repair service in Toronto"
+        title="Special Offers for Oakville Residents"
+        subtitle="Use these exclusive coupons for same-day appliance repair service in Oakville"
         mainCoupons={[
           {
-            amount: "30",
+            amount: "25",
             type: "Repair",
             forCustomer: "New Customer Discount",
-            code: "TRNEW30",
+            code: "OAK25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -448,7 +537,7 @@ export default function TorontoAreaPage() {
             amount: "15",
             type: "Repair",
             forCustomer: "For Returning Customers",
-            code: "TRRETURN15",
+            code: "OAKRETURN15",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -457,7 +546,7 @@ export default function TorontoAreaPage() {
             amount: "30",
             type: "Repair",
             forCustomer: "Senior Customer Discount",
-            code: "TRSENIOR30",
+            code: "OAKSENIOR30",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -467,8 +556,8 @@ export default function TorontoAreaPage() {
           {
             amount: "35",
             type: "Refrigerator Repair",
-            forCustomer: "For Toronto Downtown",
-            code: "TRFRIDGE35",
+            forCustomer: "Lakefront Residents",
+            code: "OAKLAKE35",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -476,8 +565,8 @@ export default function TorontoAreaPage() {
           {
             amount: "25",
             type: "Washer Repair",
-            forCustomer: "North York Residents",
-            code: "TRWASH25",
+            forCustomer: "Glen Abbey Residents",
+            code: "OAKGLEN25",
             website: "jkappliancerepair.ca",
             phone: "647-560-8966",
             primaryColor: "#0071e3"
@@ -487,9 +576,9 @@ export default function TorontoAreaPage() {
       
       {/* Blog Section */}
       <BlogSection 
-        title="Appliance Tips for Toronto Residents"
-        subtitle="Helpful guides and maintenance tips specifically for Toronto homeowners and residents"
-        areaId="toronto"
+        title="Appliance Tips for Oakville Residents"
+        subtitle="Helpful guides and maintenance tips specifically for Oakville homeowners and residents"
+        areaId="oakville"
         showCategories={true}
         limit={3}
         viewAllLink={true}

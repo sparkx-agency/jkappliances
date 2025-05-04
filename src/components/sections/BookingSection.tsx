@@ -331,8 +331,22 @@ const BookingSection = () => {
     
     setIsLoading(true);
     
-    // Simulate API call with timeout
-    setTimeout(() => {
+    try {
+      // Send data to API endpoint
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to send booking request');
+      }
+      
       setIsLoading(false);
       setIsSubmitted(true);
       
@@ -360,7 +374,13 @@ const BookingSection = () => {
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setIsLoading(false);
+      // Show error message without using setForm
+      setIsSubmitted(false);
+      alert(error instanceof Error ? error.message : 'Failed to submit booking request');
+    }
   };
 
   // Render input field with error handling

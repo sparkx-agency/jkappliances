@@ -27,11 +27,11 @@ const AreaServicesSection: React.FC<AreaServicesSectionProps> = ({ areaName, ser
   const getIconPath = (serviceId: string) => {
     // Map service IDs to icon paths
     const iconMap: {[key: string]: string} = {
-      'refrigerator-repair': '/images/icons/fridge.png',
-      'washer-repair': '/images/icons/washer.png',
-      'dryer-repair': '/images/icons/dryer.png',
-      'dishwasher-repair': '/images/icons/dishwasher.png',
-      'oven-repair': '/images/icons/stove.png',
+      'refrigerator-repair': '/images/icons/fridge.webp',
+      'washer-repair': '/images/icons/washer.webp',
+      'dryer-repair': '/images/icons/dryer.webp',
+      'dishwasher-repair': '/images/icons/dishwasher.webp',
+      'oven-repair': '/images/icons/stove.webp',
     };
     
     // Return the mapped icon path or use the provided icon in the service if available

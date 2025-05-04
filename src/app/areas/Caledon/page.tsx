@@ -22,9 +22,9 @@ const CaledonPage: React.FC = () => {
     name: 'Caledon',
     fullName: 'Caledon, Ontario',
     description: 'Professional appliance repair services throughout Caledon and surrounding areas. Our experienced technicians service all major brands including Samsung, LG, Whirlpool, and more.',
-    heroImage: '/images/areas/caledon-area.jpg',
-    neighborhoodImage: '/images/caledon-map.jpg',
-    mapImage: '/images/caledon.jpg',
+    heroImage: '/images/areas/caledon-area.webp',
+    neighborhoodImage: '/images/caledon-map.webp',
+    mapImage: '/images/caledon.webp',
   
   // Location information
   address: {
@@ -75,7 +75,7 @@ const CaledonPage: React.FC = () => {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
+      image: '/images/services/refrigerator-repair.webp',
       description: 'From classic kitchens in historic Caledon homes to modern appliances in newer builds, our technicians have the expertise to repair all refrigerator types. We diagnose and fix cooling issues, ice maker problems, and more.',
     commonServices: [
       'Temperature regulation issues',
@@ -89,7 +89,7 @@ const CaledonPage: React.FC = () => {
     {
       id: 'oven-repair',
       name: 'Oven & Stove Repair',
-      image: '/images/services/oven-repair.jpg',
+      image: '/images/services/oven-repair.webp',
       description: 'Whether you\'re in Bolton or a rural property in Caledon East, we provide fast, reliable oven and stove repair. Our technicians can fix temperature issues, faulty elements, ignition problems, and more for all models.',
       commonServices: [
         'Heating element replacements',
@@ -103,7 +103,7 @@ const CaledonPage: React.FC = () => {
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
+      image: '/images/services/dishwasher-repair.webp',
       description: 'Having dishwasher troubles in your Caledon home? Our local technicians can quickly diagnose and repair leaks, drainage problems, cleaning issues, and electrical faults in all dishwasher brands and models.',
       commonServices: [
         'Spray arm repairs and replacements',
@@ -117,7 +117,7 @@ const CaledonPage: React.FC = () => {
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
+    image: '/images/services/washer-repair.webp',
       description: 'For washing machine repairs throughout Caledon Village, Bolton, and beyond, our experienced technicians can fix everything from drainage issues to mechanical problems, unusual noises, and control panel malfunctions.',
     commonServices: [
       'Drum and agitator problems',
@@ -131,7 +131,7 @@ const CaledonPage: React.FC = () => {
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
+    image: '/images/services/dryer-repair.webp',
       description: 'When your dryer isn\'t heating, is making strange noises, or won\'t start, our Caledon technicians can help. We service all types of dryers across the region, from Bolton to the scenic villages of Belfountain and Alton.',
     commonServices: [
       'Heating element replacements',
@@ -181,61 +181,61 @@ const CaledonPage: React.FC = () => {
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
       id: 'kitchenaid',
       name: 'KitchenAid', 
-      logo: '/images/brands/kitchenaid.svg',
+      logo: '/images/brands/kitchenaid.webp',
       link: '/brands/kitchenaid'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
     },
     { 
       id: 'electrolux',
       name: 'Electrolux', 
-      logo: '/images/brands/electrolux.svg',
+      logo: '/images/brands/electrolux.webp',
       link: '/brands/electrolux'
     },
     { 
       id: 'kenmore',
       name: 'Kenmore', 
-      logo: '/images/brands/kenmore.svg',
+      logo: '/images/brands/kenmore.webp',
       link: '/brands/kenmore'
     },
   ];
@@ -266,13 +266,13 @@ const CaledonPage: React.FC = () => {
             </div>
             <div className="relative h-64 md:h-96">
                 <Image
-                src="/images/areas/caledon-hero.jpg"
+                src="/images/areas/caledon-hero.webp"
                 alt="Caledon Appliance Repair"
                   fill
                 className="rounded-lg object-cover shadow-xl"
                 sizes="(max-width: 768px) 100vw, 50vw"
                   priority
-                />
+                style={{ objectFit: "contain" }} />
               </div>
           </div>
         </div>
@@ -339,36 +339,36 @@ const CaledonPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-center mb-4">Bolton</h3>
               <p className="text-gray-600 mb-4">As Caledon's largest community, Bolton combines urban amenities with small-town charm. Our technicians provide appliance repair services throughout Bolton's residential areas, from historic downtown to newer developments.</p>
                   <Image
-                src="/images/areas/caledon-bolton.jpg"
+                src="/images/areas/caledon-bolton.webp"
                 alt="Bolton, Caledon"
                 width={350}
                 height={200}
                 className="rounded-lg mx-auto"
-                  />
+                  style={{ objectFit: "contain" }} />
                 </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-center mb-4">Caledon Village & Caledon East</h3>
               <p className="text-gray-600 mb-4">These historic communities feature a mix of heritage homes and newer residences. Our technicians are familiar with both modern appliances and the unique needs of vintage kitchens in older Caledon properties.</p>
               <Image
-                src="/images/areas/caledon-village.jpg"
+                src="/images/areas/caledon-village.webp"
                 alt="Caledon Village"
                 width={350}
                 height={200}
                 className="rounded-lg mx-auto"
-              />
+              style={{ objectFit: "contain" }} />
                 </div>
                 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-center mb-4">Scenic Villages</h3>
               <p className="text-gray-600 mb-4">From the picturesque communities of Belfountain, Alton, and Inglewood to Terra Cotta and Cheltenham, we provide reliable appliance repair services to all of Caledon's charming villages and rural properties.</p>
               <Image
-                src="/images/areas/caledon-villages.jpg"
+                src="/images/areas/caledon-villages.webp"
                 alt="Caledon Villages"
                 width={350}
                 height={200}
                 className="rounded-lg mx-auto"
-              />
+              style={{ objectFit: "contain" }} />
             </div>
           </div>
         </div>

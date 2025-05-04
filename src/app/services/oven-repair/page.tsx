@@ -226,13 +226,13 @@ export default function OvenRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/oven-repair.jpg"
+                  src="/images/services/oven-repair.webp"
                   alt="Oven Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -327,12 +327,12 @@ export default function OvenRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/oven-technician.jpg" 
+                  src="/images/services/oven-technician.webp" 
                   alt="Oven repair technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
@@ -423,12 +423,12 @@ export default function OvenRepairPage() {
                 Standard single or double ovens that use heating elements at the top and bottom of the oven cavity. Our expert technicians can diagnose and repair heating element issues, temperature control problems, and door malfunctions.
               </p>
               <Image 
-                src="/images/services/conventional-oven.jpg" 
+                src="/images/services/conventional-oven.webp" 
                 alt="Conventional oven"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -443,12 +443,12 @@ export default function OvenRepairPage() {
                 Ovens that use fans to circulate hot air, providing faster and more even cooking. We specialize in fan motor replacements, electronic control repairs, and heating element problems that are common with these sophisticated appliances.
               </p>
               <Image 
-                src="/images/services/convection-oven.jpg" 
+                src="/images/services/convection-oven.webp" 
                 alt="Convection oven"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -463,12 +463,12 @@ export default function OvenRepairPage() {
                 Integrated oven units that are installed within cabinetry. Our technicians have the expertise to repair these complex units without damaging surrounding cabinetry, handling everything from control panel issues to heating element replacements.
               </p>
               <Image 
-                src="/images/services/built-in-oven.jpg" 
+                src="/images/services/built-in-oven.webp" 
                 alt="Built-in wall oven"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -483,12 +483,12 @@ export default function OvenRepairPage() {
                 Combination units with a cooktop and oven in one appliance. We service both gas and electric models, repairing everything from faulty igniters and gas valves to broken heating elements and temperature sensors.
               </p>
               <Image 
-                src="/images/services/range-oven.jpg" 
+                src="/images/services/range-oven.webp" 
                 alt="Range oven"
                 width={400}
                 height={300}
                 className="rounded-2xl w-full h-48 object-cover"
-              />
+              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>
@@ -750,31 +750,31 @@ export default function OvenRepairPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Fix Your Oven?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Fix Your Oven?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
               Our expert technicians are standing by to provide fast, reliable oven repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

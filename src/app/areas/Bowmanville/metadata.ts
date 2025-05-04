@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/bowmanville-og.jpg',
+        url: '/images/areas/bowmanville-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Bowmanville'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Bowmanville | JK Appliances',
     description: 'Professional appliance repair throughout Bowmanville. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/bowmanville-twitter.jpg']
+    images: ['/images/areas/bowmanville-twitter.webp']
   },
   keywords: [
     'Bowmanville appliance repair', 

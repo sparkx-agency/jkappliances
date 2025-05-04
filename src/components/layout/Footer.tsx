@@ -2,20 +2,34 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Footer = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if we're on the client-side
+    if (typeof window !== "undefined") {
+      // Set initial state
+      setIsMobile(window.innerWidth < 768);
+      
+      // Add event listener for window resize
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+      
+      window.addEventListener('resize', handleResize);
+      
+      // Clean up
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
   const toggleSection = (section: string) => {
     setActiveSection(activeSection === section ? null : section);
-  };
-
-  const isMobileView = () => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth < 768;
-    }
-    return false;
   };
 
   // Footer columns and links
@@ -65,6 +79,38 @@ const Footer = () => {
     },
   ];
 
+  // Company details
+  const companyDetails = [
+    { 
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      ),
+      content: "8 Lorraine Cres, Brampton, ON L6S 2R7",
+      href: "https://maps.google.com/?q=8+Lorraine+Cres,+Brampton,+ON+L6S+2R7"
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      content: "Info@jkappliances.ca",
+      href: "mailto:Info@jkappliances.ca"
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      content: "Monday - Sunday 7:00 AM - 9:00 PM",
+      href: null
+    }
+  ];
+
   return (
     <footer className="bg-[#f5f5f7] border-t border-gray-200">
       {/* Main Footer Content */}
@@ -73,13 +119,37 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="JK Appliance Repair"
                 width={160}
                 height={40}
                 className="h-10 w-auto"
+                style={{ objectFit: "contain" }}
               />
             </Link>
+
+            {/* Company Details */}
+            <div className="mt-4 space-y-2.5 max-w-sm">
+              {companyDetails.map((detail, index) => (
+                detail.href ? (
+                  <Link 
+                    key={index} 
+                    href={detail.href} 
+                    className="flex items-start text-gray-500 hover:text-gray-700 transition-colors text-sm"
+                    target={detail.href.startsWith('http') ? "_blank" : undefined}
+                    rel={detail.href.startsWith('http') ? "noopener noreferrer" : undefined}
+                  >
+                    {detail.icon}
+                    <span>{detail.content}</span>
+                  </Link>
+                ) : (
+                  <div key={index} className="flex items-start text-gray-500 text-sm">
+                    {detail.icon}
+                    <span>{detail.content}</span>
+                  </div>
+                )
+              ))}
+            </div>
           </div>
           <div className="flex items-center space-x-6 md:ml-auto">
             <Link href="tel:+16475608966" className="text-gray-500 hover:text-gray-700 transition-colors">
@@ -130,8 +200,8 @@ const Footer = () => {
               </button>
               <div 
                 className={`${
-                  activeSection === section.title || !isMobileView() ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0 md:opacity-100 md:max-h-96 overflow-hidden'
-                } transition-all duration-300 md:pt-4`}
+                  activeSection === section.title ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0 overflow-hidden'
+                } transition-all duration-300 md:max-h-96 md:opacity-100 md:pt-4 md:overflow-visible`}
               >
                 <ul className="space-y-3">
                   {section.links.map((link) => (

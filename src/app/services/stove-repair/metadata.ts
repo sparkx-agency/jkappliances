@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/stove-repair.jpg',
+          url: '/images/services/stove-repair.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician repairing a stove',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Professional Stove Repair Services | JK Appliances',
       description: 'Expert stove and range repair with same-day service. We fix heating elements, ignition problems, temperature issues, and more with guaranteed results.',
-      images: ['/images/services/stove-repair.jpg'],
+      images: ['/images/services/stove-repair.webp'],
     },
     keywords: 'stove repair, range repair, oven repair, cooktop repair, appliance repair, electric stove repair, gas stove repair, heating element replacement, ignition repair, burner repair, same-day repair, Toronto stove repair',
   };

@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.webp', sizes: '180x180', type: 'image/png' },
     ],
   },
   keywords: ["appliance repair", "Toronto", "GTA", "refrigerator repair", "washer repair", "dryer repair", "stove repair", "oven repair"],
@@ -47,7 +49,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "JK Appliance Repair",
-              "image": "https://jkappliancerepair.ca/images/logo.png",
+              "image": "https://jkappliancerepair.ca/images/logo.webp",
               "url": "https://jkappliancerepair.ca",
               "telephone": "+1-647-560-8966",
               "address": {

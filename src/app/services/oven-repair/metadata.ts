@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/oven-repair.jpg',
+          url: '/images/services/oven-repair.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician repairing an oven',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Professional Oven Repair Services | JK Appliances',
       description: 'Expert oven repair with same-day service. We fix heating elements, temperature issues, door problems, and more with guaranteed results.',
-      images: ['/images/services/oven-repair.jpg'],
+      images: ['/images/services/oven-repair.webp'],
     },
     keywords: 'oven repair, wall oven repair, built-in oven repair, electric oven repair, gas oven repair, oven heating element replacement, oven thermostat repair, oven door repair, oven sensor repair, Toronto oven repair',
   };

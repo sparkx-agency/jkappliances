@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/dishwasher-repair.jpg',
+          url: '/images/services/dishwasher-repair.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician repairing a dishwasher',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Professional Dishwasher Repair Services | JK Appliances',
       description: 'Expert dishwasher repair with same-day service. We fix leaks, drainage issues, cleaning problems, and more with guaranteed results.',
-      images: ['/images/services/dishwasher-repair.jpg'],
+      images: ['/images/services/dishwasher-repair.webp'],
     },
     keywords: 'dishwasher repair, dishwasher not draining, dishwasher leaking, dishwasher not cleaning, appliance repair, Bosch dishwasher repair, Whirlpool dishwasher repair, KitchenAid repair, same-day repair, Toronto dishwasher repair',
   }; 

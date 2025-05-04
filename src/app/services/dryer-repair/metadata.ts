@@ -15,7 +15,7 @@ export const metadata: Metadata = {
       siteName: 'JK Appliance Repair',
       images: [
         {
-          url: '/images/services/dryer-repair.jpg',
+          url: '/images/services/dryer-repair.webp',
           width: 1200,
           height: 630,
           alt: 'Professional technician repairing a dryer',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       card: 'summary_large_image',
       title: 'Expert Dryer Repair Services | JK Appliances',
       description: 'Professional dryer repair with same-day service. We fix cooling issues, water leaks, ice makers, and more with guaranteed results.',
-      images: ['/images/services/dryer-repair.jpg'],
+      images: ['/images/services/dryer-repair.webp'],
     },
     keywords: 'dryer repair, dryer repair near me, dryer repair services, dryer repair cost, dryer repair parts, dryer repair troubleshooting, dryer repair warranty, dryer repair technician, dryer repair near me, dryer repair services, dryer repair cost, dryer repair parts, dryer repair troubleshooting, dryer repair warranty, dryer repair technician, dryer repair near me',
   };

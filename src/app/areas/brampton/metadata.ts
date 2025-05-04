@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/brampton-og.jpg',
+        url: '/images/areas/brampton-og.webp',
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Brampton'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Brampton | JK Appliances',
     description: 'Professional appliance repair throughout Brampton. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/brampton-twitter.jpg']
+    images: ['/images/areas/brampton-twitter.webp']
   },
   keywords: [
     'Brampton appliance repair', 

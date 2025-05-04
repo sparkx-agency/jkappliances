@@ -20,9 +20,9 @@ const torontoData = {
   name: 'Toronto',
   fullName: 'Toronto, Ontario',
   description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.jpg',
-  neighborhoodImage: '/images/toronto-map.jpg',
-  mapImage: '/images/toronto.jpg',
+  heroImage: '/images/toronto-skyline.webp',
+  neighborhoodImage: '/images/toronto-map.webp',
+  mapImage: '/images/toronto.webp',
   
   // Location information
   address: {
@@ -67,25 +67,25 @@ const torontoData = {
     {
       id: 'refrigerator-repair',
       name: 'Refrigerator Repair',
-      image: '/images/services/refrigerator-repair.jpg',
+      image: '/images/services/refrigerator-repair.webp',
       description: 'Expert refrigerator repair for all major brands in Toronto.'
     },
     {
       id: 'washer-repair',
       name: 'Washer Repair',
-      image: '/images/services/washer-repair.jpg',
+      image: '/images/services/washer-repair.webp',
       description: 'Professional washing machine repairs for condos and homes.'
     },
     {
       id: 'dryer-repair',
       name: 'Dryer Repair',
-      image: '/images/services/dryer-repair.jpg',
+      image: '/images/services/dryer-repair.webp',
       description: 'Fast, reliable dryer repair services throughout Toronto.'
     },
     {
       id: 'dishwasher-repair',
       name: 'Dishwasher Repair',
-      image: '/images/services/dishwasher-repair.jpg',
+      image: '/images/services/dishwasher-repair.webp',
       description: 'Expert dishwasher technicians serving the Toronto area.'
     }
   ],
@@ -96,19 +96,19 @@ const torontoData = {
       title: 'Condo Complex Appliance Service',
       location: 'Downtown Toronto',
       description: 'Regular maintenance program for 200+ units in a luxury high-rise building.',
-      image: '/images/projects/toronto-condo.jpg'
+      image: '/images/projects/toronto-condo.webp'
     },
     {
       title: 'Restaurant Equipment Repair',
       location: 'Financial District',
       description: 'Commercial kitchen equipment repair for a chain of restaurants.',
-      image: '/images/projects/toronto-restaurant.jpg'
+      image: '/images/projects/toronto-restaurant.webp'
     },
     {
       title: 'Smart Home Integration',
       location: 'Rosedale',
       description: 'Installation and repair of connected appliances in a smart home.',
-      image: '/images/projects/toronto-smarthome.jpg'
+      image: '/images/projects/toronto-smarthome.webp'
     }
   ],
   
@@ -147,7 +147,7 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Refrigerator Repair',
-    image: '/images/services/refrigerator-repair.jpg',
+    image: '/images/services/refrigerator-repair.webp',
     description: 'Our Toronto refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Toronto neighborhoods with same-day appointments available.',
     commonServices: [
       'Temperature regulation issues',
@@ -161,7 +161,7 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'washer-repair',
     name: 'Washer Repair',
-    image: '/images/services/washer-repair.jpg',
+    image: '/images/services/washer-repair.webp',
     description: 'Our washer repair services in Toronto cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Toronto home.',
     commonServices: [
       'Drum and agitator problems',
@@ -175,7 +175,7 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dryer-repair',
     name: 'Dryer Repair',
-    image: '/images/services/dryer-repair.jpg',
+    image: '/images/services/dryer-repair.webp',
     description: 'When your dryer stops working properly in Toronto, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Toronto team can solve your dryer problems quickly and effectively.',
     commonServices: [
       'Heating element replacements',
@@ -189,7 +189,7 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'dishwasher-repair',
     name: 'Dishwasher Repair',
-    image: '/images/services/dishwasher-repair.jpg',
+    image: '/images/services/dishwasher-repair.webp',
     description: 'Our Toronto dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Toronto, often on the same day you call.',
     commonServices: [
       'Spray arm repairs and replacements',
@@ -203,7 +203,7 @@ const torontoServices: AreaServiceItem[] = [
   {
     id: 'oven-repair',
     name: 'Oven & Stove Repair',
-    image: '/images/services/oven-repair.jpg',
+    image: '/images/services/oven-repair.webp',
     description: 'For oven and stove repairs in Toronto, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Toronto area.',
     commonServices: [
       'Heating element replacements',
@@ -221,61 +221,61 @@ const torontoBrands: BrandItem[] = [
   {
     id: 'samsung',
     name: 'Samsung',
-    logo: '/images/brands/samsung.svg',
+    logo: '/images/brands/samsung.webp',
     link: '/brands/samsung'
   },
   {
     id: 'lg',
     name: 'LG',
-    logo: '/images/brands/lg.svg',
+    logo: '/images/brands/lg.webp',
     link: '/brands/lg'
   },
   {
     id: 'whirlpool',
     name: 'Whirlpool',
-    logo: '/images/brands/whirlpool.svg',
+    logo: '/images/brands/whirlpool.webp',
     link: '/brands/whirlpool'
   },
   {
     id: 'ge',
     name: 'GE',
-    logo: '/images/brands/ge.svg',
+    logo: '/images/brands/ge.webp',
     link: '/brands/ge'
   },
   {
     id: 'maytag',
     name: 'Maytag',
-    logo: '/images/brands/maytag.svg',
+    logo: '/images/brands/maytag.webp',
     link: '/brands/maytag'
   },
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchen-aid.svg',
+    logo: '/images/brands/kitchen-aid.webp',
     link: '/brands/kitchenaid'
   },
   {
     id: 'electrolux',
     name: 'Electrolux',
-    logo: '/images/brands/electrolux.svg',
+    logo: '/images/brands/electrolux.webp',
     link: '/brands/electrolux'
   },
   {
     id: 'bosch',
     name: 'Bosch',
-    logo: '/images/brands/bosch.svg',
+    logo: '/images/brands/bosch.webp',
     link: '/brands/bosch'
   },
   {
     id: 'miele',
     name: 'Miele',
-    logo: '/images/brands/miele.svg',
+    logo: '/images/brands/miele.webp',
     link: '/brands/miele'
   },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
-    logo: '/images/brands/frigidaire.svg',
+    logo: '/images/brands/frigidaire.webp',
     link: '/brands/frigidaire'
   }
 ];

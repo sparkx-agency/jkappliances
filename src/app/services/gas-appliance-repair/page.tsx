@@ -226,13 +226,13 @@ export default function GasApplianceRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/gas-appliance-repair.jpg"
+                  src="/images/services/gas-appliance-repair.webp"
                   alt="Gas Appliance Repair Service"
                   width={600}
                   height={450}
                   priority
                   className="w-full h-full object-cover"
-                />
+                  style={{ objectFit: "contain" }} />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg">
                 <div className="flex items-center">
@@ -327,19 +327,19 @@ export default function GasApplianceRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/gas-technician.jpg" 
+                  src="/images/services/gas-technician.webp" 
                   alt="Licensed gas technician at work"
                   width={600}
                   height={400}
                   className="w-full h-full object-cover"
-                />
+                  style={{ objectFit: "contain" }} />
               </div>
             </motion.div>
           </div>
         </div>
       </section>
       
-      {/* Common Problems Section */}
+      {/* Common Problems Section */} 
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-6xl">
           <motion.div
@@ -423,12 +423,12 @@ export default function GasApplianceRepairPage() {
                 We repair all types of gas stoves and cooktops including freestanding ranges, built-in cooktops, and professional-grade ranges. Common issues include ignition problems, uneven heating, and gas valve malfunctions.
               </p>
               <Image 
-                src="/images/services/gas-stove.jpg" 
+                src="/images/services/gas-stove.webp" 
                 alt="Gas stove repair"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+                style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -443,12 +443,12 @@ export default function GasApplianceRepairPage() {
                 Our technicians are experienced in repairing gas ovens of all types including wall ovens and range ovens. We address issues like temperature inconsistencies, ignition problems, and thermostat malfunctions.
               </p>
               <Image 
-                src="/images/services/gas-oven.jpg" 
+                src="/images/services/gas-oven.webp" 
                 alt="Gas oven repair"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+                style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -463,12 +463,12 @@ export default function GasApplianceRepairPage() {
                 We provide comprehensive repairs for all types of gas water heaters, addressing issues like pilot light problems, insufficient hot water, leaks, and thermocouple failures with a focus on safety.
               </p>
               <Image 
-                src="/images/services/gas-water-heater.jpg" 
+                src="/images/services/gas-water-heater.webp" 
                 alt="Gas water heater repair"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+                style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -483,12 +483,12 @@ export default function GasApplianceRepairPage() {
                 Our certified technicians can repair all types of gas fireplaces, space heaters, and furnaces. We address ignition issues, gas valve problems, thermostat malfunctions, and ensure proper ventilation for safety.
               </p>
               <Image 
-                src="/images/services/gas-fireplace.jpg" 
+                src="/images/services/gas-fireplace.webp" 
                 alt="Gas fireplace repair"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
-              />
+                style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>
@@ -750,31 +750,31 @@ export default function GasApplianceRepairPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-24 bg-[#0071e3]">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6 max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="text-center"
+            className="bg-[#f2f7fd] rounded-3xl p-12 text-center"
           >
-            <h2 className="text-4xl font-semibold text-white mb-6">
-              Ready to Fix Your Gas Appliance?
+            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
+            Ready to Fix Your Gas Appliance?
             </h2>
-            <p className="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            <p className="text-lg text-[#424245] max-w-3xl mx-auto mb-10 leading-relaxed">
               Our expert technicians are standing by to provide fast, reliable gas appliance repair services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/book" 
-                className="px-8 py-4 bg-white text-[#0071e3] rounded-full font-medium hover:bg-gray-100 transition-all shadow-lg"
+                className="px-8 py-4 bg-[#0071e3] text-white rounded-full font-medium hover:bg-[#0077ed] transition-all shadow-lg"
               >
                 Book a Repair
               </Link>
               <Link 
                 href="tel:6475608966" 
-                className="px-8 py-4 bg-transparent text-white border-2 border-white rounded-full font-medium hover:bg-white/10 transition-all"
+                className="px-8 py-4 bg-[#e5e5ea] text-[#1d1d1f] rounded-full font-medium hover:bg-[#d1d1d6] transition-all"
               >
                 Call (647) 560-8966
               </Link>

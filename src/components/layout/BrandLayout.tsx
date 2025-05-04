@@ -198,7 +198,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
             >
               <div className="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/technician-repairing.jpg"
+                  src="/images/technician-repairing.webp"
                   alt="Technician repairing appliance"
                   fill
                   style={{ objectFit: 'cover' }}
