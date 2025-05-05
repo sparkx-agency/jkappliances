@@ -23,13 +23,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "JK Appliance Repair | Professional Appliance Repair Services in GTA",
     description: "Professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
-    url: "https://jkappliancerepair.ca",
+    url: "https://jkappliances.ca",
     siteName: "JK Appliance Repair",
     locale: "en_CA",
     type: "website",
   },
   alternates: {
-    canonical: 'https://jkappliancerepair.ca',
+    canonical: 'https://jkappliances.ca',
   },
 }
 
@@ -49,8 +49,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "JK Appliance Repair",
-              "image": "https://jkappliancerepair.ca/images/logo.webp",
-              "url": "https://jkappliancerepair.ca",
+              "image": "https://jkappliances.ca/images/logo.webp",
+              "url": "https://jkappliances.ca",
               "telephone": "+1-647-560-8966",
               "address": {
                 "@type": "PostalAddress",
@@ -82,8 +82,8 @@ export default function RootLayout({
               "priceRange": "$$",
               "servesCuisine": "Appliance Repair Services",
               "sameAs": [
-                "https://www.facebook.com/jkappliancerepair",
-                "https://www.instagram.com/jkappliancerepair"
+                "https://www.facebook.com/jkappliances",
+                "https://www.instagram.com/jkappliances"
               ]
             })
           }}
