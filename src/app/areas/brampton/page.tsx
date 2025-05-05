@@ -20,7 +20,7 @@ const bramptonData = {
   name: 'Brampton',
   fullName: 'Brampton, Ontario',
   description: 'From new suburban developments to established neighborhoods, our appliance repair technicians provide prompt service throughout Brampton with same-day appointments available.',
-  heroImage: '/images/brampton-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/brampton-map.webp',
   mapImage: '/images/brampton.webp',
   

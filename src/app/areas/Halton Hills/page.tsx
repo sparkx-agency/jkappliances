@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Halton Hills area data
 const haltonHillsData = {
@@ -21,7 +22,7 @@ const haltonHillsData = {
   name: 'Halton Hills',
   fullName: 'Halton Hills, Ontario',
   description: 'From historic homes in Georgetown to rural properties in Acton, our appliance repair technicians provide prompt service throughout Halton Hills with same-day appointments available.',
-  heroImage: '/images/haltonhills-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/haltonhills-map.webp',
   mapImage: '/images/haltonhills.webp',
   
@@ -503,10 +504,10 @@ export default function HaltonHillsAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Halton Hills Customers Say"
         subtitle="Read testimonials from satisfied customers across Halton Hills communities"
-        testimonials={haltonHillsTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

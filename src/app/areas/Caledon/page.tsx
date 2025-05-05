@@ -13,6 +13,7 @@ import BrandsSliderSection from '@/components/sections/BrandsSliderSection';
 import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 import CouponSection from '@/components/sections/CouponSection';
 
 const CaledonPage: React.FC = () => {
@@ -22,7 +23,7 @@ const CaledonPage: React.FC = () => {
     name: 'Caledon',
     fullName: 'Caledon, Ontario',
     description: 'Professional appliance repair services throughout Caledon and surrounding areas. Our experienced technicians service all major brands including Samsung, LG, Whirlpool, and more.',
-    heroImage: '/images/areas/caledon-area.webp',
+    heroImage: '/images/areas/areas-hero.webp',
     neighborhoodImage: '/images/caledon-map.webp',
     mapImage: '/images/caledon.webp',
   
@@ -217,7 +218,7 @@ const CaledonPage: React.FC = () => {
   {
       id: 'kitchenaid',
       name: 'KitchenAid', 
-      logo: '/images/brands/kitchenaid.webp',
+      logo: '/images/brands/kitchen-aid.webp',
       link: '/brands/kitchenaid'
   },
   {
@@ -375,10 +376,10 @@ const CaledonPage: React.FC = () => {
       </section>
       
       {/* Customer Testimonials */}
-      <TestimonialsSection 
+      <AppleTestimonialsSection
         title="What Caledon Customers Say About Us"
         subtitle="Read about experiences from our satisfied Caledon customers"
-        testimonials={testimonials}
+        maxReviews={4}
       />
 
       {/* Brands We Service */}

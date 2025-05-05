@@ -226,7 +226,7 @@ export default function DryerRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/Dryer-repair.webp"
+                  src="/images/services/dryer-repair.webp"
                   alt="Dryer Repair Service"
                   width={600}
                   height={450}
@@ -328,7 +328,7 @@ export default function DryerRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/Dryer-technician.webp" 
+                  src="/images/services/dryer-technician.webp" 
                   alt="Dryer repair technician at work"
                   width={600}
                   height={400}

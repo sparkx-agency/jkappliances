@@ -37,12 +37,12 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { label: "Refrigerator Repair", href: "/services/refrigerator-repair" },
-        { label: "Washer Repair", href: "/services/washer-repair" },
-        { label: "Dryer Repair", href: "/services/dryer-repair" },
-        { label: "Dishwasher Repair", href: "/services/dishwasher-repair" },
-        { label: "Oven Repair", href: "/services/oven-repair" },
-        { label: "Stove Repair", href: "/services/stove-repair" },
+        { label: "Refrigerator Repair", href: "/refrigerator-repair" },
+        { label: "Washer Repair", href: "/washer-repair" },
+        { label: "Dryer Repair", href: "/dryer-repair" },
+        { label: "Dishwasher Repair", href: "/dishwasher-repair" },
+        { label: "Oven Repair", href: "/oven-repair" },
+        { label: "Stove Repair", href: "/stove-repair" },
       ],
     },
     {
@@ -59,11 +59,11 @@ const Footer = () => {
     {
       title: "Brands",
       links: [
-        { label: "Samsung", href: "/brands/samsung" },
-        { label: "LG", href: "/brands/lg" },
-        { label: "Whirlpool", href: "/brands/whirlpool" },
-        { label: "GE", href: "/brands/ge" },
-        { label: "Bosch", href: "/brands/bosch" },
+        { label: "Samsung", href: "/samsung-appliance-repair" },
+        { label: "LG", href: "/lg-appliance-repair" },
+        { label: "Whirlpool", href: "/whirlpool-appliance-repair" },
+        { label: "GE", href: "/ge-appliance-repair" },
+        { label: "Bosch", href: "/bosch-appliance-repair" },
         { label: "View All Brands", href: "/brands" },
       ],
     },

@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // East York area data
 const eastYorkData = {
@@ -21,7 +22,7 @@ const eastYorkData = {
   name: 'East York',
   fullName: 'East York, Toronto',
   description: 'From charming bungalows to mid-century homes and newer condos, our appliance repair technicians provide prompt service throughout East York with same-day appointments available.',
-  heroImage: '/images/eastyork-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/eastyork-map.webp',
   mapImage: '/images/eastyork.webp',
   
@@ -496,10 +497,10 @@ export default function EastYorkAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our East York Customers Say"
         subtitle="Read testimonials from satisfied customers across East York neighborhoods"
-        testimonials={eastYorkTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

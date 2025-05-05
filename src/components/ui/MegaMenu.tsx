@@ -31,7 +31,7 @@ const MegaMenu = () => {
   const serviceItems: ServiceItem[] = [
     {
       name: 'Refrigerator Repair',
-      href: '/services/refrigerator-repair',
+      href: '/refrigerator-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="2" width="16" height="20" rx="2" strokeWidth="2" />
@@ -42,7 +42,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Dishwasher Repair',
-      href: '/services/dishwasher-repair',
+      href: '/dishwasher-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="2" />
@@ -53,7 +53,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Washer Repair',
-      href: '/services/washer-repair',
+      href: '/washer-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <circle cx="12" cy="12" r="8" strokeWidth="2" />
@@ -64,7 +64,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Dryer Repair',
-      href: '/services/dryer-repair',
+      href: '/dryer-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="2" />
@@ -75,7 +75,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Oven Repair',
-      href: '/services/oven-repair',
+      href: '/oven-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="2" />
@@ -86,7 +86,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Stove / Cooktop Repair',
-      href: '/services/stove-repair',
+      href: '/stove-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="3" y="3" width="18" height="18" rx="2" strokeWidth="2" />
@@ -99,7 +99,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Freezer Repair',
-      href: '/services/freezer-repair',
+      href: '/freezer-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <rect x="4" y="2" width="16" height="20" rx="2" strokeWidth="2" />
@@ -110,7 +110,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Gas Appliance Repair',
-      href: '/services/gas-appliance-repair',
+      href: '/gas-appliance-repair',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.5 19.5c1.5-2 3.5-3 5.5-3s4 1 5.5 3M8 13a4 4 0 100-8 4 4 0 000 8zM16 13a4 4 0 100-8 4 4 0 000 8z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -119,7 +119,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Installation Services',
-      href: '/services/installation-services',
+      href: '/installation-services',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -128,7 +128,7 @@ const MegaMenu = () => {
     },
     {
       name: 'Maintenance Services',
-      href: '/services/maintenance-services',
+      href: '/maintenance-services',
       icon: (
         <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

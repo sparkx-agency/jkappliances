@@ -31,7 +31,7 @@ const Header = () => {
       items: [
         {
           title: "Refrigerator Repair",
-          href: "/services/refrigerator-repair",
+          href: "/refrigerator-repair",
           description: "Cold storage appliance repairs",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,7 +43,7 @@ const Header = () => {
         },
         {
           title: "Dishwasher Repair",
-          href: "/services/dishwasher-repair",
+          href: "/dishwasher-repair",
           description: "For clean dishes every time",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,7 @@ const Header = () => {
         },
         {
           title: "Oven Repair",
-          href: "/services/oven-repair",
+          href: "/oven-repair",
           description: "Restore your baking power",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,7 +67,7 @@ const Header = () => {
         },
         {
           title: "Stove/Cooktop Repair",
-          href: "/services/stove-repair",
+          href: "/stove-repair",
           description: "Fix your cooking surface",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,7 +86,7 @@ const Header = () => {
       items: [
         {
           title: "Washer Repair",
-          href: "/services/washer-repair",
+          href: "/washer-repair",
           description: "Fix washing machine issues",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,7 +98,7 @@ const Header = () => {
         },
         {
           title: "Dryer Repair",
-          href: "/services/dryer-repair",
+          href: "/dryer-repair",
           description: "Solutions for drying problems",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +115,7 @@ const Header = () => {
       items: [
         {
           title: "Freezer Repair",
-          href: "/services/freezer-repair",
+          href: "/freezer-repair",
           description: "Keep your frozen items safe",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,7 +127,7 @@ const Header = () => {
         },
         {
           title: "Gas Appliance Repair",
-          href: "/services/gas-appliance-repair",
+          href: "/gas-appliance-repair",
           description: "Safe repairs for gas systems",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,7 +137,7 @@ const Header = () => {
         },
         {
           title: "Installation Services",
-          href: "/services/installation-services",
+          href: "/installation-services",
           description: "Expert appliance installation",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -147,7 +147,7 @@ const Header = () => {
         },
         {
           title: "Maintenance Services",
-          href: "/services/maintenance-services",
+          href: "/maintenance-services",
           description: "Preventative care plans",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

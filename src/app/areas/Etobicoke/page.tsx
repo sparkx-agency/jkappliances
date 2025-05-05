@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Etobicoke area data
 const etobicokeData = {
@@ -21,7 +22,7 @@ const etobicokeData = {
   name: 'Etobicoke',
   fullName: 'Etobicoke, Toronto',
   description: 'From lakefront residences to family homes in quiet neighborhoods, our appliance repair technicians provide prompt service throughout Etobicoke with same-day appointments available.',
-  heroImage: '/images/etobicoke-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/etobicoke-map.webp',
   mapImage: '/images/etobicoke.webp',
   
@@ -503,10 +504,10 @@ export default function EtobicokeAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Etobicoke Customers Say"
         subtitle="Read testimonials from satisfied customers across Etobicoke neighborhoods"
-        testimonials={etobicokeTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

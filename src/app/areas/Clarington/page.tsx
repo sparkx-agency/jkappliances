@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Clarington area data
 const claringtonData = {
@@ -21,7 +22,7 @@ const claringtonData = {
   name: 'Clarington',
   fullName: 'Clarington, Ontario',
   description: 'From the historic communities of Bowmanville and Newcastle to the growing areas of Courtice and rural charm of Orono, our appliance repair technicians provide prompt service throughout Clarington with same-day appointments available.',
-  heroImage: '/images/clarington-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/clarington-map.webp',
   mapImage: '/images/clarington.webp',
   
@@ -541,10 +542,10 @@ export default function ClaringtonAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection 
+      <AppleTestimonialsSection
         title="What Our Clarington Customers Say"
         subtitle="Read testimonials from satisfied customers across Clarington communities"
-        testimonials={claringtonTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

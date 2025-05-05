@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jkappliancerepair.ca';
+  const baseUrl = 'https://jkappliances.ca';
   
   // Main pages
   const mainRoutes = [

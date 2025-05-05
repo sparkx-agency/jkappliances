@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Kleinburg area data
 const kleinburgData = {
@@ -21,7 +22,7 @@ const kleinburgData = {
   name: 'Kleinburg',
   fullName: 'Kleinburg, Vaughan',
   description: 'From historic properties in Old Kleinburg to luxury homes in Copper Creek, our appliance repair technicians provide prompt service throughout Kleinburg with same-day appointments available.',
-  heroImage: '/images/kleinburg-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/kleinburg-map.webp',
   mapImage: '/images/kleinburg.webp',
   
@@ -503,10 +504,10 @@ export default function KleinburgAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Kleinburg Customers Say"
         subtitle="Read testimonials from satisfied customers across Kleinburg neighborhoods"
-        testimonials={kleinburgTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

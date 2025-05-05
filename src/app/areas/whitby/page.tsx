@@ -20,7 +20,7 @@ const torontoData = {
   name: 'Toronto',
   fullName: 'Toronto, Ontario',
   description: 'From downtown condos to suburban homes, our appliance repair technicians provide prompt service throughout Toronto with same-day appointments available.',
-  heroImage: '/images/toronto-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/toronto-map.webp',
   mapImage: '/images/toronto.webp',
   

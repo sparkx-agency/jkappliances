@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Georgetown area data
 const georgetownData = {
@@ -21,7 +22,7 @@ const georgetownData = {
   name: 'Georgetown',
   fullName: 'Georgetown, Halton Hills',
   description: 'From historic downtown to newer suburban neighborhoods, our appliance repair technicians provide prompt service throughout Georgetown with same-day appointments available.',
-  heroImage: '/images/georgetown-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/georgetown-map.webp',
   mapImage: '/images/georgetown.webp',
   
@@ -493,10 +494,10 @@ export default function GeorgetownAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Georgetown Customers Say"
         subtitle="Read testimonials from satisfied customers across Georgetown neighborhoods"
-        testimonials={georgetownTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

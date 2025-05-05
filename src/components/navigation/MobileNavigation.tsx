@@ -71,17 +71,16 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
       name: 'Services',
       icon: <WrenchScrewdriverIcon className="w-6 h-6" />,
       content: [
-        { name: 'Refrigerator Repair', href: '/services/refrigerator-repair' },
-        { name: 'Washer Repair', href: '/services/washer-repair' },
-        { name: 'Dryer Repair', href: '/services/dryer-repair' },
-        { name: 'Dishwasher Repair', href: '/services/dishwasher-repair' },
-        { name: 'Oven Repair', href: '/services/oven-repair' },
-        { name: 'Stove/Cooktop Repair', href: '/services/stove-repair' },
-        { name: 'Freezer Repair', href: '/services/freezer-repair' },
-        { name: 'Gas Appliance Repair', href: '/services/gas-appliance-repair' },
-        { name: 'Installation Services', href: '/services/installation-services' },
-        { name: 'Maintenance Services', href: '/services/maintenance-services' },
-        { name: 'All Services', href: '/services' },
+        { name: 'Refrigerator Repair', href: '/refrigerator-repair' },
+        { name: 'Washer Repair', href: '/washer-repair' },
+        { name: 'Dryer Repair', href: '/dryer-repair' },
+        { name: 'Dishwasher Repair', href: '/dishwasher-repair' },
+        { name: 'Oven Repair', href: '/oven-repair' },
+        { name: 'Stove/Cooktop Repair', href: '/stove-repair' },
+        { name: 'Freezer Repair', href: '/freezer-repair' },
+        { name: 'Gas Appliance Repair', href: '/gas-appliance-repair' },
+        { name: 'Installation Services', href: '/installation-services' },
+        { name: 'Maintenance Services', href: '/maintenance-services' },
       ]
     },
     {
@@ -107,15 +106,15 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
       name: 'Brands',
       icon: <BuildingStorefrontIcon className="w-6 h-6" />,
       content: [
-        { name: 'Samsung', href: '/brands/samsung' },
-        { name: 'LG', href: '/brands/lg' },
-        { name: 'Whirlpool', href: '/brands/whirlpool' },
-        { name: 'GE', href: '/brands/ge' },
-        { name: 'Maytag', href: '/brands/maytag' },
-        { name: 'KitchenAid', href: '/brands/kitchenaid' },
-        { name: 'Bosch', href: '/brands/bosch' },
-        { name: 'Miele', href: '/brands/miele' },
-        { name: 'Frigidaire', href: '/brands/frigidaire' },
+        { name: 'Samsung', href: '/samsung-appliance-repair' },
+        { name: 'LG', href: '/lg-appliance-repair' },
+        { name: 'Whirlpool', href: '/whirlpool-appliance-repair' },
+        { name: 'GE', href: '/ge-appliance-repair' },
+        { name: 'Maytag', href: '/maytag-appliance-repair' },
+        { name: 'KitchenAid', href: '/kitchenaid-appliance-repair' },
+        { name: 'Bosch', href: '/bosch-appliance-repair' },
+        { name: 'Miele', href: '/miele-appliance-repair' },
+        { name: 'Frigidaire', href: '/frigidaire-appliance-repair' },
         { name: 'All Brands', href: '/brands' },
       ]
     },
@@ -275,7 +274,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
                   <div className="mb-6">
                     <h3 className="text-lg font-medium text-gray-900 mb-3">Popular Services</h3>
                     <div className="grid grid-cols-2 gap-3">
-                      <Link href="/services/refrigerator-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                      <Link href="/refrigerator-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
                         <span className="block text-blue-600 mb-1">
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <rect x="4" y="2" width="16" height="20" rx="2" strokeWidth="1.5" />
@@ -284,7 +283,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
                         </span>
                         <span className="text-sm font-medium">Refrigerator Repair</span>
                       </Link>
-                      <Link href="/services/washer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                      <Link href="/washer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
                         <span className="block text-blue-600 mb-1">
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <circle cx="12" cy="12" r="8" strokeWidth="1.5" />
@@ -293,7 +292,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
                         </span>
                         <span className="text-sm font-medium">Washer Repair</span>
                       </Link>
-                      <Link href="/services/dryer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                      <Link href="/dryer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
                         <span className="block text-blue-600 mb-1">
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />
@@ -302,7 +301,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
                         </span>
                         <span className="text-sm font-medium">Dryer Repair</span>
                       </Link>
-                      <Link href="/services/dishwasher-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                      <Link href="/dishwasher-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
                         <span className="block text-blue-600 mb-1">
                           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />

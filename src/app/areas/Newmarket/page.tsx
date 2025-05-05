@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Newmarket area data
 const newmarketData = {
@@ -21,7 +22,7 @@ const newmarketData = {
   name: 'Newmarket',
   fullName: 'Newmarket, Ontario',
   description: 'From historic homes in Old Newmarket to modern developments in Stonehaven, our appliance repair technicians provide prompt service throughout Newmarket with same-day appointments available.',
-  heroImage: '/images/newmarket-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/newmarket-map.webp',
   mapImage: '/images/newmarket.webp',
   
@@ -503,10 +504,10 @@ export default function NewmarketAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Newmarket Customers Say"
         subtitle="Read testimonials from satisfied customers across Newmarket neighborhoods"
-        testimonials={newmarketTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

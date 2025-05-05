@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Cambridge area data
 const cambridgeData = {
@@ -21,7 +22,7 @@ const cambridgeData = {
   name: 'Cambridge',
   fullName: 'Cambridge, Ontario',
   description: 'From historic Galt to Preston and Hespeler, our appliance repair technicians provide prompt service throughout Cambridge with same-day appointments available.',
-  heroImage: '/images/cambridge-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/cambridge-map.webp',
   mapImage: '/images/cambridge.webp',
   
@@ -525,10 +526,10 @@ export default function CambridgeAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Cambridge Customers Say"
         subtitle="Read testimonials from satisfied customers across Cambridge neighborhoods"
-        testimonials={cambridgeTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Vaughan area data
 const vaughanData = {
@@ -21,7 +22,7 @@ const vaughanData = {
   name: 'Vaughan',
   fullName: 'Vaughan, Ontario',
   description: 'From bustling urban centers like Woodbridge to family neighborhoods in Maple, our appliance repair technicians provide prompt service throughout Vaughan with same-day appointments available.',
-  heroImage: '/images/vaughan-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/vaughan-map.webp',
   mapImage: '/images/vaughan.webp',
   
@@ -503,10 +504,11 @@ export default function VaughanAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Vaughan Customers Say"
         subtitle="Read testimonials from satisfied customers across Vaughan neighborhoods"
-        testimonials={vaughanTestimonials}
+        filterLocation="Vaughan"
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

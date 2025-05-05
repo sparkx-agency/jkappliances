@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Oakville area data
 const oakvilleData = {
@@ -21,7 +22,7 @@ const oakvilleData = {
   name: 'Oakville',
   fullName: 'Oakville, Ontario',
   description: 'From lakefront estates in Old Oakville to family homes in Glen Abbey, our appliance repair technicians provide prompt service throughout Oakville with same-day appointments available.',
-  heroImage: '/images/oakville-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/oakville-map.webp',
   mapImage: '/images/oakville.webp',
   
@@ -503,10 +504,10 @@ export default function OakvilleAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Oakville Customers Say"
         subtitle="Read testimonials from satisfied customers across Oakville neighborhoods"
-        testimonials={oakvilleTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

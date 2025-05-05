@@ -58,7 +58,7 @@ const brandsData = [
   {
     id: 'kitchenaid',
     name: 'KitchenAid',
-    logo: '/images/brands/kitchenaid.webp',
+    logo: '/images/brands/kitchen-aid.webp',
     description: 'Expert repairs for KitchenAid appliances and mixers.',
     categories: ['refrigerators', 'dishwashers', 'ovens', 'mixers'],
     popular: false,

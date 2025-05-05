@@ -30,25 +30,25 @@ export default function NotFound() {
             <h2 className="text-xl font-semibold mb-4">Popular Services</h2>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                href="/services/refrigerator-repair" 
+                href="/refrigerator-repair" 
                 className="text-blue-600 hover:text-blue-800 hover:underline"
               >
                 Refrigerator Repair
               </Link>
               <Link 
-                href="/services/washer-repair" 
+                href="/washer-repair" 
                 className="text-blue-600 hover:text-blue-800 hover:underline"
               >
                 Washer Repair
               </Link>
               <Link 
-                href="/services/dryer-repair" 
+                href="/dryer-repair" 
                 className="text-blue-600 hover:text-blue-800 hover:underline"
               >
                 Dryer Repair
               </Link>
               <Link 
-                href="/services/dishwasher-repair" 
+                href="/dishwasher-repair" 
                 className="text-blue-600 hover:text-blue-800 hover:underline"
               >
                 Dishwasher Repair

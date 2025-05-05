@@ -20,7 +20,7 @@ const ajaxData = {
   name: 'Ajax',
   fullName: 'Ajax, Ontario',
   description: 'From lakeside homes to new developments, our appliance repair technicians provide prompt service throughout Ajax with same-day appointments available.',
-  heroImage: '/images/ajax-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/ajax-map.webp',
   mapImage: '/images/ajax.webp',
   

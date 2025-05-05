@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // North York area data
 const northYorkData = {
@@ -21,7 +22,7 @@ const northYorkData = {
   name: 'North York',
   fullName: 'North York, Toronto',
   description: 'From high-rise condos along Yonge Street to spacious homes in Willowdale, our appliance repair technicians provide prompt service throughout North York with same-day appointments available.',
-  heroImage: '/images/northyork-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/northyork-map.webp',
   mapImage: '/images/northyork.webp',
   
@@ -503,10 +504,10 @@ export default function NorthYorkAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our North York Customers Say"
         subtitle="Read testimonials from satisfied customers across North York neighborhoods"
-        testimonials={northYorkTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

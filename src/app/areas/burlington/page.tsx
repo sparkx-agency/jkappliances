@@ -20,7 +20,7 @@ const burlingtonData = {
   name: 'Burlington',
   fullName: 'Burlington, Ontario',
   description: 'From lakefront homes to suburban neighborhoods, our appliance repair technicians provide prompt service throughout Burlington with same-day appointments available.',
-  heroImage: '/images/burlington-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/burlington-map.webp',
   mapImage: '/images/burlington.webp',
   

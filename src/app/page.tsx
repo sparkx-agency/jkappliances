@@ -9,7 +9,7 @@ const WhyChooseUsSection = dynamic(() => import('@/components/sections/WhyChoose
   ssr: true,
 });
 
-const TestimonialsSection = dynamic(() => import('@/components/sections/TestimonialsSection'), {
+const AppleTestimonialsSection = dynamic(() => import('@/components/sections/AppleTestimonialsSection'), {
   loading: () => <div className="h-96 bg-gray-50"></div>,
   ssr: true,
 });
@@ -45,7 +45,10 @@ export default function Home() {
       </LazySection>
       
       <LazySection offset={200}>
-        <TestimonialsSection />
+        <AppleTestimonialsSection 
+          title="What Our Customers Are Saying" 
+          subtitle="Real feedback from real customers across the Greater Toronto Area" 
+        />
       </LazySection>
       
       <LazySection offset={200}>

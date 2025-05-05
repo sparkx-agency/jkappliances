@@ -13,5 +13,5 @@ export const isDevelopment = (): boolean => {
 export const getBaseUrl = (): string => {
   return isDevelopment() 
     ? 'http://localhost:3000' 
-    : 'https://jkappliancerepair.ca';
+    : 'https://jkappliances.ca';
 }; 

@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Woodbridge area data
 const woodbridgeData = {
@@ -21,7 +22,7 @@ const woodbridgeData = {
   name: 'Woodbridge',
   fullName: 'Woodbridge, Vaughan',
   description: 'From historic homes in Old Woodbridge to modern developments in Vellore Village, our appliance repair technicians provide prompt service throughout Woodbridge with same-day appointments available.',
-  heroImage: '/images/woodbridge-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/woodbridge-map.webp',
   mapImage: '/images/woodbridge.webp',
   
@@ -503,10 +504,10 @@ export default function WoodbridgeAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Woodbridge Customers Say"
         subtitle="Read testimonials from satisfied customers across Woodbridge neighborhoods"
-        testimonials={woodbridgeTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

@@ -13,9 +13,173 @@ const nextConfig = {
       },
     ],
   },
-  // Add rewrites to handle area page routing
+  // Add rewrites and redirects
   async rewrites() {
     return [
+      // Service page rewrites - direct routes without /services/ prefix
+      {
+        source: '/refrigerator-repair',
+        destination: '/services/refrigerator-repair',
+      },
+      {
+        source: '/washer-repair',
+        destination: '/services/washer-repair',
+      },
+      {
+        source: '/dryer-repair',
+        destination: '/services/dryer-repair',
+      },
+      {
+        source: '/dishwasher-repair',
+        destination: '/services/dishwasher-repair',
+      },
+      {
+        source: '/oven-repair',
+        destination: '/services/oven-repair',
+      },
+      {
+        source: '/stove-repair',
+        destination: '/services/stove-repair',
+      },
+      {
+        source: '/freezer-repair',
+        destination: '/services/freezer-repair',
+      },
+      {
+        source: '/gas-appliance-repair',
+        destination: '/services/gas-appliance-repair',
+      },
+      {
+        source: '/maintenance-services',
+        destination: '/services/maintenance-services',
+      },
+      {
+        source: '/installation-services',
+        destination: '/services/installation-services',
+      },
+      
+      // Brand page rewrites - with appliance-repair suffix
+      {
+        source: '/samsung-appliance-repair',
+        destination: '/brands/samsung',
+      },
+      {
+        source: '/lg-appliance-repair',
+        destination: '/brands/lg',
+      },
+      {
+        source: '/whirlpool-appliance-repair',
+        destination: '/brands/whirlpool',
+      },
+      {
+        source: '/ge-appliance-repair',
+        destination: '/brands/GeneralElectricGE',
+      },
+      {
+        source: '/bosch-appliance-repair',
+        destination: '/brands/Bosch',
+      },
+      {
+        source: '/maytag-appliance-repair',
+        destination: '/brands/Maytag',
+      },
+      {
+        source: '/kitchenaid-appliance-repair',
+        destination: '/brands/KitchenAid',
+      },
+      {
+        source: '/frigidaire-appliance-repair',
+        destination: '/brands/Frigidaire',
+      },
+      {
+        source: '/kenmore-appliance-repair',
+        destination: '/brands/Kenmore',
+      },
+      {
+        source: '/electrolux-appliance-repair',
+        destination: '/brands/Electrolux',
+      },
+      {
+        source: '/miele-appliance-repair',
+        destination: '/brands/Miele',
+      },
+      {
+        source: '/wolf-appliance-repair',
+        destination: '/brands/Wolf',
+      },
+      {
+        source: '/subzero-appliance-repair',
+        destination: '/brands/SubZero',
+      },
+      {
+        source: '/viking-appliance-repair',
+        destination: '/brands/Viking',
+      },
+      {
+        source: '/thermador-appliance-repair',
+        destination: '/brands/Thermador',
+      },
+      {
+        source: '/dacor-appliance-repair',
+        destination: '/brands/Dacor',
+      },
+      {
+        source: '/asko-appliance-repair',
+        destination: '/brands/Asko',
+      },
+      {
+        source: '/fisher-paykel-appliance-repair',
+        destination: '/brands/FisherPaykel',
+      },
+      {
+        source: '/jenn-air-appliance-repair',
+        destination: '/brands/JennAir',
+      },
+      {
+        source: '/liebherr-appliance-repair',
+        destination: '/brands/Liebherr',
+      },
+      {
+        source: '/inglis-appliance-repair',
+        destination: '/brands/Inglis',
+      },
+      {
+        source: '/panasonic-appliance-repair',
+        destination: '/brands/Panasonic',
+      },
+      {
+        source: '/moffat-appliance-repair',
+        destination: '/brands/Moffat',
+      },
+      {
+        source: '/bloomberg-appliance-repair',
+        destination: '/brands/Bloomberg',
+      },
+      {
+        source: '/brada-appliance-repair',
+        destination: '/brands/Brada',
+      },
+      {
+        source: '/aeg-appliance-repair',
+        destination: '/brands/AEG',
+      },
+      {
+        source: '/amana-appliance-repair',
+        destination: '/brands/Amana',
+      },
+      {
+        source: '/bartazzoni-appliance-repair',
+        destination: '/brands/Bartazzoni',
+      },
+      {
+        source: '/fulgor-milano-appliance-repair',
+        destination: '/brands/FulgorMilano',
+      },
+      {
+        source: '/gaggenau-appliance-repair',
+        destination: '/brands/Gaggenau',
+      },
+      
       // Rewrites for area pages - using exact directory casing
       {
         source: '/appliance-repair-ajax',

@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Richmond Hill area data
 const richmondHillData = {
@@ -21,7 +22,7 @@ const richmondHillData = {
   name: 'Richmond Hill',
   fullName: 'Richmond Hill, Ontario',
   description: 'From luxury estates in Bayview Hill to family homes in Oak Ridges, our appliance repair technicians provide prompt service throughout Richmond Hill with same-day appointments available.',
-  heroImage: '/images/richmondhill-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/richmondhill-map.webp',
   mapImage: '/images/richmondhill.webp',
   
@@ -503,10 +504,10 @@ export default function RichmondHillAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Richmond Hill Customers Say"
         subtitle="Read testimonials from satisfied customers across Richmond Hill neighborhoods"
-        testimonials={richmondHillTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}

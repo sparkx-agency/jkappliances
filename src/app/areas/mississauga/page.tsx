@@ -20,7 +20,7 @@ const mississaugaData = {
   name: 'Mississauga',
   fullName: 'Mississauga, Ontario',
   description: 'From lakefront homes to urban condos, our appliance repair technicians provide prompt service throughout Mississauga with same-day appointments available.',
-  heroImage: '/images/mississauga-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/mississauga-map.webp',
   mapImage: '/images/mississauga.webp',
   

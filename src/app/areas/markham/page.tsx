@@ -14,6 +14,7 @@ import type { BrandItem } from '@/components/sections/BrandsSliderSection';
 import BlogSection from '@/components/sections/BlogSection';
 import CouponSection from '@/components/sections/CouponSection';
 import TestimonialsSection, { TestimonialItem } from '@/components/sections/TestimonialsSection';
+import AppleTestimonialsSection from '@/components/sections/AppleTestimonialsSection';
 
 // Markham area data
 const markhamData = {
@@ -21,7 +22,7 @@ const markhamData = {
   name: 'Markham',
   fullName: 'Markham, Ontario',
   description: 'From heritage streets of Old Markham to modern developments in Unionville, our appliance repair technicians provide prompt service throughout Markham with same-day appointments available.',
-  heroImage: '/images/markham-skyline.webp',
+  heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/markham-map.webp',
   mapImage: '/images/markham.webp',
   
@@ -503,10 +504,10 @@ export default function MarkhamAreaPage() {
       </section>
       
       {/* Testimonials Section */}
-      <TestimonialsSection
+      <AppleTestimonialsSection
         title="What Our Markham Customers Say"
         subtitle="Read testimonials from satisfied customers across Markham neighborhoods"
-        testimonials={markhamTestimonials}
+        maxReviews={4}
       />
 
       {/* Neighborhoods Section */}
