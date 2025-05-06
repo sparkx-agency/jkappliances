@@ -160,7 +160,7 @@ export default function MaintenanceServicesPage() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
   
   return (
-    <div className="bg-[#f5f5f7] pt-24 pb-20">
+    <div className="bg-[#f5f5f7] pt-24  ">
       {/* Hero Section */}
       <section className="bg-white pt-10 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -327,7 +327,7 @@ export default function MaintenanceServicesPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/maintenance-technician.webp" 
+                  src="/images/services/maintenance-technician.jpg" 
                   alt="Appliance maintenance technician at work"
                   width={600}
                   height={400}
@@ -422,13 +422,6 @@ export default function MaintenanceServicesPage() {
               <p className="text-[#424245] mb-4">
                 Our refrigerator maintenance service includes cleaning condenser coils, checking refrigerant levels, inspecting door seals, cleaning filters, checking temperature settings, and ensuring proper airflow. Regular maintenance helps prevent costly breakdowns and keeps your food fresh.
               </p>
-              <Image 
-                src="/images/services/refrigerator-maintenance.webp" 
-                alt="Refrigerator maintenance"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -442,13 +435,6 @@ export default function MaintenanceServicesPage() {
               <p className="text-[#424245] mb-4">
                 We provide comprehensive maintenance for washers and dryers, including cleaning filters, checking hoses and connections, inspecting drum and motor bearings, cleaning lint traps, checking heating elements, and testing electronic controls to ensure efficient operation.
               </p>
-              <Image 
-                src="/images/services/washer-maintenance.webp" 
-                alt="Washer and dryer maintenance"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -462,13 +448,6 @@ export default function MaintenanceServicesPage() {
               <p className="text-[#424245] mb-4">
                 Our dishwasher maintenance includes cleaning filters and spray arms, checking water inlet valves, inspecting door seals, cleaning interior components, testing water temperature, and checking drain systems to ensure optimal cleaning performance.
               </p>
-              <Image 
-                src="/images/services/dishwasher-maintenance.webp" 
-                alt="Dishwasher maintenance"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -482,13 +461,6 @@ export default function MaintenanceServicesPage() {
               <p className="text-[#424245] mb-4">
                 We provide thorough maintenance for ovens and ranges, including cleaning burners and heating elements, checking gas connections, calibrating temperature controls, inspecting door hinges and seals, and testing safety systems for reliable cooking results.
               </p>
-              <Image 
-                src="/images/services/oven-maintenance.webp" 
-                alt="Oven and range maintenance"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
             </motion.div>
           </div>
         </div>

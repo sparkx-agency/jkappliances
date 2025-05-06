@@ -161,7 +161,7 @@ const Header = () => {
   ];
 
   const applianceServicesFeaturedImage = {
-    src: "/images/header-img.webp",
+    src: "/images/megamenu-image.webp",
     alt: "Appliance repair technician fixing a refrigerator",
     title: "Same-Day Repairs Available",
     description: "Our certified technicians can fix most appliance issues on the first visit.",
@@ -279,7 +279,7 @@ const Header = () => {
   ];
 
   const aboutUsFeaturedImage = {
-    src: "/images/header-img.webp",
+    src: "/images/megamenu-image.webp",
     alt: "Appliance repair technician at work",
     title: "Expert Appliance Repair",
     description: "Our certified technicians can fix any appliance issue, from refrigerators to ovens.",
@@ -313,6 +313,36 @@ const Header = () => {
                   style={{ objectFit: "contain" }} />
               </motion.div>
             </Link>
+          </div>
+
+          {/* Mobile Header Buttons (Message & Call) */}
+          <div className="flex md:hidden items-center gap-3 mr-2 pl-26">
+            <motion.button 
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-black shadow-sm active:shadow-inner border border-gray-200"
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              aria-label="Send a text message"
+              onClick={() => window.open(`sms:${phoneNumber.replace(/-/g, '')}`)}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.button>
+            <motion.a 
+              href={`tel:${phoneNumber.replace(/-/g, '')}`}
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-black shadow-sm active:shadow-inner border border-gray-200"
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              aria-label="Call us"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 16.92V19.92C22 20.4704 21.7893 20.9996 21.4142 21.3746C21.0391 21.7497 20.5099 21.9604 19.96 21.96C16.4214 21.7856 13.0074 20.5341 10.07 18.36C7.37382 16.3805 5.19 14.1967 3.21 11.5C1.03 8.54089 0.778519 5.10977 0.61 1.59997C0.60975 1.05005 0.820387 0.521144 1.19537 0.146149C1.57036 -0.228847 2.09877 -0.43941 2.64 -0.43997H5.64C6.1305 -0.44248 6.60456 -0.259412 6.97453 -0.022358C7.3445 0.214696 7.5881 0.585343 7.66 1C7.78704 1.89169 7.99898 2.77085 8.29 3.62C8.4256 3.98808 8.44353 4.38494 8.34095 4.76258C8.23837 5.14022 8.02084 5.47998 7.71 5.73L6.4 7.03C8.2482 10.041 10.689 12.5461 13.7 14.42L15 13.11C15.2514 12.7991 15.5923 12.5809 15.9707 12.4775C16.3491 12.3741 16.7466 12.3911 17.115 12.53C17.9642 12.822 18.8434 13.034 19.735 13.16C20.1528 13.2326 20.5261 13.4765 20.766 13.8457C21.0059 14.2149 21.0935 14.6673 21 15.15V16.92H22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.a>
           </div>
 
           {/* Desktop Navigation */}

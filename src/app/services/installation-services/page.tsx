@@ -226,7 +226,7 @@ export default function InstallationServicesPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/appliance-installation.webp"
+                  src="/images/services/appliance-install.webp"
                   alt="Appliance Installation Service"
                   width={600}
                   height={450}
@@ -327,7 +327,7 @@ export default function InstallationServicesPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/installation-technician.webp" 
+                  src="/images/services/appliance-technician.jpg" 
                   alt="Appliance installation technician at work"
                   width={600}
                   height={400}
@@ -422,13 +422,7 @@ export default function InstallationServicesPage() {
               <p className="text-[#424245] mb-4">
                 We install all types of refrigeration units including standard refrigerators, French door models, side-by-side designs, built-in refrigerators, and standalone freezers. Our service includes water line connection, leveling, and door alignment.
               </p>
-              <Image 
-                src="/images/services/refrigerator-installation.webp" 
-                alt="Refrigerator installation"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
+             
             </motion.div>
             
             <motion.div
@@ -442,13 +436,7 @@ export default function InstallationServicesPage() {
               <p className="text-[#424245] mb-4">
                 From standard top-loading washers to front-loading machines and stackable units, we provide expert installation including water and drain connections, vent hookups, and proper leveling to minimize vibration and noise.
               </p>
-              <Image 
-                src="/images/services/washer-installation.webp" 
-                alt="Washer and dryer installation"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
+              
             </motion.div>
             
             <motion.div
@@ -462,13 +450,6 @@ export default function InstallationServicesPage() {
               <p className="text-[#424245] mb-4">
                 Our technicians are experienced in installing both built-in and portable dishwashers, connecting water and drain lines, ensuring proper electrical connections, and testing for leaks and proper operation.
               </p>
-              <Image 
-                src="/images/services/dishwasher-installation.webp" 
-                alt="Dishwasher installation"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
             </motion.div>
             
             <motion.div
@@ -482,13 +463,7 @@ export default function InstallationServicesPage() {
               <p className="text-[#424245] mb-4">
                 We install all types of cooking appliances including freestanding ranges, built-in ovens, cooktops, and range hoods. Our services include gas line connection, electrical wiring, and ventilation system setup.
               </p>
-              <Image 
-                src="/images/services/stove-installation.webp" 
-                alt="Range and oven installation"
-                width={400}
-                height={300}
-                className="rounded-2xl w-full h-48 object-cover"
-              style={{ objectFit: "contain" }} />
+              
             </motion.div>
           </div>
         </div>

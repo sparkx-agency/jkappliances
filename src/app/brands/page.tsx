@@ -47,6 +47,33 @@ const brandsData = [
     categories: ['refrigerators', 'washers', 'dryers', 'dishwashers'],
     popular: true,
   },
+
+  {
+    id: 'aeg',
+    name: 'AEG',
+    logo: '/images/brands/aeg.webp',
+    description: 'Quality repair services for all AEG home appliances.',
+    categories: ['refrigerators', 'washers', 'dryers', 'dishwashers', 'ovens'],
+    popular: false,
+  },
+
+  {
+    id: 'Asko',
+    name: 'Asko',
+    logo: '/images/brands/asko.webp',
+    description: 'Quality repair services for all Asko home appliances.',
+    categories: [ 'washers', 'dryers', 'dishwashers'],
+    popular: false,
+  },
+
+  {
+    id: 'Bertazzoni',
+    name: 'Bertazzoni',
+    logo: '/images/brands/bertazzoni.webp',
+    description: 'Quality repair services for all Bertazzoni home appliances.',
+    categories: ['dishwashers', 'ovens'],
+    popular: false,
+  },
   {
     id: 'frigidaire',
     name: 'Frigidaire',
@@ -135,6 +162,7 @@ const brandsData = [
     categories: ['refrigerators', 'washers', 'dryers', 'air-conditioners'],
     popular: false,
   },
+  
 ];
 
 // Appliance categories for filtering

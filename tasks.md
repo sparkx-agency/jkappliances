@@ -7,9 +7,6 @@
 - [x] Improve mobile design for service categories with icon tabs
 - [x] Convert images to WebP format sitewide
 - [x] Remove backgrounds from brand logos
-- [ ] Create consistent color scheme across all components
-- [ ] Implement subtle animations for page transitions
-- [ ] Improve hover states and interactive elements for better feedback
 - [ ] Standardize card designs across different sections
 - [ ] Add loading states/skeletons for dynamic content
 - [ ] Enhance visual hierarchy in long content pages

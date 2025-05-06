@@ -107,21 +107,6 @@ export default function BlogPostPage() {
             
             <div className="flex items-center justify-center mb-10">
               <div className="flex items-center mr-6">
-                {post.author.avatar ? (
-                  <Image 
-                    src={post.author.avatar} 
-                    alt={post.author.name}
-                    width={40} 
-                    height={40} 
-                    className="rounded-full mr-3"
-                  />
-                ) : (
-                  <div className="w-10 h-10 bg-gray-200 rounded-full mr-3 flex items-center justify-center">
-                    <span className="text-sm font-medium text-gray-600">
-                      {post.author.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
                 <span className="text-gray-700 font-medium">{post.author.name}</span>
               </div>
               
@@ -188,21 +173,6 @@ export default function BlogPostPage() {
           <div className="mt-12 pt-8 border-t border-gray-200">
             <div className="bg-gray-50 rounded-2xl p-8">
               <div className="flex flex-col sm:flex-row items-center sm:items-start">
-                {post.author.avatar ? (
-                  <Image 
-                    src={post.author.avatar} 
-                    alt={post.author.name} 
-                    width={80} 
-                    height={80} 
-                    className="rounded-full mb-4 sm:mb-0 sm:mr-6"
-                  />
-                ) : (
-                  <div className="w-20 h-20 bg-gray-200 rounded-full mb-4 sm:mb-0 sm:mr-6 flex items-center justify-center">
-                    <span className="text-2xl font-medium text-gray-600">
-                      {post.author.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center sm:text-left">
                     About {post.author.name}

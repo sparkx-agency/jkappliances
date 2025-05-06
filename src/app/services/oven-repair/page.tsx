@@ -160,7 +160,7 @@ export default function OvenRepairPage() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
   
   return (
-    <div className="bg-[#f5f5f7] pt-24 pb-20">
+    <div className="bg-[#f5f5f7] pt-24  ">
       {/* Hero Section */}
       <section className="bg-white pt-10 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -226,7 +226,7 @@ export default function OvenRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/oven-repair.webp"
+                  src="/images/services/oven.webp"
                   alt="Oven Repair Service"
                   width={600}
                   height={450}
@@ -327,7 +327,7 @@ export default function OvenRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/oven-technician.webp" 
+                  src="/images/services/ovenss.jpg" 
                   alt="Oven repair technician at work"
                   width={600}
                   height={400}

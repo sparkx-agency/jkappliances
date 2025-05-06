@@ -8,6 +8,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'src' | 'onLoad'> {
   mobileSrc?: string;
   fadeIn?: boolean;
   sizes?: string;
+  preserveAspectRatio?: boolean;
 }
 
 export default function OptimizedImage({
@@ -21,6 +22,7 @@ export default function OptimizedImage({
   priority = false,
   sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
   className = '',
+  preserveAspectRatio = false,
   ...rest
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(priority);
@@ -49,6 +51,7 @@ export default function OptimizedImage({
     ${className}
     ${fadeIn && !isLoaded ? 'opacity-0' : 'opacity-100'}
     ${fadeIn ? 'transition-opacity duration-500' : ''}
+    ${!preserveAspectRatio ? 'mobile-aspect-ratio' : ''}
   `.trim();
 
   return (

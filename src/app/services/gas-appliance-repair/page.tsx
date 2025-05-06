@@ -226,7 +226,7 @@ export default function GasApplianceRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/gas-appliance-repair.webp"
+                  src="/images/services/gas-cooktop.webp"
                   alt="Gas Appliance Repair Service"
                   width={600}
                   height={450}
@@ -327,7 +327,7 @@ export default function GasApplianceRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/gas-technician.webp" 
+                  src="/images/services/stovess.jpg" 
                   alt="Licensed gas technician at work"
                   width={600}
                   height={400}
@@ -483,7 +483,7 @@ export default function GasApplianceRepairPage() {
                 Our certified technicians can repair all types of gas fireplaces, space heaters, and furnaces. We address ignition issues, gas valve problems, thermostat malfunctions, and ensure proper ventilation for safety.
               </p>
               <Image 
-                src="/images/services/gas-fireplace.webp" 
+                src="/images/services/fireplace.webp" 
                 alt="Gas fireplace repair"
                 width={400}
                 height={300}

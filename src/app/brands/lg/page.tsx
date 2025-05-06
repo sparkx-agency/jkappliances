@@ -18,12 +18,12 @@ const brandData = {
     {
         id: 'refrigerator',
         name: 'Refrigerator Repair',
-      image: '/images/services/lg-refrigerator.webp',
         description: 'Expert repair for all LG refrigerator models, including French door, side-by-side, and smart refrigerators.',
+        image: '/images/services/refrigerator-repair.webp',
         icon: 'refrigerator',
-      commonIssues: [
+        commonIssues: [
           'Cooling problems',
-        'Ice maker malfunctions',
+          'Ice maker malfunctions',
           'Strange noises',
           'Water leakage',
           'Smart features not working'
@@ -32,10 +32,10 @@ const brandData = {
       {
         id: 'washer',
         name: 'Washer Repair',
-      image: '/images/services/lg-washer.webp',
         description: 'Professional repair services for front-load, top-load, and combination LG washer models.',
+        image: '/images/services/washer-repair.webp',
         icon: 'washer',
-      commonIssues: [
+        commonIssues: [
           'Spinning issues',
           'Loud operation',
           'Leaking water',
@@ -46,10 +46,10 @@ const brandData = {
       {
         id: 'dryer',
         name: 'Dryer Repair',
-      image: '/images/services/lg-dryer.webp',
         description: 'Comprehensive repair solutions for electric, gas, and heat pump LG dryers.',
+        image: '/images/services/dryer-repair.webp',
         icon: 'dryer',
-      commonIssues: [
+        commonIssues: [
           'Not heating properly',
           'Noisy operation',
           'Won\'t start',
@@ -60,10 +60,10 @@ const brandData = {
       {
         id: 'dishwasher',
         name: 'Dishwasher Repair',
-      image: '/images/services/lg-dishwasher.webp',
         description: 'Expert repairs for all LG dishwasher models, including smart and built-in units.',
+        image: '/images/services/dishwasher-repair.webp',
         icon: 'dishwasher',
-      commonIssues: [
+        commonIssues: [
           'Not cleaning properly',
           'Leaking',
           'Drainage issues',
@@ -74,10 +74,10 @@ const brandData = {
       {
         id: 'oven',
         name: 'Oven Repair',
-      image: '/images/services/lg-oven.webp',
         description: 'Specialized repair services for LG electric, gas, and combination ovens and ranges.',
+        image: '/images/services/oven-repair.webp',
         icon: 'oven',
-      commonIssues: [
+        commonIssues: [
           'Not heating correctly',
           'Temperature inaccuracy',
           'Self-cleaning issues',
@@ -88,10 +88,10 @@ const brandData = {
       {
         id: 'microwave',
         name: 'Microwave Repair',
-      image: '/images/services/lg-microwave.webp',
         description: 'Professional repair for countertop, built-in, and over-the-range LG microwaves.',
+        image: '/images/services/microwave-repair.webp',
         icon: 'microwave',
-      commonIssues: [
+        commonIssues: [
           'Not heating',
           'Turntable not rotating',
           'Loud operation',

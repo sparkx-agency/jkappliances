@@ -156,21 +156,6 @@ const BlogSection: React.FC<BlogSectionProps> = ({
                       {post.excerpt}
                     </p>
                     <div className="flex items-center mt-auto">
-                      {post.author.avatar ? (
-                        <Image 
-                          src={post.author.avatar} 
-                          alt={post.author.name}
-                          width={32} 
-                          height={32} 
-                          className="rounded-full mr-3"
-                        />
-                      ) : (
-                        <div className="w-8 h-8 bg-gray-200 rounded-full mr-3 flex items-center justify-center">
-                          <span className="text-xs font-medium text-gray-600">
-                            {post.author.name.charAt(0)}
-                          </span>
-                        </div>
-                      )}
                       <div className="flex-1">
                         <p className="text-sm font-medium text-gray-900">{post.author.name}</p>
                         <p className="text-xs text-gray-500">{post.readTime} min read</p>

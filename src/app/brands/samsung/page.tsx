@@ -2,7 +2,7 @@
 
 import BrandLayout from '@/components/layout/BrandLayout';
 import { BrandInfo, Advantage, Testimonial, FAQItem } from '@/components/layout/BrandLayout';
-import { BrandServiceItem } from '@/components/sections/BrandServicesSection';
+import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSection';
 
 // Brand Information
 const samsungInfo: BrandInfo = {
@@ -19,8 +19,7 @@ const samsungServices: BrandServiceItem[] = [
   {
     id: 'refrigerator-repair',
     name: 'Samsung Refrigerator Repair',
-    image: '/images/services/refrigerator.webp',
-    description: 'Expert repair services for all Samsung refrigerator models, including French door, side-by-side, bottom freezer, and smart refrigerators.',
+        description: 'Expert repair services for all Samsung refrigerator models, including French door, side-by-side, bottom freezer, and smart refrigerators.',
     commonIssues: [
       'Cooling problems',
       'Ice maker malfunction',
@@ -29,13 +28,13 @@ const samsungServices: BrandServiceItem[] = [
       'Display panel errors',
       'Unusual noises',
       'Temperature fluctuations'
-    ]
+    ],
+    image: '/images/services/fridge-repair.png'
   },
   {
     id: 'washer-repair',
     name: 'Samsung Washer Repair',
-    image: '/images/services/washer.webp',
-    description: 'Professional repair services for all Samsung washing machine models, including front-load, top-load, and combination washer/dryers.',
+        description: 'Professional repair services for all Samsung washing machine models, including front-load, top-load, and combination washer/dryers.',
     commonIssues: [
       'Won\'t start or power issues',
       'Not spinning or draining',
@@ -44,13 +43,13 @@ const samsungServices: BrandServiceItem[] = [
       'Leaking water',
       'Door lock problems',
       'Smart features not connecting'
-    ]
+    ],
+    image: '/images/services/washing-machine-repair.png'
   },
   {
     id: 'dryer-repair',
     name: 'Samsung Dryer Repair',
-    image: '/images/services/dryer.webp',
-    description: 'Complete repair solutions for all Samsung dryer models, including electric, gas, and heat pump dryers.',
+        description: 'Complete repair solutions for all Samsung dryer models, including electric, gas, and heat pump dryers.',
     commonIssues: [
       'Not heating properly',
       'Won\'t start',
@@ -59,13 +58,13 @@ const samsungServices: BrandServiceItem[] = [
       'Taking too long to dry',
       'Auto sensor not working',
       'Overheating'
-    ]
+    ],
+    image: '/images/services/dryer-repair.png'
   },
   {
     id: 'dishwasher-repair',
     name: 'Samsung Dishwasher Repair',
-    image: '/images/services/dishwasher.webp',
-    description: 'Specialized repair services for all Samsung dishwasher models.',
+        description: 'Specialized repair services for all Samsung dishwasher models.',
     commonIssues: [
       'Not cleaning properly',
       'Not draining water',
@@ -74,13 +73,13 @@ const samsungServices: BrandServiceItem[] = [
       'Leaking water',
       'Control panel unresponsive',
       'Error codes displaying'
-    ]
+    ],
+    image: '/images/services/dishwasher-repair.png'
   },
   {
     id: 'oven-repair',
     name: 'Samsung Oven Repair',
-    image: '/images/services/oven.webp',
-    description: 'Expert repair for all Samsung oven types including single, double, wall ovens, and ranges.',
+        description: 'Expert repair for all Samsung oven types including single, double, wall ovens, and ranges.',
     commonIssues: [
       'Not heating to correct temperature',
       'Uneven cooking',
@@ -89,13 +88,13 @@ const samsungServices: BrandServiceItem[] = [
       'Control panel issues',
       'Error codes',
       'Timer or clock malfunction'
-    ]
+    ],
+    image: '/images/services/walloven-repair.png  '
   },
   {
     id: 'stove-repair',
     name: 'Samsung Stove Repair',
-    image: '/images/services/stove.webp',
-    description: 'Professional repair services for all Samsung cooktops and ranges, including gas, electric, and induction models.',
+        description: 'Professional repair services for all Samsung cooktops and ranges, including gas, electric, and induction models.',
     commonIssues: [
       'Burners not igniting',
       'Temperature control issues',
@@ -104,7 +103,8 @@ const samsungServices: BrandServiceItem[] = [
       'Control knob problems',
       'Error codes',
       'Smart features not responding'
-    ]
+    ],
+    image: '/images/services/cooktop-repair.png'
   }
 ];
 

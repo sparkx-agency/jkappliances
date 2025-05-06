@@ -149,18 +149,37 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
 
   return (
     <>
-      {/* Toggle Button */}
-      <button 
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden flex items-center justify-center p-2 rounded-full bg-white shadow-sm text-blue-600 hover:bg-blue-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-        aria-label="Toggle mobile menu"
-      >
-        {isOpen ? (
-          <XMarkIcon className="w-6 h-6" />
-        ) : (
-          <Bars3Icon className="w-6 h-6" />
-        )}
-      </button>
+      {/* Mobile Menu Button - Fixed Position */}
+      <div className="md:hidden fixed bottom-6 right-6 z-[60]">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className={`flex items-center justify-center w-14 h-14 rounded-full ${
+              isOpen 
+                ? 'bg-white text-blue-600' 
+                : 'bg-blue-600 text-white'
+            } backdrop-blur-sm shadow-lg transition-all duration-300`}
+            style={{
+              boxShadow: isOpen 
+                ? '0 8px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06)' 
+                : '0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1)',
+              border: isOpen ? '1px solid rgba(224, 224, 224, 0.8)' : 'none'
+            }}
+            aria-label="Toggle mobile menu"
+          >
+            {isOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            )}
+          </button>
+        </motion.div>
+      </div>
 
       {/* Overlay when drawer is open */}
       <AnimatePresence>
@@ -185,7 +204,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed bottom-0 left-0 right-0 w-full max-h-[85vh] bg-white z-50 overflow-hidden rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.12)] md:hidden"
+            className="fixed bottom-0 left-0 right-0 w-full max-h-[85vh] bg-white z-50 overflow-hidden rounded-t-3xl shadow-[0_-8px_30px_rgba(0,0,0,0.12)] md:hidden pb-24"
           >
             {/* Drawer Header with Pill Handle */}
             <div className="flex flex-col items-center pt-4 pb-2">

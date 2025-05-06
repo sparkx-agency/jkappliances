@@ -160,7 +160,7 @@ export default function FreezerRepairPage() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
   
   return (
-    <div className="bg-[#f5f5f7] pt-24 pb-20">
+    <div className="bg-[#f5f5f7] pt-24  ">
       {/* Hero Section */}
       <section className="bg-white pt-10 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -226,7 +226,7 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/freezer-repair.webp"
+                  src="/images/services/fridge-freezer.webp"
                   alt="Freezer Repair Service"
                   width={600}
                   height={450}
@@ -548,7 +548,7 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/built-in-freezer.webp" 
+                  src="/images/services/fridge-freezer.WEBP" 
                   alt="Built-in Freezer Repair"
                   width={600}
                   height={450}
@@ -595,7 +595,7 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/freezer-refrigerator.webp" 
+                  src="/images/services/free-standing-fridge.webp" 
                   alt="Refrigerator Freezer Combination Repair"
                   width={600}
                   height={450}

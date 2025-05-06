@@ -6,7 +6,6 @@ export interface Review {
   rating: number;
   date: string;
   reviewText: string;
-  profileImage: string;
   verified: boolean;
   serviceType: string;
 }
@@ -22,7 +21,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-12-15",
     reviewText: "JK Appliance Repair saved me when my fridge stopped working right before a big holiday dinner. Their technician arrived within hours, diagnosed the issue quickly, and had it fixed the same day. Highly professional service!",
-    profileImage: "/images/avatars/avatar-1.webp",
     verified: true,
     serviceType: "Refrigerator Repair"
   },
@@ -34,7 +32,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-11-28",
     reviewText: "I was impressed with how knowledgeable the technician was about my washing machine. He explained everything clearly and gave me tips on how to maintain it properly. The repair was done efficiently and my washer works like new again.",
-    profileImage: "/images/avatars/avatar-2.webp",
     verified: true,
     serviceType: "Washer Repair"
   },
@@ -46,7 +43,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-12-10",
     reviewText: "JK Appliance has serviced my appliances multiple times and they never disappoint. This time they fixed my dryer that other companies couldn't repair. They're my go-to for any appliance issues now.",
-    profileImage: "/images/avatars/avatar-4.webp",
     verified: true,
     serviceType: "Dryer Repair"
   },
@@ -58,7 +54,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-12-05",
     reviewText: "Best appliance repair service I've used. The technician was professional, efficient, and honest about what needed to be done. He didn't try to upsell unnecessary repairs which I really appreciated.",
-    profileImage: "/images/avatars/avatar-6.webp",
     verified: true,
     serviceType: "Refrigerator Repair"
   },
@@ -70,7 +65,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-12-12",
     reviewText: "After my dishwasher flooded my kitchen, JK Appliance came to the rescue! They responded quickly to my emergency call and fixed the issue permanently. Their 24/7 service is truly reliable.",
-    profileImage: "/images/avatars/avatar-10.webp",
     verified: true,
     serviceType: "Dishwasher Repair"
   },
@@ -84,7 +78,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-11-15",
     reviewText: "Exceptional service from start to finish. The booking process was simple, the technician arrived on time, and fixed my stove with no hassle. Fair pricing too. I'll definitely use them again.",
-    profileImage: "/images/avatars/avatar-5.webp",
     verified: true,
     serviceType: "Stove Repair"
   },
@@ -96,7 +89,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-11-30",
     reviewText: "I've had multiple appliance repair companies come to my home over the years, but JK Appliance stands out for their customer service and technician expertise. They went above and beyond to fix my complex washer issue.",
-    profileImage: "/images/avatars/avatar-9.webp",
     verified: true,
     serviceType: "Washer Repair"
   },
@@ -108,7 +100,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-11-25",
     reviewText: "Very professional from the first phone call to the completion of the repair. The technician was knowledgeable, careful, and thorough. My refrigerator is running better than before.",
-    profileImage: "/images/avatars/avatar-11.webp",
     verified: true,
     serviceType: "Refrigerator Repair"
   },
@@ -122,7 +113,6 @@ export const reviews: Review[] = [
     rating: 4,
     date: "2023-12-03",
     reviewText: "Good service overall. The technician was a bit late but called ahead to inform me. Once he arrived, he worked quickly to repair my dishwasher and was thorough in testing it after the repair was done.",
-    profileImage: "/images/avatars/avatar-3.webp",
     verified: true,
     serviceType: "Dishwasher Repair"
   },
@@ -134,7 +124,6 @@ export const reviews: Review[] = [
     rating: 4,
     date: "2023-12-08",
     reviewText: "Reliable and prompt service. The technician came exactly when scheduled and fixed my oven issue. He was courteous and made sure to explain what was wrong and how he fixed it.",
-    profileImage: "/images/avatars/avatar-8.webp",
     verified: true,
     serviceType: "Oven Repair"
   },
@@ -146,7 +135,6 @@ export const reviews: Review[] = [
     rating: 5,
     date: "2023-11-20",
     reviewText: "Very pleased with the service I received. My freezer was making strange noises and not cooling properly. The technician identified the issue promptly and had it working perfectly within an hour.",
-    profileImage: "/images/avatars/avatar-7.webp",
     verified: true,
     serviceType: "Freezer Repair"
   },
@@ -158,7 +146,6 @@ export const reviews: Review[] = [
     rating: 4,
     date: "2023-12-01",
     reviewText: "Good value for the quality of service provided. The technician was skilled and efficient in repairing my dryer. Would recommend to others looking for appliance repair.",
-    profileImage: "/images/avatars/avatar-12.webp",
     verified: true,
     serviceType: "Dryer Repair"
   },

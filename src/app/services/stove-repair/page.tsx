@@ -160,7 +160,7 @@ export default function StoveRepairPage() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
   
   return (
-    <div className="bg-[#f5f5f7] pt-24 pb-20">
+    <div className="bg-[#f5f5f7] pt-24  ">
       {/* Hero Section */}
       <section className="bg-white pt-10 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -327,7 +327,7 @@ export default function StoveRepairPage() {
             >
               <div className="aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/stove-technician.webp" 
+                  src="/images/services/stovess.jpg" 
                   alt="Stove repair technician at work"
                   width={600}
                   height={400}
@@ -423,7 +423,7 @@ export default function StoveRepairPage() {
                 Electric models often experience issues with heating elements and temperature control boards. Our technicians have specialized testing equipment to diagnose electronic issues quickly and provide efficient repairs for all electric cooking appliances.
               </p>
               <Image 
-                src="/images/services/electric-stove.webp" 
+                src="/images/services/electric-cooktop.webp" 
                 alt="Electric stove"
                 width={400}
                 height={300}

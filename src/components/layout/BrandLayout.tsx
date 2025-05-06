@@ -4,8 +4,11 @@ import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import BrandFAQSection from '@/components/sections/BrandFAQSection';
-import BrandServicesSection, { BrandServiceItem } from '@/components/sections/BrandServicesSection';
+import BrandFAQSection from '@/components/sections/brands/BrandFAQSection';
+import BrandServicesSection, { BrandServiceItem } from '@/components/sections/brands/BrandServicesSection';
+import TestimonialsSliderSection from '../sections/common/TestimonialsSliderSection';
+import BrandsSliderSection, { BrandItem } from '../sections/brands/BrandsSliderSection';
+import ModernCTASection from '../sections/common/ModernCTASection';
 
 export interface Advantage {
   title: string;
@@ -56,6 +59,14 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
   primaryColor = "#000", 
   secondaryColor = "#f5f5f7" 
 }) => {
+  // Convert relatedBrands string array to BrandItem array
+  const relatedBrandItems: BrandItem[] = relatedBrands.map(brandName => ({
+    id: brandName.toLowerCase().replace(/\s+/g, '-'),
+    name: brandName,
+    logo: `/images/brands/${brandName.toLowerCase().replace(/\s+/g, '-')}.webp`,
+    link: `/brands/${brandName.toLowerCase().replace(/\s+/g, '-')}`
+  }));
+
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section - Apple-style minimalist hero with large typography */}
@@ -248,58 +259,11 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
         </div>
       </section>
 
-      {/* Testimonials - Simple, elegant testimonial cards */}
-      <section className="py-32 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-20"
-          >
-            <h2 className="text-5xl font-semibold text-gray-900 mb-8">
-              Customer Experiences
-            </h2>
-            <p className="text-xl text-gray-500 max-w-3xl mx-auto font-light">
-              Read what our customers have to say about our {brandInfo.name} appliance repair services.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-                className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition-all"
-              >
-                <div className="text-yellow-400 flex mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-200'}`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic font-light text-lg">&quot;{testimonial.text}&quot;</p>
-                <div className="flex items-center">
-                  <div>
-                    <p className="font-medium text-gray-900">{testimonial.author}</p>
-                    <p className="text-sm text-gray-500">{testimonial.location}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/*Testimonials Section*/}
+      <TestimonialsSliderSection 
+        title="What Our Customers Say"
+        subtitle="Hear from our valued customers about their experience with our services."
+      />
 
       {/* FAQ Section */}
       <BrandFAQSection 
@@ -307,72 +271,23 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
         faqs={faqs}
       />
 
-      {/* Related Brands - Simple horizontal list */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-semibold text-gray-900 mb-8">
-              Other Brands We Service
-            </h2>
-            <p className="text-xl text-gray-500 max-w-3xl mx-auto mb-12 font-light">
-              We repair all major appliance brands with the same level of expertise.
-            </p>
-          </motion.div>
+      {/*BrandsSliderSection*/}
+      <BrandsSliderSection 
+        title="Other Brands We Service"
+        subtitle="We repair all major appliance brands with the same level of expertise."
+        brands={relatedBrandItems}
+        locationName={brandInfo.name}
+      />
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {relatedBrands.map((brand, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: index * 0.1 }}
-              >
-                <Link 
-                  href={`/brands/${brand.toLowerCase()}`}
-                  className="px-8 py-4 bg-gray-50 rounded-full text-gray-700 font-medium hover:bg-gray-100 transition-colors flex items-center"
-                >
-                  {brand}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Simple, bold call to action */}
-      <section className="py-32 bg-black text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-5xl font-semibold mb-8">
-              Ready to Fix Your {brandInfo.name} Appliance?
-            </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-light">
-              Book a repair service today with our certified technicians. We&apos;ll get your appliance running like new!
-            </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link 
-                href="/book" 
-                className="px-10 py-5 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium"
-              >
-                Schedule a Repair
-              </Link>
-              <Link 
-                href="tel:647-560-8966" 
-                className="px-10 py-5 bg-transparent border border-white text-white rounded-full hover:bg-white/10 transition-colors text-lg font-medium"
-              >
-                Call 647-560-8966
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Modern CTA Section */}
+      <ModernCTASection 
+        style="google"
+        title={`Ready to Fix Your ${brandInfo.name} Appliance?`}
+        subtitle={`Book your repair service today with our certified ${brandInfo.name} specialists. We'll get your appliance running like new!`}
+        primaryButtonText="Book a Repair"
+        secondaryButtonText="Call Now"
+        imageUrl={`/images/brands/${brandInfo.id}-repair.webp`}
+      />
     </div>
   );
 };

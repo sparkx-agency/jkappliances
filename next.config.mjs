@@ -11,6 +11,14 @@ const nextConfig = {
         protocol: 'http',
         hostname: 'localhost',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
     ],
   },
   // Add rewrites and redirects
@@ -243,7 +251,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-king-city',
-        destination: '/areas/King%20City',
+        destination: '/areas/king-city',
       },
       {
         source: '/appliance-repair-kleinburg',

@@ -177,7 +177,7 @@ export default function WashingMachineRepairPage() {
   const [activeFaq, setActiveFaq] = React.useState<number | null>(null);
   
   return (
-    <div className="bg-[#f5f5f7] pt-24 pb-20">
+    <div className="bg-[#f5f5f7] pt-24  ">
       {/* Hero Section */}
       <section className="bg-white pt-10 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
@@ -243,7 +243,7 @@ export default function WashingMachineRepairPage() {
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden">
                 <Image
-                  src="/images/services/washing-machine-repair.webp"
+                  src="/images/services/washer.webp"
                   alt="Washing Machine Repair Service"
                   width={600}
                   height={450}
@@ -342,14 +342,13 @@ export default function WashingMachineRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
                 <Image 
-                  src="/images/services/washing-machine-technician.webp" 
+                  src="/images/services/washerss.jpg" 
                   alt="Washing Machine repair technician at work"
-                  width={600}
-                  height={400}
-                  className="w-full h-full object-cover"
-                style={{ objectFit: "contain" }} />
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
             </motion.div>
           </div>
@@ -440,7 +439,7 @@ export default function WashingMachineRepairPage() {
                 These popular models often experience issues with water leakage, excessive vibration, and draining problems. Our technicians have the specialized equipment needed to diagnose and repair these problems quickly.
               </p>
               <Image 
-                src="/images/services/top-loading-washing-machine.webp" 
+                src="/images/services/top-load-washer.webp" 
                 alt="Top-loading washing machine"
                 width={400}
                 height={300}
@@ -460,7 +459,7 @@ export default function WashingMachineRepairPage() {
                 These integrated models can be challenging to repair due to their installation complexity and top-mounted motors that are prone to overheating. Our specialists have the expertise to access and repair these units without damaging surrounding cabinetry.
               </p>
               <Image 
-                src="/images/services/front-loading-washing-machine.webp" 
+                src="/images/services/front-load-washer.webp" 
                 alt="Front-loading washing machine"
                 width={400}
                 height={300}
@@ -468,25 +467,6 @@ export default function WashingMachineRepairPage() {
               style={{ objectFit: "contain" }} />
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-lg transition-all"
-            >
-              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">High-Efficiency Washing Machines</h3>
-              <p className="text-[#424245] mb-4">
-                These specialized washing machines have unique components like water level sensors and detergent dispensers. Our technicians are trained to address their unique cooling requirements and repair complex dispensing mechanisms.
-              </p>
-              <Image 
-                src="/images/services/high-efficiency-washing-machine.webp" 
-                alt="High-efficiency washing machine"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded-xl"
-              style={{ objectFit: "contain" }} />
-            </motion.div>
           </div>
         </div>
       </section>

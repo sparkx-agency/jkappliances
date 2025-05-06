@@ -10,7 +10,6 @@ export interface BlogPost {
   publishDate: string;
   author: {
     name: string;
-    avatar?: string;
   };
   featuredImage: string;
   categories: string[];
@@ -70,9 +69,8 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-05-15',
     author: {
       name: 'David Chen',
-      avatar: '/images/blog/authors/david.webp',
     },
-    featuredImage: '/images/blog/refrigerator-not-cooling.webp',
+    featuredImage: '/images/blog/refrigerator-not-cooling.jpg',
     categories: ['troubleshooting', 'maintenance'],
     tags: ['refrigerator', 'cooling issues', 'troubleshooting', 'DIY'],
     relatedServices: ['refrigerator-repair'],
@@ -132,9 +130,8 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-06-22',
     author: {
       name: 'Sarah Johnson',
-      avatar: '/images/blog/authors/sarah.webp',
     },
-    featuredImage: '/images/blog/washing-machine-vibration.webp',
+    featuredImage: '/images/blog/energy-efficient-appliances.jpg',
     categories: ['troubleshooting', 'maintenance', 'repairs'],
     tags: ['washing machine', 'vibration', 'DIY repair', 'maintenance'],
     relatedServices: ['washer-repair'],
@@ -190,15 +187,14 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-07-08',
     author: {
       name: 'Mike Rodriguez',
-      avatar: '/images/blog/authors/mike.webp',
     },
-    featuredImage: '/images/blog/dryer-not-heating.webp',
+    featuredImage: 'https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
     categories: ['troubleshooting', 'maintenance', 'repairs'],
     tags: ['dryer', 'heating issues', 'troubleshooting', 'DIY repair'],
     relatedServices: ['dryer-repair'],
     relatedBrands: ['samsung', 'lg', 'whirlpool', 'maytag', 'ge'],
     relatedAreas: ['toronto', 'mississauga', 'brampton', 'richmond-hill'],
-    readTime: 9,
+    readTime: 8,
   },
   {
     id: 'dishwasher-buying-guide',
@@ -271,9 +267,8 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-08-14',
     author: {
       name: 'Jennifer Lee',
-      avatar: '/images/blog/authors/jennifer.webp',
     },
-    featuredImage: '/images/blog/dishwasher-buying-guide.webp',
+    featuredImage: '/images/blog/dishwasher-buying-guide.jpg',
     categories: ['buying-guides', 'technology'],
     tags: ['dishwasher', 'buying guide', 'appliance features', 'energy efficiency'],
     relatedServices: ['dishwasher-repair'],
@@ -353,9 +348,8 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-09-05',
     author: {
       name: 'Robert Kim',
-      avatar: '/images/blog/authors/robert.webp',
     },
-    featuredImage: '/images/blog/samsung-refrigerator-ice-maker.webp',
+    featuredImage: '/images/blog/ice-maker-issues.jpg',
     categories: ['troubleshooting', 'repairs'],
     tags: ['samsung', 'refrigerator', 'ice maker', 'troubleshooting'],
     relatedServices: ['refrigerator-repair'],
@@ -468,7 +462,6 @@ export const blogPosts: BlogPost[] = [
     publishDate: '2023-10-20',
     author: {
       name: 'Elena Martinez',
-      avatar: '/images/blog/authors/elena.webp',
     },
     featuredImage: '/images/blog/energy-efficient-appliances.webp',
     categories: ['energy-efficiency', 'buying-guides', 'technology'],
@@ -477,6 +470,295 @@ export const blogPosts: BlogPost[] = [
     relatedBrands: ['samsung', 'lg', 'whirlpool', 'ge', 'bosch', 'maytag'],
     relatedAreas: ['toronto', 'mississauga', 'brampton', 'vaughan', 'richmond-hill'],
     readTime: 11,
+  },
+  {
+    id: 'dishwasher-not-draining',
+    title: 'Why Is My Dishwasher Not Draining? Expert Solutions for Standing Water',
+    slug: 'dishwasher-not-draining',
+    excerpt: 'Dealing with standing water in your dishwasher? Discover the common causes and practical solutions to fix drainage issues in your dishwasher.',
+    content: `
+      <p>Standing water at the bottom of your dishwasher after a cycle is not only frustrating but can lead to unpleasant odors, poor cleaning performance, and potentially even water damage to your kitchen floor. Let's explore why this happens and what you can do about it.</p>
+      
+      <h2>Common Causes of Dishwasher Drainage Problems</h2>
+      
+      <h3>1. Clogged Garbage Disposal or Air Gap</h3>
+      <p>Many dishwashers connect to the garbage disposal or an air gap. If you've recently installed a garbage disposal but haven't removed the drain plug, or if the disposal or air gap is clogged, water can't drain properly from your dishwasher.</p>
+      <p><strong>Solution:</strong> If you have a garbage disposal, make sure it's clear of debris and that the knockout plug was removed during installation. If you have an air gap (the small cylinder on top of your sink), remove the cap and clean out any debris that may be clogging it.</p>
+      
+      <h3>2. Clogged Drain Filter or Basket</h3>
+      <p>The most common cause of drainage issues is a filter basket clogged with food particles or foreign objects. This filter catches debris to prevent it from entering the drain pump.</p>
+      <p><strong>Solution:</strong> Remove the bottom rack of your dishwasher and locate the filter (typically in the bottom center). Most modern dishwashers have a filter that can be twisted and lifted out. Clean it thoroughly under running water, removing any debris, grease, or food particles.</p>
+      
+      <h3>3. Blocked Drain Hose</h3>
+      <p>The drain hose that runs from your dishwasher to either the garbage disposal or drain pipe can become kinked or clogged with debris, restricting water flow.</p>
+      <p><strong>Solution:</strong> Check the drain hose for kinks or bends. To check for clogs, disconnect the hose (after placing a pan underneath to catch water) and blow through it or run water through it in the opposite direction of normal flow to dislodge any blockage.</p>
+      
+      <h3>4. Faulty Drain Pump</h3>
+      <p>If your dishwasher's drain pump is malfunctioning or has failed completely, water won't be forced out through the drain hose.</p>
+      <p><strong>Solution:</strong> Listen for a humming sound during the drain cycle without any water movement, which could indicate a pump problem. Testing and replacing the drain pump typically requires professional expertise.</p>
+      
+      <h3>5. Check Valve Issues</h3>
+      <p>A stuck or faulty check valve can prevent water from flowing out of the dishwasher or allow it to flow back in after draining.</p>
+      <p><strong>Solution:</strong> The check valve is typically located where the drain hose connects to the pump. Inspect it for proper movement and clean it if necessary, or replace if damaged.</p>
+      
+      <h3>6. Timer or Control Board Malfunction</h3>
+      <p>In some cases, the dishwasher's electronic controls may not be properly activating the drain cycle.</p>
+      <p><strong>Solution:</strong> This is generally a job for professionals who can properly diagnose and repair electronic components.</p>
+      
+      <h2>DIY Troubleshooting Steps</h2>
+      <ol>
+        <li>Cancel the wash cycle and remove as much standing water as possible using a cup or wet/dry vacuum.</li>
+        <li>Remove and clean the dishwasher filter and drain basket.</li>
+        <li>Check for and remove any clogs in the garbage disposal or air gap.</li>
+        <li>Inspect the drain hose for kinks or blockages.</li>
+        <li>Run a short wash cycle with nothing but a cup of white vinegar to clear minor clogs and reduce odors.</li>
+        <li>If these steps don't resolve the issue, it's time to call a professional.</li>
+      </ol>
+      
+      <h2>Professional Dishwasher Repair</h2>
+      <p>If you've tried the basic troubleshooting steps and your dishwasher still isn't draining properly, it's time to call in the experts. At JK Appliance Repair, our technicians are experienced with all dishwasher brands including Bosch, KitchenAid, Whirlpool, Samsung, and more.</p>
+      
+      <p>Our technicians can quickly diagnose the problem, whether it's a faulty drain pump, control board issue, or another complex problem. Most repairs can be completed in a single visit, getting your dishwasher back to perfect working order with minimal disruption to your household.</p>
+    `,
+    publishDate: '2023-08-17',
+    author: {
+      name: 'Lisa Wong',
+    },
+    featuredImage: 'https://images.unsplash.com/photo-1581622558667-3419a8dc5f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    categories: ['troubleshooting', 'maintenance', 'repairs'],
+    tags: ['dishwasher', 'drainage issues', 'standing water', 'DIY repair'],
+    relatedServices: ['dishwasher-repair'],
+    relatedBrands: ['bosch', 'kitchenaid', 'whirlpool', 'samsung', 'maytag'],
+    relatedAreas: ['toronto', 'etobicoke', 'north-york', 'richmond-hill'],
+    readTime: 7,
+  },
+  {
+    id: 'refrigerator-buying-guide',
+    title: 'Comprehensive Refrigerator Buying Guide: Styles, Features, and Efficiency',
+    slug: 'refrigerator-buying-guide',
+    excerpt: 'Shopping for a new refrigerator? Our expert guide breaks down everything you need to know about refrigerator types, features, energy efficiency, and more.',
+    content: `
+      <p>Buying a new refrigerator is a significant investment, and with units lasting 10-15 years on average, it's important to choose wisely. This comprehensive guide will help you navigate the various options available so you can select the perfect refrigerator for your needs and budget.</p>
+      
+      <h2>Refrigerator Styles and Configurations</h2>
+      
+      <h3>French Door Refrigerators</h3>
+      <p><strong>Features:</strong> Two side-by-side doors on top and a freezer drawer on the bottom</p>
+      <p><strong>Pros:</strong> Wide shelves for platters and pizza boxes, less door swing space required, freezer organization with pull-out drawers</p>
+      <p><strong>Cons:</strong> Premium pricing, bending required to access the freezer</p>
+      <p><strong>Best for:</strong> Larger families, entertainers, kitchens with island obstructions</p>
+      
+      <h3>Side-by-Side Refrigerators</h3>
+      <p><strong>Features:</strong> Vertically split design with freezer on left and refrigerator on right</p>
+      <p><strong>Pros:</strong> Good access to both freezer and refrigerator items without much bending, narrow door swing space, typically includes ice and water dispensers</p>
+      <p><strong>Cons:</strong> Narrow compartments that may not fit wide items, slightly less energy efficient</p>
+      <p><strong>Best for:</strong> Narrow kitchens, families who use frozen foods frequently</p>
+      
+      <h3>Top-Freezer Refrigerators</h3>
+      <p><strong>Features:</strong> Traditional design with freezer on top and refrigerator below</p>
+      <p><strong>Pros:</strong> Most affordable option, good energy efficiency, straightforward layout</p>
+      <p><strong>Cons:</strong> Refrigerator space requires bending, fewer modern features</p>
+      <p><strong>Best for:</strong> Budget-conscious buyers, smaller households, simple needs</p>
+      
+      <h3>Bottom-Freezer Refrigerators</h3>
+      <p><strong>Features:</strong> Inverted traditional design with freezer drawer on bottom</p>
+      <p><strong>Pros:</strong> Eye-level access to fresh foods, more ergonomic for daily access items</p>
+      <p><strong>Cons:</strong> Bending required for freezer access, typically no external ice/water dispenser</p>
+      <p><strong>Best for:</strong> Households that use fresh foods more frequently than frozen</p>
+      
+      <h3>Counter-Depth Refrigerators</h3>
+      <p><strong>Features:</strong> Shallower design that aligns with countertop depth (usually 24-25" deep vs. standard 30-36")</p>
+      <p><strong>Pros:</strong> Sleek built-in look, doesn't protrude into kitchen space</p>
+      <p><strong>Cons:</strong> Higher price point, less interior capacity</p>
+      <p><strong>Best for:</strong> Design-conscious consumers, smaller kitchens where space is premium</p>
+      
+      <h2>Key Features to Consider</h2>
+      
+      <h3>Cooling Technology</h3>
+      <ul>
+        <li><strong>Dual Cooling Systems:</strong> Separate cooling systems for refrigerator and freezer compartments, preventing odor transfer and maintaining appropriate humidity levels</li>
+        <li><strong>Multi-Air Flow:</strong> Multiple vents throughout the refrigerator for consistent temperature</li>
+        <li><strong>Inverter Compressors:</strong> More energy-efficient operation with variable speed adjustment</li>
+      </ul>
+      
+      <h3>Storage Features</h3>
+      <ul>
+        <li><strong>Adjustable Shelves:</strong> Allows customization for tall items</li>
+        <li><strong>Gallon Door Storage:</strong> Accommodates large milk jugs or beverage containers</li>
+        <li><strong>Humidity-Controlled Drawers:</strong> Keeps produce fresh longer</li>
+        <li><strong>Temperature-Controlled Drawers:</strong> Specialized storage for meats, cheese, or beverages</li>
+      </ul>
+      
+      <h3>Dispensers and Ice Makers</h3>
+      <ul>
+        <li><strong>External Water/Ice Dispensers:</strong> Convenient access without opening the door</li>
+        <li><strong>Internal Ice Makers:</strong> Saves external space but requires opening door for access</li>
+        <li><strong>Dual Ice Makers:</strong> Available in some premium models for high ice production</li>
+      </ul>
+      
+      <h3>Smart Features</h3>
+      <ul>
+        <li><strong>Wi-Fi Connectivity:</strong> Monitor and control your refrigerator remotely</li>
+        <li><strong>Touch Screens:</strong> Digital displays for temperature control and more</li>
+        <li><strong>Internal Cameras:</strong> View inside your refrigerator from your smartphone while shopping</li>
+        <li><strong>Voice Assistant Compatibility:</strong> Integration with Alexa, Google Assistant, etc.</li>
+      </ul>
+      
+      <h2>Sizing Your Refrigerator</h2>
+      <p>When measuring for a new refrigerator, consider:</p>
+      <ul>
+        <li><strong>Width:</strong> Standard sizes range from 30-36 inches (with some compact models at 24" and built-ins up to 48")</li>
+        <li><strong>Depth:</strong> Standard depth is 30-34 inches; counter-depth is 23-27 inches</li>
+        <li><strong>Height:</strong> Typically 67-70 inches, but may vary</li>
+        <li><strong>Capacity:</strong> 18-22 cubic feet is typical for a family of four</li>
+      </ul>
+      <p>Be sure to measure doorways and hallways to ensure you can get your new refrigerator into your kitchen!</p>
+      
+      <h2>Energy Efficiency</h2>
+      <p>Look for the Energy Star rating and consider the yellow EnergyGuide label, which estimates annual operating costs and energy consumption. More efficient models may cost more upfront but save money over their lifetime.</p>
+      
+      <h2>Budget Considerations</h2>
+      <ul>
+        <li><strong>Basic Top-Freezer Models:</strong> $600-$1,200</li>
+        <li><strong>Bottom-Freezer Models:</strong> $900-$1,800</li>
+        <li><strong>Side-by-Side Models:</strong> $1,000-$2,500</li>
+        <li><strong>French Door Models:</strong> $1,500-$4,000+</li>
+        <li><strong>Built-In Premium Models:</strong> $5,000-$10,000+</li>
+      </ul>
+      
+      <h2>Maintenance Considerations</h2>
+      <p>As appliance repair experts, we recommend considering the long-term maintenance needs of your refrigerator:</p>
+      <ul>
+        <li>Water filters typically need replacement every 6 months ($30-$60 each)</li>
+        <li>Models with more features generally have more potential repair points</li>
+        <li>Check warranty coverage carefully (typically 1 year parts and labor, with longer coverage on sealed system)</li>
+      </ul>
+      
+      <p>At JK Appliance Repair, we service all major refrigerator brands and can help keep your new appliance running optimally through its lifetime. When you're ready to make your purchase, consider reliability ratings and read consumer reviews for insights on long-term performance.</p>
+    `,
+    publishDate: '2023-09-05',
+    author: {
+      name: 'James Wilson',
+    },
+    featuredImage: '/images/blog/refrigerator-buying-guide.jpg',
+    categories: ['buying-guides', 'energy-efficiency', 'technology'],
+    tags: ['refrigerator', 'buying guide', 'energy efficiency', 'appliance features'],
+    relatedServices: ['refrigerator-repair'],
+    relatedBrands: ['lg', 'samsung', 'whirlpool', 'ge', 'kitchenaid', 'bosch'],
+    relatedAreas: ['toronto', 'mississauga', 'oakville', 'vaughan'],
+    readTime: 10,
+  },
+  {
+    id: 'smart-appliance-features',
+    title: 'Smart Appliance Features Worth Having (And Those You Can Skip)',
+    slug: 'smart-appliance-features',
+    excerpt: 'Are smart appliances worth the premium price tag? We break down which connected features actually add value to your daily life and which are just expensive gimmicks.',
+    content: `
+      <p>As appliance repair experts, we've seen the explosive growth of smart technology in home appliances over the past decade. While some connected features genuinely improve functionality and convenience, others may not justify their added cost. This guide will help you navigate the world of smart appliances so you can make informed buying decisions.</p>
+      
+      <h2>Smart Refrigerator Features</h2>
+      
+      <h3>Worth Having:</h3>
+      <ul>
+        <li><strong>Temperature Alerts:</strong> Notifications if your refrigerator temperature rises to unsafe levels due to a power outage or door left ajar can save hundreds in spoiled food.</li>
+        <li><strong>Internal Cameras:</strong> The ability to check refrigerator contents while grocery shopping prevents duplicate purchases and can be surprisingly practical.</li>
+        <li><strong>Energy Usage Tracking:</strong> Features that help you optimize efficiency and reduce electricity consumption provide tangible savings.</li>
+      </ul>
+      
+      <h3>Consider Skipping:</h3>
+      <ul>
+        <li><strong>Door Display Web Browsers:</strong> These are often clunky, and most people prefer using their phones or tablets.</li>
+        <li><strong>Recipe Apps on Refrigerators:</strong> These are rarely updated and offer less functionality than free apps on your mobile devices.</li>
+        <li><strong>Family Communication Centers:</strong> Digital sticky notes sound useful but are typically abandoned after the novelty wears off.</li>
+      </ul>
+      
+      <h2>Smart Washing Machine and Dryer Features</h2>
+      
+      <h3>Worth Having:</h3>
+      <ul>
+        <li><strong>Remote Start/Stop:</strong> Being able to start or stop cycles remotely helps prevent wrinkled clothing if you can't be home when the cycle ends.</li>
+        <li><strong>Cycle Completion Alerts:</strong> Notifications when your laundry is done prevent forgotten loads and potential odor issues.</li>
+        <li><strong>Usage Diagnostics:</strong> Features that can identify potential problems before they cause a breakdown can save on repair costs.</li>
+        <li><strong>Auto-Dispensing Detergent Systems:</strong> These dispense the perfect amount of detergent for each load, preventing waste and improving cleaning performance.</li>
+      </ul>
+      
+      <h3>Consider Skipping:</h3>
+      <ul>
+        <li><strong>Voice Control:</strong> While it sounds futuristic, the practical applications for voice-controlled laundry appliances are limited.</li>
+        <li><strong>Social Media Integration:</strong> Features that let your washer post to social media offer questionable value.</li>
+      </ul>
+      
+      <h2>Smart Dishwasher Features</h2>
+      
+      <h3>Worth Having:</h3>
+      <ul>
+        <li><strong>Leak Detection:</strong> Systems that detect and alert you to leaks can prevent significant water damage.</li>
+        <li><strong>Remote Monitoring:</strong> Knowing when your dishwasher will finish can help with meal planning and kitchen workflow.</li>
+        <li><strong>Automatic Reordering:</strong> Systems that can automatically order detergent or rinse aid when supplies run low are legitimately convenient.</li>
+      </ul>
+      
+      <h3>Consider Skipping:</h3>
+      <ul>
+        <li><strong>Downloadable Specialty Cycles:</strong> Most users find the standard cycle options sufficient for their needs.</li>
+      </ul>
+      
+      <h2>Smart Oven and Range Features</h2>
+      
+      <h3>Worth Having:</h3>
+      <ul>
+        <li><strong>Remote Preheat:</strong> Starting your oven on your commute home can save valuable time when preparing meals.</li>
+        <li><strong>Temperature Precision:</strong> Smart features that maintain more precise cooking temperatures can improve results.</li>
+        <li><strong>Safety Shut-off:</strong> Remote verification that your oven or burners are off provides peace of mind.</li>
+      </ul>
+      
+      <h3>Consider Skipping:</h3>
+      <ul>
+        <li><strong>Recipe Integration:</strong> These features often have limited recipes and aren't as comprehensive as dedicated cooking apps.</li>
+        <li><strong>Automated Cooking Programs:</strong> The technology isn't yet sophisticated enough to consistently outperform traditional cooking methods.</li>
+      </ul>
+      
+      <h2>Key Considerations for Any Smart Appliance</h2>
+      
+      <h3>Security and Privacy</h3>
+      <p>Connected appliances can potentially introduce security vulnerabilities. Before purchasing, research:</p>
+      <ul>
+        <li>The manufacturer's track record for security updates</li>
+        <li>What data is collected and how it's used</li>
+        <li>Whether functionality remains if internet connection is lost</li>
+      </ul>
+      
+      <h3>Longevity and Support</h3>
+      <p>Smart appliances raise new concerns about long-term usability:</p>
+      <ul>
+        <li>How long will the manufacturer support the app and connected features?</li>
+        <li>What happens if the company discontinues support?</li>
+        <li>Will the appliance still function normally without connectivity?</li>
+      </ul>
+      
+      <h3>Practical Value vs. Novelty</h3>
+      <p>Before paying a premium for smart features, ask yourself:</p>
+      <ul>
+        <li>Does this feature solve a real problem in my daily routine?</li>
+        <li>Will I still use this feature after the novelty wears off?</li>
+        <li>Is the convenience worth the added cost (typically $200-$500 more than non-smart equivalents)?</li>
+      </ul>
+      
+      <h2>The Bottom Line on Smart Appliances</h2>
+      <p>As repair professionals, we recommend focusing on smart features that provide genuine utility rather than flashy gimmicks. The most valuable connected features tend to involve safety enhancements, genuine time savings, or preventative maintenance capabilities.</p>
+      
+      <p>At JK Appliance Repair, we service all types of smart appliances and can help you maintain your connected home devices regardless of brand. If you're considering smart appliance purchases and have questions about reliability or specific features, don't hesitate to contact our expert team for guidance.</p>
+    `,
+    publishDate: '2023-09-20',
+    author: {
+      name: 'Robert Chang',
+    },
+    featuredImage: 'https://images.unsplash.com/photo-1588854337236-6889d631faa8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    categories: ['technology', 'buying-guides', 'energy-efficiency'],
+    tags: ['smart appliances', 'connected home', 'IoT', 'technology'],
+    relatedServices: ['smart-appliance-repair', 'refrigerator-repair', 'washer-repair', 'dishwasher-repair', 'oven-repair'],
+    relatedBrands: ['samsung', 'lg', 'ge', 'bosch', 'miele'],
+    relatedAreas: ['toronto', 'mississauga', 'richmind-hill', 'vaughan'],
+    readTime: 9,
   },
 ];
 

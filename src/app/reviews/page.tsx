@@ -196,7 +196,7 @@ const ReviewsPage = () => {
               <motion.button
                 key={platform.id}
                 onClick={() => setSelectedPlatform(platform.id)}
-                className={`flex items-center px-5 py-2.5 rounded-full transition-all duration-300 ease-out ${
+                className={`flex items-center px-5 py-3 rounded-full transition-all duration-300 ease-out ${
                   selectedPlatform === platform.id
                     ? 'bg-white scale-105'
                     : 'bg-white/70 hover:bg-white hover:scale-[1.02]'
@@ -213,12 +213,14 @@ const ReviewsPage = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 {platform.logo && (
-                  <div className="w-5 h-5 mr-3 relative">
+                  <div className="w-6 h-6 mr-3 relative">
                     <Image
                       src={platform.logo}
                       alt={platform.name}
                       fill
                       style={{ objectFit: 'contain' }}
+                      sizes="24px"
+                      className="rounded-full"
                     />
                   </div>
                 )}
@@ -312,45 +314,42 @@ const ReviewsPage = () => {
                   ease: [0.23, 1, 0.32, 1] 
                 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="bg-white rounded-2xl overflow-hidden"
+                className="bg-white rounded-2xl overflow-hidden h-full flex flex-col"
                 style={{ 
                   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02)'
                 }}
               >
                 {/* Review Card Content */}
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full overflow-hidden mr-4 relative">
-                        <Image
-                          src={review.profileImage}
-                          alt={review.name}
-                          fill
-                          style={{ objectFit: 'cover' }}
-                        />
-                      </div>
-                      <div>
-                        <h3 className="font-medium text-gray-900">{review.name}</h3>
-                        <p className="text-sm text-gray-500">{review.location}</p>
-                      </div>
+                    <div>
+                      <h3 className="font-medium text-gray-900 text-lg">{review.name}</h3>
+                      <p className="text-sm text-gray-500">{review.location}</p>
                     </div>
-                    <div className="flex items-center">
-                      {/* Platform icon */}
-                      {platforms.find(p => p.id === review.platform)?.logo && (
-                        <div className="w-6 h-6 relative">
-                          <Image
-                            src={platforms.find(p => p.id === review.platform)?.logo || ''}
-                            alt={review.platform}
+                    
+                    {/* Platform logo - styled for emphasis */}
+                    {platforms.find(p => p.id === review.platform)?.logo && (
+                      <div 
+                        className="w-12 h-12 relative p-1.5 rounded-full bg-white flex-shrink-0"
+                        style={{ 
+                          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)',
+                          border: '1px solid rgba(0, 0, 0, 0.03)' 
+                        }}
+                      >
+                        <Image
+                          src={platforms.find(p => p.id === review.platform)?.logo || ''}
+                          alt={`${review.platform} Review`}
                             fill
-                            style={{ objectFit: 'contain' }}
+                          style={{ objectFit: 'contain', padding: '2px' }}
+                          sizes="48px"
+                          className="rounded-full"
                           />
                         </div>
                       )}
-                    </div>
                   </div>
                   
                   {/* Rating and date */}
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-5">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <StarIcon 
@@ -359,11 +358,11 @@ const ReviewsPage = () => {
                         />
                       ))}
                     </div>
-                    <p className="text-xs text-gray-400">{formatDate(review.date)}</p>
+                    <p className="text-xs text-gray-400 ml-2">{formatDate(review.date)}</p>
                   </div>
                   
                   {/* Service type */}
-                  <div className="mb-5">
+                  <div className="mb-6">
                     <span className="inline-block bg-blue-50 text-blue-600 text-xs px-3 py-1 rounded-full font-medium">
                       {review.serviceType}
                     </span>
@@ -380,7 +379,7 @@ const ReviewsPage = () => {
                   </div>
                   
                   {/* Review text */}
-                  <p className="text-gray-600 text-sm leading-relaxed font-light">{review.reviewText}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed font-light flex-grow">{review.reviewText}</p>
                 </div>
               </motion.div>
             ))}
