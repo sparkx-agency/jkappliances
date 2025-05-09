@@ -357,9 +357,9 @@ export default function DishwasherRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/dishwasher-technician.webp" 
+                  src="/images/services/dishwasherss.jpg" 
                   alt="Dishwasher repair technician at work"
                   width={600}
                   height={400}

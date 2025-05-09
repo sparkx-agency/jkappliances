@@ -185,7 +185,7 @@ const Header = () => {
         },
         {
           title: "Our Team",
-          href: "/about/team",
+          href: "/about",
           description: "Meet our certified technicians",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -195,7 +195,7 @@ const Header = () => {
         },
         {
           title: "Careers",
-          href: "/about/careers",
+          href: "/about",
           description: "Join our growing team",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -220,7 +220,7 @@ const Header = () => {
         },
         {
           title: "FAQs",
-          href: "/faqs",
+          href: "/faq",
           description: "Frequently asked questions",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -230,7 +230,7 @@ const Header = () => {
         },
         {
           title: "Testimonials",
-          href: "/testimonials",
+          href: "/reviews",
           description: "What our customers say",
           icon: (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

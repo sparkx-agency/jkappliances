@@ -9,90 +9,90 @@ import { motion } from 'framer-motion';
 // Problems data with icons
 const problems = [
     {
-      id: "not-cooling",
-    title: "Not Cooling Properly",
-    description: "Inefficient cooling leading to food spoilage and energy waste.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-      </svg>
-    ),
+      id: "not-heating",
+      title: "Not Heating",
+      description: "Dryer runs but clothes remain damp because it's not producing enough heat.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+        </svg>
+      ),
       solutions: [
-        "Compressor diagnosis and repair",
-      "Thermostat calibration",
-        "Condenser coil cleaning",
-      "Refrigerant level check",
-      "Evaporator fan replacement"
-    ]
+        "Heating element replacement",
+        "Thermal fuse testing and replacement",
+        "Thermostat calibration",
+        "Gas valve solenoid repair",
+        "High-limit thermostat replacement"
+      ]
     },
     {
-      id: "water-leaking",
-    title: "Water Leaking",
-    description: "Water puddles inside or around your Dryer requiring immediate attention.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
-      </svg>
-    ),
+      id: "not-tumbling",
+      title: "Not Tumbling",
+      description: "Dryer drum doesn't rotate properly during operation.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+        </svg>
+      ),
       solutions: [
-        "Defrost drain unclogging",
-      "Water inlet valve repair",
-      "Drain pan cleaning",
-        "Ice maker connection sealing",
-      "Door seal replacement"
-    ]
+        "Drive belt replacement",
+        "Motor repair or replacement", 
+        "Drum roller replacement",
+        "Idler pulley adjustment",
+        "Drum bearing lubrication"
+      ]
     },
     {
       id: "strange-noises",
-    title: "Unusual Noises",
-    description: "Buzzing, clicking, or knocking sounds indicating mechanical problems.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
-      </svg>
-    ),
+      title: "Unusual Noises",
+      description: "Buzzing, squeaking, or thumping sounds during dryer operation.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+        </svg>
+      ),
       solutions: [
-        "Compressor mounting repair",
-        "Fan motor replacement",
-      "Condenser fan cleaning",
-        "Evaporator fan repair",
-      "Defrost timer maintenance"
-    ]
+        "Drum support roller replacement",
+        "Blower wheel cleaning or replacement",
+        "Belt tensioner repair",
+        "Motor mount adjustment",
+        "Drum bearing lubrication"
+      ]
     },
     {
-      id: "ice-maker-issues",
-    title: "Ice Maker Problems",
-    description: "Issues with ice production, quality, or dispensing functionality.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-      </svg>
-    ),
+      id: "overheating",
+      title: "Overheating",
+      description: "Dryer gets too hot, potentially damaging clothes or creating a fire hazard.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </svg>
+      ),
       solutions: [
-      "Water inlet valve replacement",
-      "Ice maker module repair",
-        "Water filter replacement",
-      "Water line unclogging",
-      "Ice maker assembly realignment"
-    ]
+        "Cycling thermostat replacement",
+        "Vent cleaning and maintenance",
+        "High-limit thermostat replacement",
+        "Control board repair",
+        "Heat sensor recalibration"
+      ]
     },
     {
-      id: "temperature-fluctuations",
-    title: "Temperature Inconsistency",
-    description: "Varying temperatures causing food safety concerns and energy waste.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
-      </svg>
-    ),
+      id: "long-drying-time",
+      title: "Long Drying Times",
+      description: "Dryer takes much longer than normal to dry clothes completely.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+        </svg>
+      ),
       solutions: [
-      "Thermostat replacement",
-      "Temperature control board repair",
-        "Sensor calibration",
-      "Door seal repair",
-      "Airflow system optimization"
-    ]
-  }
+        "Vent system cleaning",
+        "Heating element testing",
+        "Moisture sensor repair",
+        "Blower wheel cleaning",
+        "Airflow system optimization"
+      ]
+    }
 ];
 
 // Benefits with Apple-style icons
@@ -174,14 +174,14 @@ export default function DryerRepairPage() {
                 Dryer<br />Repair Service
               </h1>
               <p className="text-xl text-[#424245] mb-8 leading-relaxed max-w-2xl">
-                Our expert technicians can fix any brand of fridge with same-day service at the most affordable prices on the market.
+                Our expert technicians can fix any brand of dryer with same-day service at the most affordable prices on the market.
               </p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-[#424245]">
                   <svg className="w-5 h-5 text-[#0071e3] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Certified technicians repair all fridge brands</span>
+                  <span>Certified technicians repair all dryer brands</span>
                 </li>
                 <li className="flex items-center text-[#424245]">
                   <svg className="w-5 h-5 text-[#0071e3] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -294,7 +294,7 @@ export default function DryerRepairPage() {
               Expert Dryer Repair Services
             </h2>
             <p className="text-lg text-[#86868b] max-w-3xl mx-auto leading-relaxed">
-              Your Dryer is an essential appliance in your modern kitchen. We understand how disruptive a malfunctioning fridge can be to your daily life, which is why our expert technicians provide fast, reliable repair services for all major brands and models.
+              Your dryer is an essential appliance in your modern home. We understand how disruptive a malfunctioning dryer can be to your daily life, which is why our expert technicians provide fast, reliable repair services for all major brands and models.
             </p>
           </motion.div>
           
@@ -310,10 +310,10 @@ export default function DryerRepairPage() {
                 Why Choose Our Dryer Repair Service
               </h3>
               <p className="text-[#424245] mb-4 leading-relaxed">
-                Today's Dryers are designed to last 5-10 years with proper care, but even the highest quality appliances can develop issues due to improper maintenance or factory defects. When problems arise, our experienced technicians can diagnose and fix your Dryer quickly and efficiently.
+                Today's dryers are designed to last 10-15 years with proper care, but even the highest quality appliances can develop issues due to frequent use or factory defects. When problems arise, our experienced technicians can diagnose and fix your dryer quickly and efficiently.
               </p>
               <p className="text-[#424245] mb-4 leading-relaxed">
-                At JK Appliances, we use the latest equipment and proven repair methods to ensure your Dryer works like new. Our comprehensive diagnostic process identifies both immediate issues and potential future problems, allowing us to provide a complete solution.
+                At JK Appliances, we use the latest equipment and proven repair methods to ensure your dryer works like new. Our comprehensive diagnostic process identifies both immediate issues and potential future problems, allowing us to provide a complete solution.
               </p>
               <p className="text-[#424245] leading-relaxed">
                 We only use original manufacturer parts and stand behind our work with a complete warranty, giving you peace of mind that your repair will last.
@@ -326,9 +326,9 @@ export default function DryerRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/dryer-technician.webp" 
+                  src="/images/services/dryerss.jpg" 
                   alt="Dryer repair technician at work"
                   width={600}
                   height={400}
@@ -408,7 +408,7 @@ export default function DryerRepairPage() {
               Types of Dryers We Service
             </h2>
             <p className="text-lg text-[#86868b] max-w-3xl mx-auto">
-              Our experienced technicians are qualified to repair all styles and configurations of Dryers.
+              Our experienced technicians are qualified to repair all styles and configurations of dryers.
             </p>
           </motion.div>
           
@@ -420,13 +420,13 @@ export default function DryerRepairPage() {
               transition={{ duration: 0.5 }}
               className="bg-white rounded-3xl p-8 hover:shadow-lg transition-all"
             >
-              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Free-standing Dryers</h3>
+              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Electric Dryers</h3>
               <p className="text-[#424245] mb-4">
-                These popular models (including French door and side-by-side styles) often experience issues with internal temperature regulation and door mechanisms. Our technicians have the specialized equipment needed to diagnose and repair these problems quickly.
+                These common household dryers can experience issues with heating elements, thermostats, and timers. Our technicians have the specialized equipment needed to diagnose and repair these electrical components quickly and safely.
               </p>
               <Image 
-                src="/images/services/free-standing-fridge.webp" 
-                alt="Free-standing Dryer"
+                src="/images/services/dryer.webp" 
+                alt="Electric Dryer"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
@@ -441,13 +441,13 @@ export default function DryerRepairPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-white rounded-3xl p-8 hover:shadow-lg transition-all"
             >
-              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Built-in Dryers</h3>
+              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Gas Dryers</h3>
               <p className="text-[#424245] mb-4">
-                These integrated models can be challenging to repair due to their installation complexity and top-mounted compressors that are prone to overheating. Our specialists have the expertise to access and repair these units without damaging surrounding cabinetry.
+                Gas-powered dryers require special attention to gas valves, ignitors, and safety components. Our specialists have the expertise to safely work with gas appliances and ensure they operate efficiently and safely after repairs.
               </p>
               <Image 
-                src="/images/services/built-in-fridge.webp" 
-                alt="Built-in Dryer"
+                src="/images/services/gas-dryer.webp" 
+                alt="Gas Dryer"
                 width={400}
                 height={300}
                 className="w-full h-48 object-cover rounded-xl"
@@ -455,47 +455,7 @@ export default function DryerRepairPage() {
               />
             </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-lg transition-all"
-            >
-              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Freezers</h3>
-              <p className="text-[#424245] mb-4">
-                Standalone freezers require precise temperature control for food preservation. We can repair or replace thermostats, control units, temperature sensors, motors, and diagnose compressor failures to keep your frozen foods safely preserved.
-              </p>
-              <Image 
-                src="/images/services/freezer.webp" 
-                alt="Standalone freezer"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded-xl"
-                style={{ objectFit: "contain" }}
-              />
-            </motion.div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-lg transition-all"
-            >
-              <h3 className="text-xl font-semibold text-[#1d1d1f] mb-4">Wine Coolers & Ice Makers</h3>
-              <p className="text-[#424245] mb-4">
-                These specialized refrigeration units have unique components like wine-specific thermostats and ice production systems. Our technicians are trained to address their unique cooling requirements and repair complex dispensing mechanisms.
-              </p>
-              <Image 
-                src="/images/services/wine-cooler.webp" 
-                alt="Wine cooler"
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover rounded-xl"
-                style={{ objectFit: "contain" }}
-              />
-            </motion.div>
           </div>
         </div>
       </section>
@@ -656,46 +616,46 @@ export default function DryerRepairPage() {
               Common Dryer Issues We Resolve
             </h2>
             <p className="text-lg text-[#86868b] max-w-3xl mx-auto">
-              Our technicians can diagnose and fix all of these common Dryer problems.
+              Our technicians can diagnose and fix all of these common dryer problems.
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.1}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Smelly fridge</span>
+              <span className="text-[#424245]">Dryer won't start</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.15}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Dryer is too cold</span>
+              <span className="text-[#424245]">Dryer not heating</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.2}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge is not cooling</span>
+              <span className="text-[#424245]">Dryer making loud noise</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.25}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge compressor is hot</span>
+              <span className="text-[#424245]">Dryer drum not turning</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.3}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge is making noise</span>
+              <span className="text-[#424245]">Dryer stops mid-cycle</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.35}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Dryer constantly runs</span>
+              <span className="text-[#424245]">Dryer overheating</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.4}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Dryer leaking water</span>
+              <span className="text-[#424245]">Clothes taking too long to dry</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.45}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge is warm but freezer is cold</span>
+              <span className="text-[#424245]">Burning smell from dryer</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.5}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Ice maker doesn't make ice</span>
+              <span className="text-[#424245]">Control panel not working</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.55}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge freezing food</span>
+              <span className="text-[#424245]">Door not closing properly</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.6}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Fridge is not working at all</span>
+              <span className="text-[#424245]">Dryer tripping breaker</span>
             </motion.div>
             <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.65}} className="bg-white p-4 rounded-2xl">
-              <span className="text-[#424245]">Water dispenser not working</span>
+              <span className="text-[#424245]">Lint trap issues</span>
             </motion.div>
           </div>
         </div>
@@ -810,10 +770,10 @@ export default function DryerRepairPage() {
               },
               "telephone": "+16475608966"
             },
-            "description": "Expert Dryer repair services in Toronto and GTA. Fast, reliable repairs for all major brands including Samsung, LG, Whirlpool, and more.",
+            "description": "Expert dryer repair services in Toronto and GTA. Fast, reliable repairs for all major brands including Samsung, LG, Whirlpool, and more.",
             "areaServed": "Greater Toronto Area",
             "serviceType": "Dryer Repair",
-            "url": "https://jkappliances.ca/fridge-repair"
+            "url": "https://jkappliances.ca/services/dryer-repair"
           })
         }}
       />
