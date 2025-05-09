@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/areas/markham-og.webp',
+        url: '/images/areas/toronto-og.webp', // Using Toronto image as fallback
         width: 1200,
         height: 630,
         alt: 'Appliance repair services in Markham'
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert Appliance Repair in Markham | JK Appliances',
     description: 'Professional appliance repair throughout Markham. Same-day service, certified technicians, and all major brands repaired.',
-    images: ['/images/areas/markham-twitter.webp']
+    images: ['/images/areas/toronto-twitter.webp'] // Using Toronto image as fallback
   },
   keywords: [
     'Markham appliance repair', 
@@ -36,11 +36,9 @@ export const metadata: Metadata = {
     'Markham washer repair', 
     'Markham dryer repair', 
     'Markham dishwasher repair', 
-    'Unionville appliance repair', 
-    'Cornell appliance repair',
+    'Unionville appliance service', 
     'Thornhill appliance repair',
     'same day appliance repair Markham',
-    'smart appliance repair Markham',
-    'luxury appliance repair Markham'
+    'smart appliance repair Markham'
   ]
 }; 
