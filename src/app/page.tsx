@@ -8,6 +8,9 @@ import NewsletterSection from '@/components/sections/NewsletterSection';
 import BrandsSliderSection from '@/components/sections/brands/BrandsSliderSection';
 import { popularBrands } from '@/data/brandsData';
 import ModernCTASection from '@/components/sections/common/ModernCTASection';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 // Dynamically import sections that are below the fold for code splitting
 const WhyChooseUsSection = dynamic(() => import('@/components/sections/WhyChooseUsSection'), {
