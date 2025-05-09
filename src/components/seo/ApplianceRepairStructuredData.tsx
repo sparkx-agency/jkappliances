@@ -23,7 +23,7 @@ export default function ApplianceRepairStructuredData({
           'description': serviceDescription,
           'provider': {
             '@type': 'LocalBusiness',
-            'name': 'JK Appliance Repair',
+            'name': 'JK Appliances',
             'address': {
               '@type': 'PostalAddress',
               'addressLocality': 'Toronto',

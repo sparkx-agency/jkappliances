@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/brands',
     '/areas',
     '/warranty',
+    '/store',
     '/reviews',
     '/sitemap-page',
     '/coupons',

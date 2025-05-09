@@ -21,7 +21,7 @@ const Header = () => {
     // Removed Service Areas from desktop navigation
     { name: 'Reviews', href: '/reviews' },
     // Removed About Us from regular links as it will be replaced with MegaMenu
-    { name: 'Store', href: '/store' },
+    { name: 'Store', href: '/store', badge: 'Coming Soon' },
   ];
 
   // Appliance Services megamenu content

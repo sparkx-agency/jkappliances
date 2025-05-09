@@ -438,7 +438,7 @@ const ReviewsPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="https://g.page/r/jk-appliance-repair/review" 
+                href="https://g.page/r/CYhrgYpg7KiqEAE/review" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-full font-medium transition-all duration-300 hover:shadow-md"
@@ -455,7 +455,7 @@ const ReviewsPage = () => {
                 Review on Google
               </a>
               <a 
-                href="https://www.yelp.com/biz/jk-appliance-repair" 
+                href="https://www.yelp.ca/biz/jk-appliances-toronto" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-white text-gray-900 rounded-full font-medium transition-all duration-300 hover:shadow-md"

@@ -160,8 +160,8 @@ const nextConfig = {
         destination: '/brands/moffat',
       },
       {
-        source: '/bloomberg-appliance-repair',
-        destination: '/brands/bloomberg',
+        source: '/blomberg-appliance-repair',
+        destination: '/brands/blomberg',
       },
       {
         source: '/aeg-appliance-repair',

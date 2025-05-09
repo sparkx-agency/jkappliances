@@ -19,6 +19,7 @@ export default function SitemapPage() {
         { name: 'Book a Repair', url: '/book' },
         { name: 'FAQ', url: '/faq' },
         { name: 'Warranty', url: '/warranty' },
+        { name: 'Store', url: '/store' },
         { name: 'Reviews', url: '/reviews' },
         { name: 'Coupons', url: '/coupons' },
         { name: 'Newsletter', url: '/newsletter' },

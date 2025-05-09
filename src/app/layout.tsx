@@ -10,8 +10,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "JK Appliance Repair | Professional Appliance Repair Services in GTA",
-  description: "JK Appliance Repair provides professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
+  title: "JK Appliances | Professional Same Day Appliance Repair Services in GTA",
+  description: "JK Appliances provides professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
   icons: {
     icon: '/favicon.ico',
     apple: [
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     ],
   },
   keywords: ["appliance repair", "Toronto", "GTA", "refrigerator repair", "washer repair", "dryer repair", "stove repair", "oven repair"],
-  authors: [{ name: "JK Appliance Repair" }],
+  authors: [{ name: "JK Appliances" }],
   openGraph: {
-    title: "JK Appliance Repair | Professional Appliance Repair Services in GTA",
+    title: "JK Appliances | Professional Same Day Appliance Repair Services in GTA",
     description: "Professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
     url: "https://jkappliances.ca",
     siteName: "JK Appliance Repair",
@@ -82,8 +82,8 @@ export default function RootLayout({
               "priceRange": "$$",
               "servesCuisine": "Appliance Repair Services",
               "sameAs": [
-                "https://www.facebook.com/jkappliances",
-                "https://www.instagram.com/jkappliances"
+                "https://www.facebook.com/jkappliancesinc",
+                "https://www.instagram.com/jkappliancerepair"
               ]
             })
           }}
@@ -93,6 +93,8 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">{children}</main>
+          <Analytics />
+          <SpeedInsights />
           <Footer />
         </div>
       </body>
