@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const boschInfo: BrandInfo = {
   id: 'bosch',
   name: 'Bosch',
-  logo: '/images/brands/Bosch.webp',
+  logo: '/images/brands/bosch.webp',
   description: "Bosch is a German engineering giant, offering appliances renowned for their quality, reliability, and innovative features.",
   history: "Founded in 1886, Bosch has a long history of developing advanced technologies and high-quality appliances.",
   expertise: "Our technicians are experts in Bosch's complex engineering and innovative technologies. We offer comprehensive repairs using only genuine Bosch parts."

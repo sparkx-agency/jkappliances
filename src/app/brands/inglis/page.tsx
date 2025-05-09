@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const inglisInfo: BrandInfo = {
   id: 'inglis',
   name: 'Inglis',
-  logo: '/images/brands/Inglis.webp',
+  logo: '/images/brands/inglis.webp',
   description: 'Inglis is a trusted Canadian brand that offers reliable and practical home appliances. Known for their durability and straightforward designs, Inglis appliances provide essential features for everyday household needs, including washers, dryers, refrigerators, and stoves.',
   history: 'Established in Canada in 1859, Inglis began as a manufacturer of farm equipment and transitioned to producing home appliances in the 20th century. Inglis has a longstanding reputation for providing dependable appliances that meet the needs of Canadian families.',
   expertise: 'Our technicians are experienced in servicing Inglis appliances, focusing on both older models and newer designs. We use genuine Inglis parts to ensure the continued reliability and performance of your appliances.'

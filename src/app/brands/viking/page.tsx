@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const vikingInfo: BrandInfo = {
   id: 'viking',
   name: 'Viking',
-  logo: '/images/brands/Viking.webp',
+  logo: '/images/brands/viking.webp',
   description: 'Viking is a high-end appliance brand specializing in professional-grade kitchen appliances. Known for their durability, performance, and sleek design, Viking appliances are a favorite among serious home cooks and professional chefs.',
   history: 'Founded in 1984, Viking has a long history of producing top-of-the-line kitchen appliances. With a commitment to quality and innovation, Viking has become a leading brand in the luxury appliance market.',
   expertise: 'Our technicians are factory-trained and certified to service Viking appliances. We have extensive experience with their advanced features and technology, and we use genuine Viking replacement parts to ensure optimal performance and longevity.'

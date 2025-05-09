@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const kitchenaidInfo: BrandInfo = {
   id: 'kitchenaid',
   name: 'KitchenAid',
-  logo: '/images/brands/Kitchen-aid.webp',
+  logo: '/images/brands/kitchen-aid.webp',
   description: 'KitchenAid is a premier American brand known for its high-quality, stylish, and durable kitchen appliances. Offering a wide range of products, including refrigerators, dishwashers, ovens, and cooktops, KitchenAid appliances are designed for both performance and aesthetic appeal, catering to the needs of passionate home cooks.',
   history: 'Founded in 1919, KitchenAid has a long history of innovation in the kitchen appliance industry. They have consistently delivered appliances that blend performance with iconic design, making them a favorite among home cooks and culinary enthusiasts.',
   expertise: 'Our technicians are highly trained in repairing KitchenAid appliances, understanding their design features and advanced technologies. We use only genuine KitchenAid parts to ensure your appliances maintain their exceptional performance and style.'

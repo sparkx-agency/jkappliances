@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const gaggenauInfo: BrandInfo = {
   id: 'gaggenau',
   name: 'Gaggenau',
-  logo: '/images/brands/Gaggenau.webp',
+  logo: '/images/brands/gaggenau.webp',
   description: 'Gaggenau is a luxury brand known for its professional-grade home appliances. With a focus on culinary excellence and innovative technology, Gaggenau offers a range of high-performance ovens, cooktops, refrigerators, and more. Their appliances are favored by chefs and those passionate about cooking.',
   history: 'Founded in Germany in 1683, Gaggenau began as an ironworks and transitioned to producing high-end appliances in the late 19th century. They have since been at the forefront of culinary appliance innovation, setting new standards for quality and design.',
   expertise: 'Our technicians are highly trained in the intricacies of Gaggenau appliances, understanding their advanced technology and high-end design. We use only genuine Gaggenau parts to maintain the exceptional quality and performance of your appliances.'

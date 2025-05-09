@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const fisherPaykelInfo: BrandInfo = {
   id: 'fisher-paykel',
   name: 'Fisher & Paykel',
-  logo: '/images/brands/Fisher-paykel.webp',
+  logo: '/images/brands/fisher-paykel.webp',
   description: 'Fisher & Paykel is a premium appliance brand known for its innovative design and advanced technology. Originating in New Zealand, the brand offers a range of high-quality home appliances that focus on user-centric design, including refrigerators, dishwashers, ovens, and cooking ranges.',
   history: 'Founded in 1934, Fisher & Paykel began as an importer of appliances and later transitioned to manufacturing. The brand has consistently focused on innovation, particularly in developing appliances that integrate seamlessly into the modern home.',
   expertise: 'Our technicians are specialists in Fisher & Paykel appliances, trained to handle their unique design and technological features. We are committed to using genuine Fisher & Paykel parts to maintain the quality and performance of your appliances.'

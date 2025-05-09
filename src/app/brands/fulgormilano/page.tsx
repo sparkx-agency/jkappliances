@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const fulgorMilanoInfo: BrandInfo = {
   id: 'fulgor-milano',
   name: 'Fulgor Milano',
-  logo: '/images/brands/FulgorMilano.webp',
+  logo: '/images/brands/fulgormilano.webp',
   description: 'Fulgor Milano is a premium Italian brand specializing in high-end cooking appliances. Known for blending cutting-edge technology with elegant Italian design, Fulgor Milano offers ranges, cooktops, ovens, and more. Their appliances are designed for those who appreciate superior craftsmanship and sophisticated style.',
   history: 'Established in Italy in 1949, Fulgor Milano has a rich history of producing high-performance cooking appliances. The brand is dedicated to innovation and continues to develop advanced cooking solutions that cater to the needs of discerning chefs.',
   expertise: 'Our technicians are specially trained to work with Fulgor Milano appliances, understanding their advanced features and sophisticated design. We use only genuine Fulgor Milano parts to ensure your appliances maintain their high performance and elegant appearance.'

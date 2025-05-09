@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const thermadorInfo: BrandInfo = {
   id: 'thermador',
   name: 'Thermador',
-  logo: '/images/brands/Thermador.webp',
+  logo: '/images/brands/thermador.webp',
   description: 'Thermador is a luxury appliance brand renowned for its high-performance cooking appliances. With a focus on innovation and design, Thermador offers a range of ovens, cooktops, and dishwashers that cater to the needs of passionate cooks.',
   history: 'Founded in 1916, Thermador has a long history of producing innovative and high-quality appliances. With a commitment to culinary excellence, Thermador has become a leading brand in the luxury appliance market.',
   expertise: 'Our technicians are factory-trained and certified to service Thermador appliances. We have extensive experience with their advanced features and technology, and we use genuine Thermador replacement parts to ensure optimal performance and longevity.'

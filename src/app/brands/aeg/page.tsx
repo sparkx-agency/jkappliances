@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const aegInfo: BrandInfo = {
   id: 'aeg',
   name: 'AEG',
-  logo: '/images/brands/AEG.webp',
+  logo: '/images/brands/aeg.webp',
   description: 'AEG is a German appliance manufacturer known for its high-quality and innovative home appliances. Offering a range of products, including ovens, cooktops, washing machines, and dishwashers, AEG focuses on combining advanced technology with sleek design.',
   history: 'Founded in 1883 as Deutsche Edison-Gesellschaft, AEG has a long history of producing electrical equipment and appliances. With a commitment to innovation and engineering excellence, AEG has become a respected brand in the European appliance market.',
   expertise: 'Our technicians are experienced in servicing AEG appliances and understand their advanced features and technology. We use genuine AEG replacement parts to ensure that your AEG appliance continues to perform at its best.'

@@ -195,11 +195,11 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-aurora',
-        destination: '/areas/Aurora',
+        destination: '/areas/aurora',
       },
       {
         source: '/appliance-repair-bowmanville',
-        destination: '/areas/Bowmanville',
+        destination: '/areas/bowmanville',
       },
       {
         source: '/appliance-repair-brampton',
@@ -211,19 +211,19 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-caledon',
-        destination: '/areas/Caledon',
+        destination: '/areas/caledon',
       },
       {
         source: '/appliance-repair-cambridge',
-        destination: '/areas/Cambridge',
+        destination: '/areas/cambridge',
       },
       {
         source: '/appliance-repair-claremont',
-        destination: '/areas/Claremont',
+        destination: '/areas/claremont',
       },
       {
         source: '/appliance-repair-clarington',
-        destination: '/areas/Clarington',
+        destination: '/areas/clarington',
       },
       {
         source: '/appliance-repair-downtown-toronto',
@@ -235,15 +235,15 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-etobicoke',
-        destination: '/areas/Etobicoke',
+        destination: '/areas/etobicoke',
       },
       {
         source: '/appliance-repair-georgetown',
-        destination: '/areas/Georgetown',
+        destination: '/areas/georgetown',
       },
       {
         source: '/appliance-repair-georgina',
-        destination: '/areas/Georgina',
+        destination: '/areas/georgina',
       },
       {
         source: '/appliance-repair-halton-hills',
@@ -255,7 +255,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-kleinburg',
-        destination: '/areas/Kleinburg',
+        destination: '/areas/kleinburg',
       },
       {
         source: '/appliance-repair-markham',
@@ -263,7 +263,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-milton',
-        destination: '/areas/Milton',
+        destination: '/areas/milton',
       },
       {
         source: '/appliance-repair-mississauga',
@@ -271,7 +271,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-newmarket',
-        destination: '/areas/Newmarket',
+        destination: '/areas/newmarket',
       },
       {
         source: '/appliance-repair-north-york',
@@ -295,15 +295,15 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-scarborough',
-        destination: '/areas/Scarborough',
+        destination: '/areas/scarborough',
       },
       {
         source: '/appliance-repair-stouffville',
-        destination: '/areas/Stouffville',
+        destination: '/areas/stouffville',
       },
       {
         source: '/appliance-repair-thornhill',
-        destination: '/areas/Thornhill',
+        destination: '/areas/thornhill',
       },
       {
         source: '/appliance-repair-toronto',
@@ -319,11 +319,11 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-woodbridge',
-        destination: '/areas/Woodbridge',
+        destination: '/areas/woodbridge',
       },
       {
         source: '/appliance-repair-york',
-        destination: 'areas/york',
+        destination: '/areas/york',
       }
     ];
   },

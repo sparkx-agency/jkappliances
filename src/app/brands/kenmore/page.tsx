@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const kenmoreInfo: BrandInfo = {
   id: 'kenmore',
   name: 'Kenmore',
-  logo: '/images/brands/Kenmore.webp',
+  logo: '/images/brands/kenmore.webp',
   description: 'Kenmore is a trusted American brand that has been providing reliable home appliances for decades. Known for their durability and value, Kenmore offers a wide range of products including refrigerators, washers, dryers, dishwashers, and ovens that cater to various household needs.',
   history: 'First introduced in 1913, Kenmore has a long history of innovation and reliability in the appliance industry. Over the years, Kenmore has become a household name, known for providing dependable and affordable appliances.',
   expertise: 'Our technicians have extensive experience repairing Kenmore appliances, from their classic designs to the latest models. We use genuine Kenmore parts to ensure your appliances continue to perform reliably.'

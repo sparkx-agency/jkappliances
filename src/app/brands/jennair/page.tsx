@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const jennAirInfo: BrandInfo = {
   id: 'jennair',
   name: 'JennAir',
-  logo: '/images/brands/Jennair.webp',
+  logo: '/images/brands/jennair.webp',
   description: 'JennAir is a luxury appliance brand known for its high-performance, innovative, and stylish kitchen appliances. Offering a range of premium products including ovens, cooktops, refrigerators, and dishwashers, JennAir appliances are designed for those who demand both excellence and aesthetic appeal in their kitchen.',
   history: 'Since its founding in 1947, JennAir has been a leader in the high-end appliance market. The brand was the first to introduce the downdraft cooktop and has consistently set new standards in culinary appliance innovation and design.',
   expertise: 'Our technicians are experts in the repair of JennAir appliances, equipped with the knowledge and tools to service their advanced technology and sophisticated designs. We use only genuine JennAir parts to ensure your appliances maintain their exceptional performance and elegance.'

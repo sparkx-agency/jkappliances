@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const whirlpoolInfo: BrandInfo = {
   id: 'whirlpool',
   name: 'Whirlpool',
-  logo: '/images/brands/Whirlpool.webp',
+  logo: '/images/brands/whirlpool.webp',
   description: 'Whirlpool is a well-known appliance brand recognized for its reliable and innovative home appliances. Offering a wide range of products, including refrigerators, washers, dryers, and ovens, Whirlpool focuses on providing quality and convenience to consumers.',
   history: 'Founded in 1911, Whirlpool has a long history of producing dependable and high-quality appliances. With a commitment to innovation and customer satisfaction, Whirlpool has become a leading brand in the home appliance industry.',
   expertise: 'Our technicians are experienced in servicing Whirlpool appliances and understand their design and functionality. We use quality replacement parts to ensure that your Whirlpool appliance continues to provide reliable performance.'

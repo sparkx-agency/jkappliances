@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const dacorInfo: BrandInfo = {
   id: 'dacor',
   name: 'Dacor',
-  logo: '/images/brands/Dacor.webp',
+  logo: '/images/brands/dacor.webp',
   description: "Dacor is an American luxury appliance brand known for its high-end cooking and refrigeration appliances.",
   history: "For over 50 years, Dacor has been setting the standard for luxury kitchen appliances, blending innovative features with elegant design.",
   expertise: "Our technicians are specially trained in Dacor appliances, understanding their unique high-end design and functionality. We provide top-quality repairs using genuine Dacor parts."

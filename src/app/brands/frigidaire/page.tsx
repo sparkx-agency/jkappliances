@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const frigidaireInfo: BrandInfo = {
   id: 'frigidaire',
   name: 'Frigidaire',
-  logo: '/images/brands/Frigidaire.webp',
+  logo: '/images/brands/frigidaire.webp',
   description: 'Frigidaire is a well-established American brand, offering a wide range of dependable and efficient home appliances. Known for their practical design and affordability, Frigidaire appliances include refrigerators, washers, dryers, dishwashers, and ovens. They provide great value for everyday home needs.',
   history: 'Established in 1918, Frigidaire has played a pivotal role in shaping the home appliance industry. As one of the first manufacturers to produce self-contained refrigerators, Frigidaire has a legacy of developing innovative solutions for the modern home.',
   expertise: 'Our team is skilled in the repair of Frigidaire appliances, with a focus on both new and older models. We use authentic Frigidaire parts to maintain the reliability and efficiency of your appliances.'

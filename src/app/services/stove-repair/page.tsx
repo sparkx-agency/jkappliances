@@ -325,7 +325,7 @@ export default function StoveRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/services/stovess.jpg" 
                   alt="Stove repair technician at work"

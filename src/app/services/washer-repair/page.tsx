@@ -342,7 +342,7 @@ export default function WashingMachineRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[300px] md:h-[400px] w-full rounded-3xl overflow-hidden shadow-xl">
                 <Image 
                   src="/images/services/washerss.jpg" 
                   alt="Washing Machine repair technician at work"

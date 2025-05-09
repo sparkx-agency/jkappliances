@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const mieleInfo: BrandInfo = {
   id: 'miele',
   name: 'Miele',
-  logo: '/images/brands/Miele.webp',
+  logo: '/images/brands/miele.webp',
   description:
     'Miele is a renowned German brand known for its high-end, premium home appliances. Specializing in durable, energy-efficient, and technologically advanced appliances, Miele offers a wide range of products, including refrigerators, dishwashers, ovens, and laundry systems, that are built to last and designed for exceptional performance.',
   history:

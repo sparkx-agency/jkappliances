@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const panasonicInfo: BrandInfo = {
   id: 'panasonic',
   name: 'Panasonic',
-  logo: '/images/brands/Panasonic.webp',
+  logo: '/images/brands/panasonic.webp',
   description: 'Panasonic is a trusted brand known for its innovative and reliable appliances. Offering a wide range of products, including refrigerators, microwaves, and washing machines, Panasonic focuses on delivering quality and convenience to consumers.',
   history: 'Founded in 1918, Panasonic has a long history of producing high-quality electronics and appliances. With a commitment to innovation and customer satisfaction, Panasonic has become a leading brand in the home appliance industry.',
   expertise: 'Our technicians are experienced in servicing Panasonic appliances and understand their advanced features and technology. We use genuine Panasonic replacement parts to ensure that your appliance continues to perform at its best.'

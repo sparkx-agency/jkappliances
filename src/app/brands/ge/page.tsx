@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const geInfo: BrandInfo = {
   id: 'ge',
   name: 'GE',
-  logo: '/images/brands/GE.webp',
+  logo: '/images/brands/ge.webp',
   description: 'GE is a leading American brand, offering a wide range of home appliances known for their reliability and innovative features. GE appliances include refrigerators, washers, dryers, dishwashers, and ovens, designed to meet the needs of modern households.',
   history: 'Founded in 1892, GE has been a key innovator in the home appliance industry. With a long history of technological advancements, GE continues to develop products that improve the efficiency and convenience of everyday living.',
   expertise: 'Our technicians are highly experienced in repairing GE appliances, from their standard models to the latest smart appliances. We use only genuine GE parts to ensure the reliability and longevity of your appliances.'

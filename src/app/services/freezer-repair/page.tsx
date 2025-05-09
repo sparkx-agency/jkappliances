@@ -326,7 +326,7 @@ export default function FreezerRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/services/freezer-technician.webp" 
                   alt="Freezer repair technician at work"
@@ -548,7 +548,7 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-[4/3]">
                 <Image 
-                  src="/images/services/fridge-freezer.WEBP" 
+                  src="/images/services/fridge-freezer.webp" 
                   alt="Built-in Freezer Repair"
                   width={600}
                   height={450}

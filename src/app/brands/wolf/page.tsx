@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const wolfInfo: BrandInfo = {
   id: 'wolf',
   name: 'Wolf',
-  logo: '/images/brands/Wolf.webp',
+  logo: '/images/brands/wolf.webp',
   description: 'Wolf is a luxury appliance brand specializing in high-performance cooking appliances. Known for their precision, durability, and iconic red knobs, Wolf appliances are a favorite among professional chefs and cooking enthusiasts.',
   history: 'Founded in 1934, Wolf has a long history of producing top-of-the-line cooking appliances. With a commitment to quality and innovation, Wolf has become a leading brand in the luxury appliance market.',
   expertise: 'Our technicians are factory-trained and certified to service Wolf appliances. We have extensive experience with their advanced features and technology, and we use genuine Wolf replacement parts to ensure optimal performance and longevity.'

@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const askoInfo: BrandInfo = {
   id: 'asko',
   name: 'Asko',
-  logo: '/images/brands/Asko.webp',
+  logo: '/images/brands/asko.webp',
   description: "Asko is a Scandinavian brand renowned for its high-quality, environmentally-friendly appliances.",
   history:"With a history rooted in Swedish craftsmanship, Asko appliances are designed for durability and functionality.",
   expertise: "Our technicians are highly trained in Asko's unique design and engineering, ensuring your appliance is handled with expertise. We use the best quality parts for all our repairs."

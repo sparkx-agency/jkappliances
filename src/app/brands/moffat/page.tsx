@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const moffatInfo: BrandInfo = {
   id: 'moffat',
   name: 'Moffat',
-  logo: '/images/brands/Moffat.webp',
+  logo: '/images/brands/moffat.webp',
   description: 'Moffat is a brand known for its reliable and affordable appliances. Offering a range of refrigerators, ovens, and stoves, Moffat focuses on providing practical solutions for everyday needs.',
   history: 'Moffat has a long history of producing dependable appliances for the home. With a commitment to simplicity and functionality, Moffat appliances are designed to be user-friendly and durable.',
   expertise: 'Our technicians are experienced in servicing Moffat appliances and understand their design and functionality. We use quality replacement parts to ensure that your Moffat appliance continues to provide reliable performance.'

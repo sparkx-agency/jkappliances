@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const haierInfo: BrandInfo = {
   id: 'haier',
   name: 'Haier',
-  logo: '/images/brands/Haier.webp',
+  logo: '/images/brands/haier.webp',
   description: 'Haier is a global appliance brand known for its innovative and energy-efficient home appliances. Offering a range of products, including refrigerators, freezers, washers, dryers, and air conditioners, Haier focuses on providing smart and practical solutions for modern living.',
   history: "Founded in 1984, Haier has grown to become one of the world's largest appliance manufacturers. With a commitment to quality and technological advancement, Haier has become a popular brand in the global appliance market.",
   expertise: 'Our technicians are experienced in servicing Haier appliances and understand their unique features and technology. We use quality replacement parts to ensure that your Haier appliance continues to perform efficiently.'

@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const subzeroInfo: BrandInfo = {
   id: 'subzero',
   name: 'Sub-Zero',
-  logo: '/images/brands/Sub-zero.webp',
+  logo: '/images/brands/sub-zero.webp',
   description: 'Sub-Zero is a luxury appliance brand specializing in high-end refrigeration and wine storage solutions. Known for their superior quality, innovative technology, and exceptional design, Sub-Zero appliances are a favorite among discerning homeowners.',
   history: 'Founded in 1945, Sub-Zero has a long history of producing top-of-the-line refrigeration products. With a commitment to excellence and customer satisfaction, Sub-Zero has become a leading brand in the luxury appliance market.',
   expertise: 'Our technicians are factory-trained and certified to service Sub-Zero appliances. We have extensive experience with their advanced features and technology, and we use genuine Sub-Zero replacement parts to ensure optimal performance and longevity.'

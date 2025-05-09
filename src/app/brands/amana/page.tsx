@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const amanaInfo: BrandInfo = {
   id: 'amana',
   name: 'Amana',
-  logo: '/images/brands/Amana.webp',
+  logo: '/images/brands/amana.webp',
   description: "Amana is a trusted American brand known for its reliable and durable home appliances.",
   history:"With a history spanning over 80 years, Amana has been a staple in American homes, offering simple yet effective appliance solutions.",
   expertise: "Our technicians have extensive experience with Amana appliances, understanding their straightforward designs and functionality. We prioritize efficient and reliable repairs, keeping your appliances running smoothly."

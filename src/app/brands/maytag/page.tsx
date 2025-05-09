@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const maytagInfo: BrandInfo = {
   id: 'maytag',
   name: 'Maytag',
-  logo: '/images/brands/Maytag.webp',
+  logo: '/images/brands/maytag.webp',
   description: 'Maytag is a well-known American brand that offers durable and reliable home appliances. Known for their robust design and longevity, Maytag products include washers, dryers, refrigerators, dishwashers, and ovens, catering to the needs of busy households.',
   history: 'Founded in 1893, Maytag has a long history of manufacturing dependable appliances. The brand became famous for its washing machines and has maintained a reputation for producing appliances that stand the test of time.',
   expertise: 'Our technicians are highly skilled in the repair of Maytag appliances, from their classic models to the latest designs. We use genuine Maytag parts to ensure your appliances continue to deliver reliable performance.'

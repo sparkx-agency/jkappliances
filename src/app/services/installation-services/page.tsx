@@ -325,7 +325,7 @@ export default function InstallationServicesPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/services/appliance-technician.jpg" 
                   alt="Appliance installation technician at work"

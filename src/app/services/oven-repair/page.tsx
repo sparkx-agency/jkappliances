@@ -325,7 +325,7 @@ export default function OvenRepairPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="aspect-video rounded-2xl overflow-hidden">
+              <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
                   src="/images/services/ovenss.jpg" 
                   alt="Oven repair technician at work"

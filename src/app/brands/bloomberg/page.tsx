@@ -8,7 +8,7 @@ import { BrandServiceItem } from '@/components/sections/brands/BrandServicesSect
 const blombergInfo: BrandInfo = {
   id: 'blomberg',
   name: 'Blomberg',
-  logo: '/images/brands/Blomberg.webp',
+  logo: '/images/brands/blomberg.webp',
   description: "Blomberg is a European brand focused on creating eco-friendly and efficient home appliances.",
   history: "With over a century of experience, Blomberg has a strong commitment to sustainability and efficient design.",
   expertise: "Our technicians are well-versed in Blomberg's energy-efficient technology, providing repairs that respect the brand's environmental focus. We use high-quality, eco-conscious parts."
