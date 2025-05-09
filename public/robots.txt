@@ -8,5 +8,10 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
 
-# Sitemap location
-Sitemap: https://jkappliancerepair.ca/sitemap.xml 
+# Sitemap locations
+Sitemap: https://jkappliances.ca/sitemap.xml
+Sitemap: https://jkappliances.ca/sitemap-index.xml
+Sitemap: https://jkappliances.ca/sitemap-main.xml
+Sitemap: https://jkappliances.ca/sitemap-services.xml
+Sitemap: https://jkappliances.ca/sitemap-brands.xml
+Sitemap: https://jkappliances.ca/sitemap-areas.xml 

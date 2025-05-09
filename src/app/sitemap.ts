@@ -65,6 +65,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/brands/sub-zero',
     '/brands/wolf',
     '/brands/viking',
+    '/brands/thermador',
+    '/brands/dacor',
+    '/brands/asko',
+    '/brands/fisherpaykel',
+    '/brands/jennair',
+    '/brands/liebherr',
+    '/brands/inglis',
+    '/brands/panasonic',
+    '/brands/moffat',
+    '/brands/blomberg',
+    '/brands/aeg',
+    '/brands/haier',
+    '/brands/amana',
+    '/brands/bertazzoni',
+    '/brands/fulgormilano',
+    '/brands/gaggenau',
   ].map(route => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -115,5 +131,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }));
 
+  // For Next.js sitemap, combine all routes to ensure everything is included
   return [...mainRoutes, ...serviceRoutes, ...brandRoutes, ...areaRoutes];
 } 

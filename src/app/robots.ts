@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         '/temp/',
       ],
     },
-    sitemap: 'https://jkappliances.ca/sitemap.xml',
+    sitemap: 'https://jkappliances.ca/sitemap-index.xml',
   };
 } 
