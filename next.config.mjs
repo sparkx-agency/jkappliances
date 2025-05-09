@@ -81,111 +81,111 @@ const nextConfig = {
       },
       {
         source: '/ge-appliance-repair',
-        destination: '/brands/GeneralElectricGE',
+        destination: '/brands/ge',
       },
       {
         source: '/bosch-appliance-repair',
-        destination: '/brands/Bosch',
+        destination: '/brands/bosch',
       },
       {
         source: '/maytag-appliance-repair',
-        destination: '/brands/Maytag',
+        destination: '/brands/maytag',
       },
       {
         source: '/kitchenaid-appliance-repair',
-        destination: '/brands/KitchenAid',
+        destination: '/brands/kitchenAid',
       },
       {
         source: '/frigidaire-appliance-repair',
-        destination: '/brands/Frigidaire',
+        destination: '/brands/frigidaire',
       },
       {
         source: '/kenmore-appliance-repair',
-        destination: '/brands/Kenmore',
+        destination: '/brands/kenmore',
       },
       {
         source: '/electrolux-appliance-repair',
-        destination: '/brands/Electrolux',
+        destination: '/brands/electrolux',
       },
       {
         source: '/miele-appliance-repair',
-        destination: '/brands/Miele',
+        destination: '/brands/miele',
       },
       {
         source: '/wolf-appliance-repair',
-        destination: '/brands/Wolf',
+        destination: '/brands/wolf',
       },
       {
         source: '/subzero-appliance-repair',
-        destination: '/brands/SubZero',
+        destination: '/brands/subZero',
       },
       {
         source: '/viking-appliance-repair',
-        destination: '/brands/Viking',
+        destination: '/brands/viking',
       },
       {
         source: '/thermador-appliance-repair',
-        destination: '/brands/Thermador',
+        destination: '/brands/thermador',
       },
       {
         source: '/dacor-appliance-repair',
-        destination: '/brands/Dacor',
+        destination: '/brands/dacor',
       },
       {
         source: '/asko-appliance-repair',
-        destination: '/brands/Asko',
+        destination: '/brands/asko',
       },
       {
         source: '/fisher-paykel-appliance-repair',
-        destination: '/brands/FisherPaykel',
+        destination: '/brands/fisherpaykel',
       },
       {
         source: '/jenn-air-appliance-repair',
-        destination: '/brands/JennAir',
+        destination: '/brands/jennair',
       },
       {
         source: '/liebherr-appliance-repair',
-        destination: '/brands/Liebherr',
+        destination: '/brands/liebherr',
       },
       {
         source: '/inglis-appliance-repair',
-        destination: '/brands/Inglis',
+        destination: '/brands/inglis',
       },
       {
         source: '/panasonic-appliance-repair',
-        destination: '/brands/Panasonic',
+        destination: '/brands/panasonic',
       },
       {
         source: '/moffat-appliance-repair',
-        destination: '/brands/Moffat',
+        destination: '/brands/moffat',
       },
       {
         source: '/bloomberg-appliance-repair',
-        destination: '/brands/Bloomberg',
-      },
-      {
-        source: '/brada-appliance-repair',
-        destination: '/brands/Brada',
+        destination: '/brands/bloomberg',
       },
       {
         source: '/aeg-appliance-repair',
-        destination: '/brands/AEG',
+        destination: '/brands/aeg',
+      },
+      {
+        source: '/haier-appliance-repair',
+        destination: '/brands/haier',
       },
       {
         source: '/amana-appliance-repair',
-        destination: '/brands/Amana',
+        destination: '/brands/amana',
       },
       {
         source: '/bartazzoni-appliance-repair',
-        destination: '/brands/Bartazzoni',
+        destination: '/brands/bertazzoni',
       },
       {
         source: '/fulgor-milano-appliance-repair',
-        destination: '/brands/FulgorMilano',
+        destination: '/brands/fulgormilano',
       },
       {
         source: '/gaggenau-appliance-repair',
-        destination: '/brands/Gaggenau',
+        destination: '/brands/gaggenau',
       },
       
       // Rewrites for area pages - using exact directory casing
@@ -227,11 +227,11 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-downtown-toronto',
-        destination: '/areas/Downtown%20%28Toronto%29',
+        destination: '/areas/downtown-toronto',
       },
       {
         source: '/appliance-repair-east-york',
-        destination: '/areas/East%20York',
+        destination: '/areas/east-york',
       },
       {
         source: '/appliance-repair-etobicoke',
@@ -247,7 +247,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-halton-hills',
-        destination: '/areas/Halton%20Hills',
+        destination: '/areas/halton-hills',
       },
       {
         source: '/appliance-repair-king-city',
@@ -275,7 +275,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-north-york',
-        destination: '/areas/North%20York',
+        destination: '/areas/north-york',
       },
       {
         source: '/appliance-repair-oakville',
@@ -291,7 +291,7 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-richmond-hill',
-        destination: '/areas/Richmond%20Hill',
+        destination: '/areas/richmond-hill',
       },
       {
         source: '/appliance-repair-scarborough',
@@ -323,10 +323,10 @@ const nextConfig = {
       },
       {
         source: '/appliance-repair-york',
-        destination: '/areas/York',
+        destination: 'areas/york',
       }
     ];
   },
 };
 
-export default nextConfig; 
+export default nextConfig;
