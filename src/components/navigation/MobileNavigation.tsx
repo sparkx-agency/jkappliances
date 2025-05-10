@@ -147,6 +147,51 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
     }
   ];
 
+  // --- Add all brands and areas for search (hidden from tabs) ---
+  // List of all brands from /brands directory
+  const allBrands = [
+    'aeg', 'sub-zero', 'whirlpool', 'amana', 'asko', 'bertazzoni', 'blomberg', 'bosch', 'dacor', 'haier', 'panasonic', 'thermador', 'viking', 'wolf', 'moffat', 'miele', 'frigidaire', 'fulgormilano', 'gaggenau', 'ge', 'inglis', 'jennair', 'kenmore', 'kitchenaid', 'liebherr', 'maytag', 'electrolux', 'fisherpaykel', 'samsung', 'lg'
+  ];
+  // List of all areas from /areas directory
+  const allAreas = [
+    'york', 'markham', 'halton-hills', 'north-york', 'richmond-hill', 'east-york', 'vaughan', 'whitby', 'toronto', 'pickering', 'oshawa', 'oakville', 'mississauga', 'king-city', 'downtown-toronto', 'burlington', 'brampton', 'ajax', 'woodbridge', 'thornhill', 'scarborough', 'stouffville', 'newmarket', 'milton', 'kleinburg', 'georgina', 'georgetown', 'etobicoke', 'clarington', 'cambridge', 'claremont', 'caledon', 'bowmanville', 'aurora'
+  ];
+
+  // Helper to format display names
+  function formatDisplayName(str: string) {
+    return str
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  // Hidden brand and area items for search
+  const hiddenBrandItems = allBrands.map(brand => ({
+    name: formatDisplayName(brand),
+    href: `/brands/${brand}`,
+    tabName: 'Brands'
+  }));
+  const hiddenAreaItems = allAreas.map(area => ({
+    name: formatDisplayName(area),
+    href: `/areas/${area}`,
+    tabName: 'Areas'
+  }));
+
+  // Gather all searchable items from all tabs, plus hidden brands/areas
+  const allSearchableItems = [
+    ...navigationTabs.flatMap(tab =>
+      tab.content.map(item => ({ ...item, tabName: tab.name }))
+    ),
+    ...hiddenBrandItems,
+    ...hiddenAreaItems
+  ];
+
+  // Filter items by search query (case-insensitive)
+  const filteredSearchResults = searchQuery
+    ? allSearchableItems.filter(item =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
   return (
     <>
       {/* Mobile Menu Button - Fixed Position */}
@@ -266,97 +311,123 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
               </div>
             </div>
             
-            {/* Tab Content */}
+            {/* Tab Content or Search Results */}
             <div className="overflow-y-auto max-h-[60vh] pb-8">
-              {activeTab && (
+              {/* Show search results if searchQuery is not empty */}
+              {searchQuery ? (
                 <div className="px-4 py-4">
-                  <div className="grid grid-cols-1 gap-3">
-                    {navigationTabs.find(tab => tab.id === activeTab)?.content.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={item.href}
-                        className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 text-gray-900 hover:text-blue-600 transition-colors"
-                      >
-                        <span>{item.name}</span>
-                        <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-              
-              {/* Home Content (Default when no tab is selected) */}
-              {!activeTab && (
-                <div className="px-4 py-4">
-                  <div className="mb-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">Popular Services</h3>
-                    <div className="grid grid-cols-2 gap-3">
-                      <Link href="/refrigerator-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
-                        <span className="block text-blue-600 mb-1">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <rect x="4" y="2" width="16" height="20" rx="2" strokeWidth="1.5" />
-                            <line x1="4" y1="10" x2="20" y2="10" strokeWidth="1.5" />
+                  {filteredSearchResults.length > 0 ? (
+                    <div className="grid grid-cols-1 gap-3">
+                      {filteredSearchResults.map((item, index) => (
+                        <Link
+                          key={index}
+                          href={item.href}
+                          className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 text-gray-900 hover:text-blue-600 transition-colors"
+                        >
+                          <span className="font-medium">{item.name}</span>
+                          <span className="ml-2 text-xs text-gray-400">({item.tabName})</span>
+                          <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                        </span>
-                        <span className="text-sm font-medium">Refrigerator Repair</span>
-                      </Link>
-                      <Link href="/washer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
-                        <span className="block text-blue-600 mb-1">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <circle cx="12" cy="12" r="8" strokeWidth="1.5" />
-                            <circle cx="12" cy="12" r="3" strokeWidth="1.5" />
-                          </svg>
-                        </span>
-                        <span className="text-sm font-medium">Washer Repair</span>
-                      </Link>
-                      <Link href="/dryer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
-                        <span className="block text-blue-600 mb-1">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />
-                            <circle cx="12" cy="12" r="5" strokeWidth="1.5" />
-                          </svg>
-                        </span>
-                        <span className="text-sm font-medium">Dryer Repair</span>
-                      </Link>
-                      <Link href="/dishwasher-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
-                        <span className="block text-blue-600 mb-1">
-                          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />
-                            <line x1="4" y1="8" x2="20" y2="8" strokeWidth="1.5" />
-                            <path d="M7 12h2M7 16h2M15 12h2M15 16h2" strokeWidth="1.5" strokeLinecap="round" />
-                          </svg>
-                        </span>
-                        <span className="text-sm font-medium">Dishwasher Repair</span>
-                      </Link>
+                        </Link>
+                      ))}
                     </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-3">Top Service Areas</h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      <Link href="/appliance-repair-toronto" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
-                        <span>Toronto</span>
-                        <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                      <Link href="/appliance-repair-vaughan" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
-                        <span>Vaughan</span>
-                        <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                      <Link href="/appliance-repair-markham" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
-                        <span>Markham</span>
-                        <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
+                  ) : (
+                    <div className="text-center text-gray-400 py-8">No results found.</div>
+                  )}
                 </div>
+              ) : (
+                <>
+                  {activeTab && (
+                    <div className="px-4 py-4">
+                      <div className="grid grid-cols-1 gap-3">
+                        {navigationTabs.find(tab => tab.id === activeTab)?.content.map((item, index) => (
+                          <Link
+                            key={index}
+                            href={item.href}
+                            className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 text-gray-900 hover:text-blue-600 transition-colors"
+                          >
+                            <span>{item.name}</span>
+                            <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* Home Content (Default when no tab is selected) */}
+                  {!activeTab && (
+                    <div className="px-4 py-4">
+                      <div className="mb-6">
+                        <h3 className="text-lg font-medium text-gray-900 mb-3">Popular Services</h3>
+                        <div className="grid grid-cols-2 gap-3">
+                          <Link href="/refrigerator-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                            <span className="block text-blue-600 mb-1">
+                              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <rect x="4" y="2" width="16" height="20" rx="2" strokeWidth="1.5" />
+                                <line x1="4" y1="10" x2="20" y2="10" strokeWidth="1.5" />
+                              </svg>
+                            </span>
+                            <span className="text-sm font-medium">Refrigerator Repair</span>
+                          </Link>
+                          <Link href="/washer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                            <span className="block text-blue-600 mb-1">
+                              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <circle cx="12" cy="12" r="8" strokeWidth="1.5" />
+                                <circle cx="12" cy="12" r="3" strokeWidth="1.5" />
+                              </svg>
+                            </span>
+                            <span className="text-sm font-medium">Washer Repair</span>
+                          </Link>
+                          <Link href="/dryer-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                            <span className="block text-blue-600 mb-1">
+                              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />
+                                <circle cx="12" cy="12" r="5" strokeWidth="1.5" />
+                              </svg>
+                            </span>
+                            <span className="text-sm font-medium">Dryer Repair</span>
+                          </Link>
+                          <Link href="/dishwasher-repair" className="bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors">
+                            <span className="block text-blue-600 mb-1">
+                              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <rect x="4" y="3" width="16" height="18" rx="2" strokeWidth="1.5" />
+                                <line x1="4" y1="8" x2="20" y2="8" strokeWidth="1.5" />
+                                <path d="M7 12h2M7 16h2M15 12h2M15 16h2" strokeWidth="1.5" strokeLinecap="round" />
+                              </svg>
+                            </span>
+                            <span className="text-sm font-medium">Dishwasher Repair</span>
+                          </Link>
+                        </div>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <h3 className="text-lg font-medium text-gray-900 mb-3">Top Service Areas</h3>
+                        <div className="grid grid-cols-1 gap-2">
+                          <Link href="/appliance-repair-toronto" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
+                            <span>Toronto</span>
+                            <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                          <Link href="/appliance-repair-vaughan" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
+                            <span>Vaughan</span>
+                            <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                          <Link href="/appliance-repair-markham" className="flex items-center px-4 py-3 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors">
+                            <span>Markham</span>
+                            <svg className="w-4 h-4 ml-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </motion.div>

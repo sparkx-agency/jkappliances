@@ -316,7 +316,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Header Buttons (Message & Call) */}
-          <div className="flex md:hidden items-center gap-3 mr-2 pl-26">
+          <div className="flex md:hidden items-right gap-5 mr-2">
             <motion.button 
               className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-black shadow-sm active:shadow-inner border border-gray-200"
               whileTap={{ scale: 0.95 }}
