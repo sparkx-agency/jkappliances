@@ -198,10 +198,6 @@ const nextConfig = {
         destination: '/areas/aurora',
       },
       {
-        source: '/appliance-repair-bowmanville',
-        destination: '/areas/bowmanville',
-      },
-      {
         source: '/appliance-repair-brampton',
         destination: '/areas/brampton',
       },
@@ -220,10 +216,6 @@ const nextConfig = {
       {
         source: '/appliance-repair-claremont',
         destination: '/areas/claremont',
-      },
-      {
-        source: '/appliance-repair-clarington',
-        destination: '/areas/clarington',
       },
       {
         source: '/appliance-repair-downtown-toronto',
