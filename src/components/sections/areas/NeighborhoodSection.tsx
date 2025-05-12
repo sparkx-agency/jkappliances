@@ -256,20 +256,26 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
           className="mt-20 text-center"
         >
           <p className="text-xl text-gray-500 mb-8 font-light">
-            Not sure if we service your area? Check your postal code or call us directly.
+            Not sure if we service your area? Contact us directly for the fastest response.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
-              href="/postal-code-checker" 
-              className="px-8 py-4 rounded-full bg-black text-white font-medium transition-all hover:bg-gray-800 shadow-sm text-lg"
+              href="tel:647-560-8966" 
+              className="px-8 py-4 rounded-full bg-blue-500 text-white font-medium transition-all hover:bg-blue-600 shadow-sm text-lg flex items-center justify-center"
             >
-              Check Your Postal Code
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call 647-560-8966
             </Link>
             <Link 
-              href="tel:647-560-8966" 
-              className="px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-medium transition-all hover:bg-gray-200 text-lg"
+              href="/contact" 
+              className="px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-medium transition-all hover:bg-gray-200 text-lg flex items-center justify-center"
             >
-              Call 647-560-8966
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 mr-2">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 4H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-2m-4-1v8m0 0l-4-4m4 4l4-4" />
+              </svg>
+              Contact Us
             </Link>
           </div>
         </motion.div>
