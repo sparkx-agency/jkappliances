@@ -330,7 +330,7 @@ export default function FreezerRepairPage() {
             >
               <div className="aspect-full md:aspect-square aspect-video rounded-2xl overflow-hidden">
                 <Image 
-                  src="/images/services/freezer-technician.webp" 
+                  src="/images/services/fridge-repair.webp" 
                   alt="Freezer repair technician at work"
                   width={600}
                   height={400}

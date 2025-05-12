@@ -370,12 +370,12 @@ export default function BrandsPage() {
                 >
                   <Link href={`/brands/${brand.id}`} className="block">
                     <div className="bg-gray-50 rounded-3xl p-8 transition-all hover:shadow-lg h-full flex flex-col items-center text-center">
-                      <div className="w-32 h-20 relative mb-8 flex items-center justify-center">
+                      <div className="w-40 h-28 relative mb-8 flex items-center justify-center">
                         <Image
                           src={brand.logo}
                           alt={brand.name}
-                          width={120}
-                          height={80}
+                          width={180}
+                          height={120}
                           className="object-contain transition-transform group-hover:scale-110 duration-500"
                         />
                       </div>
@@ -424,12 +424,12 @@ export default function BrandsPage() {
                 >
                   <Link href={`/brands/${brand.id}`} className="block">
                     <div className="bg-white rounded-2xl p-6 transition-all hover:shadow-md h-full flex flex-col items-center text-center">
-                      <div className="w-24 h-16 relative mb-4 flex items-center justify-center">
+                      <div className="w-32 h-20 relative mb-4 flex items-center justify-center">
                         <Image
                           src={brand.logo}
                           alt={brand.name}
-                          width={80}
-                          height={60}
+                          width={120}
+                          height={80}
                           className="object-contain transition-transform group-hover:scale-110 duration-500"
                         />
                       </div>
