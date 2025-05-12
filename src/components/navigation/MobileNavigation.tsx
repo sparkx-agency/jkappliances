@@ -137,8 +137,6 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
       icon: <UserGroupIcon className="w-6 h-6" />,
       content: [
         { name: 'Our Story', href: '/about' },
-        { name: 'Our Team', href: '/about/team' },
-        { name: 'Careers', href: '/about/careers' },
         { name: 'Blog', href: '/blog' },
         { name: 'FAQs', href: '/faq' },
         { name: 'Testimonials', href: '/testimonials' },

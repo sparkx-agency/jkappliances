@@ -74,7 +74,6 @@ const Footer = () => {
         { label: "Contact Us", href: "/contact" },
         { label: "Book a Repair", href: "/book" },
         { label: "FAQ", href: "/faq" },
-        { label: "Careers", href: "/careers" },
       ],
     },
   ];

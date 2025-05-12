@@ -7,8 +7,8 @@ import { motion } from 'framer-motion';
 import BrandFAQSection from '@/components/sections/brands/BrandFAQSection';
 import BrandServicesSection, { BrandServiceItem } from '@/components/sections/brands/BrandServicesSection';
 import TestimonialsSliderSection from '../sections/common/TestimonialsSliderSection';
-import BrandsSliderSection, { BrandItem } from '../sections/brands/BrandsSliderSection';
 import ModernCTASection from '../sections/common/ModernCTASection';
+import { BrandItem } from '../sections/brands/BrandsSliderSection';
 
 export interface Advantage {
   title: string;
@@ -271,14 +271,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
         faqs={faqs}
       />
 
-      {/*BrandsSliderSection*/}
-      <BrandsSliderSection 
-        title="Other Brands We Service"
-        subtitle="We repair all major appliance brands with the same level of expertise."
-        brands={relatedBrandItems}
-        locationName={brandInfo.name}
-      />
-
+      
       {/* Modern CTA Section */}
       <ModernCTASection 
         style="google"
@@ -286,7 +279,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
         subtitle={`Book your repair service today with our certified ${brandInfo.name} specialists. We'll get your appliance running like new!`}
         primaryButtonText="Book a Repair"
         secondaryButtonText="Call Now"
-        imageUrl={`/images/brands/${brandInfo.id}-repair.webp`}
+        imageUrl={`/images/cta/cta-appliances.jpg`}
       />
     </div>
   );
