@@ -197,6 +197,7 @@ const nextConfig = {
         source: '/appliance-repair-aurora',
         destination: '/areas/aurora',
       },
+      
       {
         source: '/appliance-repair-brampton',
         destination: '/areas/brampton',
@@ -217,6 +218,7 @@ const nextConfig = {
         source: '/appliance-repair-claremont',
         destination: '/areas/claremont',
       },
+    
       {
         source: '/appliance-repair-downtown-toronto',
         destination: '/areas/downtown-toronto',
@@ -318,6 +320,9 @@ const nextConfig = {
         destination: '/areas/york',
       }
     ];
+  },
+  env: {
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
   },
 };
 

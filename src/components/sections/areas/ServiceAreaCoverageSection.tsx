@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
+import GoogleMapComponent from '@/components/googlemapcomponent';
 
 interface ServiceAreaInfo {
   applianceUsage: string;
@@ -12,14 +12,14 @@ interface ServiceAreaInfo {
 
 interface ServiceAreaCoverageSectionProps {
   areaName: string;
-  mapImage: string;
+  mapImage?: string; // Kept for backwards compatibility with existing pages
   localInfo: ServiceAreaInfo;
   responseTime?: string;
 }
 
 const ServiceAreaCoverageSection = ({
   areaName,
-  mapImage,
+  // mapImage not used as we're now using GoogleMapComponent
   localInfo,
   responseTime,
 }: ServiceAreaCoverageSectionProps) => {
@@ -35,12 +35,11 @@ const ServiceAreaCoverageSection = ({
               transition={{ duration: 0.7 }}
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg">
-                <Image
-                  src={mapImage}
-                  alt={`${areaName} Service Area Map`}
-                  width={600}
-                  height={450}
-                  className="w-full h-full object-cover"
+                <GoogleMapComponent 
+                  area={areaName}
+                  height="100%"
+                  width="100%"
+                  showCompanyMarker={true}
                 />
               </div>
             </motion.div>

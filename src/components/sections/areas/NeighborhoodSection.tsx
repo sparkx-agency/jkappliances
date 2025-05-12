@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import GoogleMapComponent from '@/components/googlemapcomponent';
 
 export interface AreaData {
   id: string;
@@ -14,7 +14,7 @@ interface NeighborhoodSectionProps {
   title?: string;
   description?: string;
   areas: AreaData[];
-  mapImage: string;
+  mapImage?: string;
   companyName?: string;
   companyAddress?: string;
   showFullMapLink?: boolean;
@@ -24,7 +24,6 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
   title = "Areas we serve in GTA",
   description = "Our appliance repair technicians provide fast, reliable service throughout the Greater Toronto Area. Find your neighborhood below.",
   areas,
-  mapImage,
   companyName = "JK",
   companyAddress = "18 Yonge St",
   showFullMapLink = true
@@ -169,66 +168,14 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
             className="lg:w-1/2"
           >
             <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[300px] relative">
-              <Image 
-                src={mapImage} 
-                alt="Service Areas Map"
-                fill
-                style={{ objectFit: 'cover' }}
-                className="z-0"
+              <GoogleMapComponent 
+                area={activeArea ? areas.find(a => a.id === activeArea)?.name || "" : ""}
+                height="100%"
+                width="100%"
+                showCompanyMarker={true}
+                companyName={companyName}
+                companyAddress={companyAddress}
               />
-              
-              {/* Apple-style pin/marker for company location */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <motion.div
-                  initial={{ y: -20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
-                  className="relative"
-                >
-                  {/* Pin shadow/reflection effect */}
-                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-2 bg-black/20 rounded-full blur-sm"></div>
-                  
-                  {/* Pin body */}
-                  <div className="flex flex-col items-center">
-                    <div className="bg-white p-3 rounded-2xl shadow-lg mb-1">
-                      <div className="bg-blue-500 w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold">
-                        {companyName}
-                      </div>
-                    </div>
-                    {/* Pin point */}
-                    <div className="w-4 h-4 bg-white transform rotate-45 -mt-2"></div>
-                  </div>
-                  
-                  {/* Animated ripple effect */}
-                  <motion.div
-                    className="absolute -top-6 -left-6 w-28 h-28 rounded-full border-2 border-blue-500/30"
-                    animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  ></motion.div>
-                </motion.div>
-              </div>
-              
-              {/* Map controls styled in Apple's design language */}
-              <div className="absolute bottom-6 right-6 flex flex-col gap-2">
-                <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-white transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                  </svg>
-                </button>
-                <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center hover:bg-white transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12H6" />
-                  </svg>
-                </button>
-              </div>
-              
-              {/* Apple-style info pill */}
-              <div className="absolute top-6 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm py-2 px-4 rounded-full shadow-md flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 mr-2 text-blue-500">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-sm font-medium">{companyName} Appliances - {companyAddress}</span>
-              </div>
             </div>
             
             <div className="mt-6 bg-gray-50 rounded-2xl p-4 border border-gray-100">
