@@ -15,8 +15,8 @@ const auroraData: ServiceAreaData = {
   fullName: 'Aurora, Ontario',
   description: 'From historic downtown to growing suburban areas, our appliance repair technicians provide prompt service throughout Aurora with same-day appointments available.',
   heroImage: '/images/areas/areas-hero.webp',
-  neighborhoodImage: '/images/aurora-map.webp',
-  mapImage: '/images/aurora.webp',
+  neighborhoodImage: '/images/areas/aurora-map.webp',
+  mapImage: '/images/areas/coverage.jpg',
   
   // Location information
   address: {

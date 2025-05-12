@@ -16,7 +16,7 @@ const burlingtonData: ServiceAreaData = {
   description: 'From lakefront homes to suburban neighborhoods, our appliance repair technicians provide prompt service throughout Burlington with same-day appointments available.',
   heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/burlington-map.webp',
-  mapImage: '/images/burlington.webp',
+  mapImage: '/images/areas/coverage.jpg',
   
   // Location information
   address: {

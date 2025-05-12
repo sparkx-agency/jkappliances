@@ -13,10 +13,10 @@ const ajaxData: ServiceAreaData = {
   id: 'ajax',
   name: 'Ajax',
   fullName: 'Ajax, Ontario',
-  description: 'From lakeside homes to new developments, our appliance repair technicians provide prompt service throughout Ajax with same-day appointments available.',
+  description: 'From lakeside homes to new deve lopments, our appliance repair technicians provide prompt service throughout Ajax with same-day appointments available.',
   heroImage: '/images/areas/areas-hero.webp',
-  neighborhoodImage: '/images/ajax-map.webp',
-  mapImage: '/images/ajax.webp',
+  neighborhoodImage: '/images/areas/ajax-map.webp',
+  mapImage: '/images/areas/coverage.jpg',
   
   // Location information
   address: {

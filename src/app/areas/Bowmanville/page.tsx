@@ -16,7 +16,7 @@ const bowmanvilleData: ServiceAreaData = {
   description: 'From historic downtown to suburban neighborhoods, our appliance repair technicians provide prompt service throughout Bowmanville with same-day appointments available.',
   heroImage: '/images/areas/areas-hero.webp',
   neighborhoodImage: '/images/bowmanville-map.webp',
-  mapImage: '/images/bowmanville.webp',
+  mapImage: '/images/areas/coverage.jpg',
   
   // Location information
   address: {
