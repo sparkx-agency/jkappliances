@@ -4,6 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { popularBrands } from '@/data/brandsData';
+import BrandsSliderSection from '@/components/sections/brands/BrandsSliderSection';
 
 
 // Problems data with icons
@@ -704,42 +706,11 @@ export default function FreezerRepairPage() {
       </section>
       
       {/* Brands We Service Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6 max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-semibold text-[#1d1d1f] mb-6">
-              Brands We Service
-            </h2>
-            <p className="text-lg text-[#86868b] max-w-3xl mx-auto leading-relaxed">
-              Our technicians are certified to repair all major freezer brands, with specialized knowledge of each manufacturer's unique systems and components.
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-              {brands.map((brand, index) => (
-                <div 
-                  key={index}
-                  className="bg-[#f5f5f7] rounded-xl p-6 flex items-center justify-center"
-                >
-                  <span className="text-lg font-medium text-[#1d1d1f]">{brand}</span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <BrandsSliderSection
+        title="Top Freezer Brands We Fix"
+        subtitle="Our technicians are certified to repair all major freezer brands and models."
+        brands={popularBrands}
+      />
       
       {/* FAQs Section */}
       <section className="py-24 bg-[#f5f5f7]">
