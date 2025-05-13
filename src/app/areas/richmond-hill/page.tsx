@@ -1,11 +1,8 @@
 "use client";
-
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
 
 // Richmond Hill area data
@@ -74,80 +71,6 @@ const richmondHillData: ServiceAreaData = {
   }
 };
 
-// Sample services data for Richmond Hill
-const richmondHillServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-        description: 'Our Richmond Hill refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Richmond Hill neighborhoods with same-day appointments available.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement'
-    ],
-    image: '/images/services/fridge-repair.png'
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-        description: 'Our washer repair services in Richmond Hill cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Richmond Hill home.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements'
-    ],
-    image: '/images/services/washer-repair.png'
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-        description: 'When your dryer stops working properly in Richmond Hill, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Richmond Hill team can solve your dryer problems quickly and effectively.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs'
-    ],
-    image: '/images/services/dryer-repair.png'
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-        description: 'Our Richmond Hill dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Richmond Hill, often on the same day you call.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements'
-    ],
-    image: '/images/services/dishwasher-repair.png'
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-        description: 'For oven and stove repairs in Richmond Hill, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Richmond Hill area.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks'
-    ],
-    image: '/images/services/walloven-repair.png'
-  }
-];
-
 // Brand data for Richmond Hill
 const richmondHillBrands: BrandItem[] = [
   {
@@ -213,6 +136,7 @@ const richmondHillBrands: BrandItem[] = [
 ];
 
 export default function RichmondhillAreaPage() {
+  const richmondHillServices = createStandardServices(richmondHillData.name);
   return(
     <ServiceAreaPageTemplate
     areaData={richmondHillData}

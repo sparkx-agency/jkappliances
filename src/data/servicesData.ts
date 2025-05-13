@@ -12,12 +12,12 @@ export const standardServiceIds = [
 
 // Standard images for each service type
 export const serviceImageMap: Record<string, string> = {
-  'refrigerator-repair': '/images/servicestab/1.png',
-  'washer-repair': '/images/servicestab/2.png',
-  'dryer-repair': '/images/servicestab/3.png',
-  'dishwasher-repair': '/images/servicestab/6.png',
-  'oven-repair': '/images/servicestab/5.png',
-  'stove-repair': '/images/servicestab/4.png',
+  'refrigerator-repair': '/images/servicestab/1.webp',
+  'washer-repair': '/images/servicestab/2.webp',
+  'dryer-repair': '/images/servicestab/3.webp',
+  'dishwasher-repair': '/images/servicestab/6.webp',
+  'oven-repair': '/images/servicestab/5.webp',
+  'stove-repair': '/images/servicestab/4.webp',
 };
 
 // Standard service descriptions that can be reused across areas
@@ -100,5 +100,5 @@ export function getServiceImage(serviceId: string, providedImage?: string): stri
   }
   
   // Return mapped image or default if not found
-  return serviceImageMap[serviceId] || '/images/services/appliance-repair-default.webp';
+  return serviceImageMap[serviceId] || '/images/servicestab/appliance-repair-default.webp';
 } 

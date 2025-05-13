@@ -1,11 +1,7 @@
- 
-
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
  
 
@@ -92,75 +88,6 @@ const caledonData: ServiceAreaData = {
   recentProjects: [],
 };
 
-// Available services for area - properly typed as ServiceItem[]
-const caledonServices: ServiceItem[] = [
-    {
-      id: 'refrigerator-repair',
-      name: 'Refrigerator Repair',
-            description: 'From classic kitchens in historic Caledon homes to modern appliances in newer builds, our technicians have the expertise to repair all refrigerator types. We diagnose and fix cooling issues, ice maker problems, and more.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement'
-    ]
-  },
-    {
-      id: 'oven-repair',
-      name: 'Oven & Stove Repair',
-            description: 'Whether you\'re in Bolton or a rural property in Caledon East, we provide fast, reliable oven and stove repair. Our technicians can fix temperature issues, faulty elements, ignition problems, and more for all models.',
-      commonServices: [
-        'Heating element replacements',
-        'Temperature sensor calibration',
-        'Burner and igniter repairs',
-        'Control board troubleshooting',
-        'Door hinge and seal replacements',
-        'Gas line and connection safety checks'
-      ]
-    },
-    {
-      id: 'dishwasher-repair',
-      name: 'Dishwasher Repair',
-            description: 'Having dishwasher troubles in your Caledon home? Our local technicians can quickly diagnose and repair leaks, drainage problems, cleaning issues, and electrical faults in all dishwasher brands and models.',
-      commonServices: [
-        'Spray arm repairs and replacements',
-        'Pump and motor servicing',
-        'Water inlet valve repairs',
-        'Drainage system unclogging',
-        'Control board and panel repairs',
-        'Door seal replacements'
-      ]
-    },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-          description: 'For washing machine repairs throughout Caledon Village, Bolton, and beyond, our experienced technicians can fix everything from drainage issues to mechanical problems, unusual noises, and control panel malfunctions.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-          description: 'When your dryer isn\'t heating, is making strange noises, or won\'t start, our Caledon technicians can help. We service all types of dryers across the region, from Bolton to the scenic villages of Belfountain and Alton.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs'
-    ]
-    }
-  ];
-
 // Brands serviced - properly typed as BrandItem[]
 const caledonBrands: BrandItem[] = [
   {
@@ -227,6 +154,7 @@ const caledonBrands: BrandItem[] = [
 
   // Caledon page using the template
 export default function CaledonAreaPage() {
+  const caledonServices = createStandardServices(caledonData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={caledonData}

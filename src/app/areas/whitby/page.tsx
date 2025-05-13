@@ -1,9 +1,7 @@
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
 
 // Whitby area data
@@ -68,80 +66,6 @@ const whitbyData: ServiceAreaData = {
     serviceNotes: "Our Whitby technicians are familiar with the town's varied landscape, from lakefront properties to rural areas and suburban developments. We understand the specific service requirements for Whitby's diverse neighborhoods and housing types."
   }
 };
-
-// Services data for Whitby
-const whitbyServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-    description: 'Our Whitby refrigerator repair experts can diagnose and fix all brands and models of refrigerators. From cooling problems to ice maker issues, our technicians provide prompt, reliable service throughout Whitby with same-day appointments often available.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement',
-      'Smart refrigerator troubleshooting'
-    ]
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-    description: 'Our washer repair services in Whitby cover all major brands and models. Whether your machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify and resolve the problem efficiently, right in your Whitby home.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements',
-      'Hard water damage remediation'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-    description: 'When your dryer isn\'t working properly in Whitby, our expert technicians are ready to help. We service all types of dryers including gas and electric models, addressing heating problems, noise issues, and sensor malfunctions with reliable, effective repairs.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs',
-      'Gas valve and igniter servicing'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-    description: 'Our Whitby dishwasher repair specialists address all common issues like poor cleaning performance, leaking, and unusual noises. We service all brands and models, providing prompt, reliable repairs throughout Whitby, often on the same day you call.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements',
-      'Water hardness adjustments'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-    description: 'For oven and stove repairs in Whitby, our technicians are experienced with all types including gas, electric, and induction models. We provide expert diagnostics and repairs throughout the Whitby area, addressing temperature issues, burner problems, and control malfunctions.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks',
-      'Self-cleaning system repairs'
-    ]
-  }
-];
 
 // Brand data for Whitby
 const whitbyBrands: BrandItem[] = [
@@ -209,6 +133,7 @@ const whitbyBrands: BrandItem[] = [
 
 // Whitby page using the template
 export default function WhitbyAreaPage() {
+  const whitbyServices = createStandardServices(whitbyData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={whitbyData}

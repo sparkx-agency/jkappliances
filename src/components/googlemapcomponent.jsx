@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, LoadScript, Polygon, Marker, InfoWindow } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Polygon, Marker, InfoWindow } from '@react-google-maps/api';
 
 // Service area coordinates for highlighting
 // These are approximate polygons for each service area - these should be replaced with more precise coordinates
@@ -179,6 +179,7 @@ const areaCenters = {
 const defaultCenter = { lat: 43.7417, lng: -79.3733 }; // Toronto
 const defaultZoom = 10;
 
+// Singleton pattern for API loading
 const GoogleMapComponent = ({ 
   area,
   height = "400px",
@@ -188,7 +189,12 @@ const GoogleMapComponent = ({
   companyAddress = "18 Yonge St"
 }) => {
   const [selectedMarker, setSelectedMarker] = useState(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
+  
+  // Use the useJsApiLoader hook instead of LoadScript component
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""
+  });
   
   // Normalize area name to match our keys
   const normalizedArea = area ? area.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '') : '';
@@ -239,69 +245,65 @@ const GoogleMapComponent = ({
     strokeWeight: 2
   };
   
-  // Handle map load
-  const handleMapLoad = () => {
-    setMapLoaded(true);
-  };
+  if (!isLoaded) {
+    return <div style={containerStyle} className="bg-gray-100 flex items-center justify-center">Loading map...</div>;
+  }
   
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""} onLoad={() => console.log("Google Maps script loaded")}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={normalizedArea ? 11 : defaultZoom}
-        options={mapOptions}
-        onLoad={handleMapLoad}
-      >
-        {/* Highlight selected service area */}
-        {normalizedArea && areaCoordinates[normalizedArea] && (
-          <Polygon
-            paths={areaCoordinates[normalizedArea]}
-            options={polygonOptions}
-          />
-        )}
-        
-        {/* Company location marker */}
-        {showCompanyMarker && mapLoaded && (
-          <Marker
-            position={companyLocation}
-            icon={{
-              path: "M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5 2.5,1.12 2.5,2.5 -1.12,2.5 -2.5,2.5z",
-              fillColor: "#0071e3",
-              fillOpacity: 1,
-              strokeColor: "#ffffff",
-              strokeWeight: 2,
-              scale: 2,
-              anchor: { x: 12, y: 24 }
-            }}
-            onClick={() => setSelectedMarker("company")}
-          />
-        )}
-        
-        {/* Info window for company marker */}
-        {selectedMarker === "company" && (
-          <InfoWindow
-            position={companyLocation}
-            onCloseClick={() => setSelectedMarker(null)}
-          >
-            <div style={{ padding: "5px", maxWidth: "200px" }}>
-              <h3 style={{ margin: "0 0 5px", fontSize: "16px", fontWeight: "bold" }}>{companyName}</h3>
-              <p style={{ margin: "0", fontSize: "14px" }}>{companyAddress}</p>
-              <p style={{ margin: "5px 0 0", fontSize: "14px" }}>
-                <a 
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${companyLocation.lat},${companyLocation.lng}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "#0071e3", textDecoration: "none" }}
-                >
-                  Get Directions
-                </a>
-              </p>
-            </div>
-          </InfoWindow>
-        )}
-      </GoogleMap>
-    </LoadScript>
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={normalizedArea ? 11 : defaultZoom}
+      options={mapOptions}
+    >
+      {/* Highlight selected service area */}
+      {normalizedArea && areaCoordinates[normalizedArea] && (
+        <Polygon
+          paths={areaCoordinates[normalizedArea]}
+          options={polygonOptions}
+        />
+      )}
+      
+      {/* Company location marker */}
+      {showCompanyMarker && (
+        <Marker
+          position={companyLocation}
+          icon={{
+            path: "M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5 2.5,1.12 2.5,2.5 -1.12,2.5 -2.5,2.5z",
+            fillColor: "#0071e3",
+            fillOpacity: 1,
+            strokeColor: "#ffffff",
+            strokeWeight: 2,
+            scale: 2,
+            anchor: { x: 12, y: 24 }
+          }}
+          onClick={() => setSelectedMarker("company")}
+        />
+      )}
+      
+      {/* Info window for company marker */}
+      {selectedMarker === "company" && (
+        <InfoWindow
+          position={companyLocation}
+          onCloseClick={() => setSelectedMarker(null)}
+        >
+          <div style={{ padding: "5px", maxWidth: "200px" }}>
+            <h3 style={{ margin: "0 0 5px", fontSize: "16px", fontWeight: "bold" }}>{companyName}</h3>
+            <p style={{ margin: "0", fontSize: "14px" }}>{companyAddress}</p>
+            <p style={{ margin: "5px 0 0", fontSize: "14px" }}>
+              <a 
+                href={`https://www.google.com/maps/dir/?api=1&destination=${companyLocation.lat},${companyLocation.lng}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#0071e3", textDecoration: "none" }}
+              >
+                Get Directions
+              </a>
+            </p>
+          </div>
+        </InfoWindow>
+      )}
+    </GoogleMap>
   );
 };
 

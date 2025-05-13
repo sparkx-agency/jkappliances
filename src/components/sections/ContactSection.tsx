@@ -136,24 +136,6 @@ const ContactSection = () => {
             </form>
           </motion.div>
         </div>
-        
-        <div className="mt-24 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-3xl font-semibold text-gray-900 mb-8"
-          >
-            Ready for professional appliance repair?
-          </motion.p>
-          <Link 
-            href="/book" 
-            className="px-10 py-5 rounded-full bg-black text-white font-medium transition-all hover:bg-gray-800 shadow-sm inline-block"
-          >
-            Book Your Repair
-          </Link>
-        </div>
       </div>
     </section>
   );

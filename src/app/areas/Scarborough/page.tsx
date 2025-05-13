@@ -1,11 +1,8 @@
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
-
 // Scarborough area data
 const scarboroughData: ServiceAreaData = {
   id: 'scarborough',
@@ -71,79 +68,6 @@ const scarboroughData: ServiceAreaData = {
   }
 };
 
-// Services data for Scarborough
-const scarboroughServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-    description: 'Our Scarborough refrigerator repair specialists can diagnose and fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts provide efficient repairs throughout Scarborough with same-day service often available.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement',
-      'Smart refrigerator troubleshooting'
-    ]
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-    description: 'Our washer repair services in Scarborough address all common washing machine problems. Whether your machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide effective repairs right in your Scarborough home.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements',
-      'Water level sensor calibration'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-    description: 'When your dryer isn\'t working properly in Scarborough, our expert technicians can help. We service both electric and gas dryers of all brands, addressing heating problems, unusual noises, and other issues with same-day service throughout the Scarborough area.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs',
-      'Gas valve and igniter servicing'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-    description: 'Our Scarborough dishwasher repair specialists fix common issues like poor cleaning performance, leaking, and drainage problems. We service all brands and models, providing prompt, reliable repairs throughout Scarborough, often on the same day you call.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements',
-      'Water hardness adjustments'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-    description: 'For oven and stove repairs in Scarborough, our technicians are experienced with all types including gas, electric, and induction models. From temperature issues to burner problems, we provide expert diagnoses and repairs throughout all Scarborough neighborhoods.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks',
-      'Self-cleaning system repairs'
-    ]
-  }
-];
 
 // Brand data for Scarborough
 const scarboroughBrands: BrandItem[] = [
@@ -211,6 +135,7 @@ const scarboroughBrands: BrandItem[] = [
 
 // Scarborough page using the template
 export default function ScarboroughAreaPage() {
+  const scarboroughServices = createStandardServices(scarboroughData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={scarboroughData}

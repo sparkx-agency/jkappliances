@@ -1,10 +1,9 @@
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
+ 
 
 // Georgina area data
 const georginaData: ServiceAreaData = {
@@ -62,81 +61,6 @@ const georginaData: ServiceAreaData = {
     serviceNotes: "Our Georgina technicians are familiar with the unique needs of both year-round residences and seasonal lake properties. We understand the access considerations for waterfront homes and rural locations throughout the area."
   }
 };
-
-// Services data for Georgina
-const georginaServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-    description: 'Our Georgina refrigerator repair service covers all brands and models found in permanent and seasonal homes. From cooling issues to ice maker problems, our technicians provide fast, reliable repairs throughout Keswick, Sutton, and all Georgina communities.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement',
-      'Seasonal startup service'
-    ]
-
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-    description: 'Our washer repair services in Georgina address all common washing machine problems. Whether your machine is leaking, not spinning, or won\'t drain properly, our experienced technicians provide efficient, effective repairs for all Georgina residents.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements',
-      'Water level sensor calibration'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-    description: 'When your dryer isn\'t working properly in Georgina, our expert technicians can help. We service both electric and gas dryers of all brands, addressing heating problems, unusual noises, and other issues with same-day or next-day service throughout the area.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs',
-      'Gas valve and igniter servicing'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-    description: 'Our Georgina dishwasher repair service addresses cleaning performance issues, drainage problems, leaks, and unusual noises. Our technicians are experienced with models from all major brands and provide prompt, reliable repairs throughout Georgina.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements',
-      'Water hardness adjustments'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-    description: 'Our oven and stove repair services in Georgina cover all cooking appliances including electric and gas models, wall ovens, ranges, and cooktops. From temperature issues to burner problems, our technicians provide expert repairs for all Georgina residents.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks',
-      'Self-cleaning system repairs'
-    ]
-  }
-];
 
 // Brand data for Georgina
 const georginaBrands: BrandItem[] = [
@@ -204,6 +128,7 @@ const georginaBrands: BrandItem[] = [
 
 // Georgina page using the template
 export default function GeorginaAreaPage() {
+  const georginaServices = createStandardServices(georginaData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={georginaData}

@@ -1,10 +1,7 @@
-
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
 
 
@@ -70,75 +67,6 @@ const burlingtonData: ServiceAreaData = {
     serviceNotes: "Our Burlington technicians are familiar with all neighborhoods from the waterfront to rural areas in the north. We maintain inventory specifically for the most common brands and models found in Burlington homes, ensuring faster service and repairs."
   }
 };
-
-// Sample services data for Burlington
-const burlingtonServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-        description: 'Our Burlington refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Burlington neighborhoods with same-day appointments available.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement'
-    ]
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-        description: 'Our washer repair services in Burlington cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Burlington home.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-        description: 'When your dryer stops working properly in Burlington, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Burlington team can solve your dryer problems quickly and effectively.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-        description: 'Our Burlington dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Burlington, often on the same day you call.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-        description: 'For oven and stove repairs in Burlington, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Burlington area.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks'
-    ]
-  }
-];
 
 // Brand data for Burlington
 const burlingtonBrands: BrandItem[] = [
@@ -206,6 +134,7 @@ const burlingtonBrands: BrandItem[] = [
 
 // Burlington page using the template
 export default function BurlingtonAreaPage() {
+  const burlingtonServices = createStandardServices(burlingtonData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={burlingtonData}

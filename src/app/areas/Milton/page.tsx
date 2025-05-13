@@ -1,9 +1,7 @@
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
 
 // Milton area data
@@ -68,80 +66,6 @@ const miltonData: ServiceAreaData = {
     serviceNotes: "Our Milton technicians are familiar with both the historic downtown area and newer subdivisions, ensuring efficient service across all neighborhoods. We understand the unique needs of Milton's diverse housing stock, from century homes to modern developments."
   }
 };
-
-// Services data for Milton
-const miltonServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-    description: 'Our Milton refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts can diagnose and repair your refrigerator quickly and efficiently. We service all Milton neighborhoods with same-day appointments available.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement',
-      'Smart refrigerator troubleshooting'
-    ]
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-    description: 'Our washer repair services in Milton cover all major brands and models. Whether your washing machine is leaking, not spinning, or making unusual noises, our skilled technicians can identify the problem and provide efficient, long-lasting repairs right in your Milton home.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements',
-      'Hard water damage remediation'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-    description: 'When your dryer stops working properly in Milton, our expert technicians are just a call away. We repair all types of dryers including gas and electric models. From heating issues to strange noises, our Milton team can solve your dryer problems quickly and effectively.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs',
-      'Gas valve and igniter servicing'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-    description: 'Our Milton dishwasher repair services cover all brands and models. We fix common issues like poor cleaning performance, leaking, and drainage problems. Our experienced technicians provide fast, reliable dishwasher repairs throughout Milton, often on the same day you call.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements',
-      'Water hardness adjustments'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-    description: 'For oven and stove repairs in Milton, our technicians are experienced with all types including gas, electric, and induction. Whether your oven isn\'t heating properly or your stove burners won\'t light, we provide expert diagnoses and repairs throughout the Milton area.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks',
-      'Self-cleaning system repairs'
-    ]
-  }
-];
 
 // Brand data for Milton
 const miltonBrands: BrandItem[] = [
@@ -209,6 +133,7 @@ const miltonBrands: BrandItem[] = [
 
 // Milton page using the template
 export default function MiltonAreaPage() {
+  const miltonServices = createStandardServices(miltonData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={miltonData}

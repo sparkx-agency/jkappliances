@@ -1,9 +1,7 @@
 import React from 'react';
 import ServiceAreaPageTemplate from '@/components/templates/ServiceAreaPageTemplate';
 import type { ServiceAreaData } from '@/types/serviceArea';
-import type { ServiceItem } from '@/components/sections/common/ServicesTabSection';
 import type { BrandItem } from '@/components/sections/brands/BrandsSliderSection';
-import ServicesTabSection from '@/components/sections/common/ServicesTabSection';
 import { createStandardServices } from '@/data/servicesData';
 
 // Stouffville area data
@@ -72,79 +70,6 @@ const stouffvilleData: ServiceAreaData = {
   }
 };
 
-// Services data for Stouffville
-const stouffvilleServices: ServiceItem[] = [
-  {
-    id: 'refrigerator-repair',
-    name: 'Refrigerator Repair',
-        description: 'Our Stouffville refrigerator repair technicians can fix all brands and models of refrigerators. From cooling issues to ice maker problems, our experts provide efficient diagnostic and repair services throughout the Stouffville area with prompt response times.',
-    commonServices: [
-      'Temperature regulation issues',
-      'Ice maker repairs',
-      'Water dispenser problems',
-      'Strange noises or leaking',
-      'Compressor and condenser repairs',
-      'Door seal replacement',
-      'Smart refrigerator troubleshooting'
-    ]
-  },
-  {
-    id: 'washer-repair',
-    name: 'Washer Repair',
-        description: 'Our washer repair services in Stouffville address all common washing machine problems. Whether your unit is leaking, not spinning, or making unusual noises, our experienced technicians provide efficient, long-lasting repairs for all Stouffville residents.',
-    commonServices: [
-      'Drum and agitator problems',
-      'Drainage and pump issues',
-      'Water inlet and leaking repairs',
-      'Control board and timer repairs',
-      'Door latch and lock issues',
-      'Bearing and motor replacements',
-      'Hard water damage remediation'
-    ]
-  },
-  {
-    id: 'dryer-repair',
-    name: 'Dryer Repair',
-        description: 'When your dryer isn\'t working properly in Stouffville, our expert technicians can help. We service both electric and gas dryers of all brands, addressing heating issues, unusual noises, and other common problems with reliable, effective repairs.',
-    commonServices: [
-      'Heating element replacements',
-      'Drum and belt repairs',
-      'Thermostat and sensor calibration',
-      'Vent cleaning and maintenance',
-      'Motor and bearing replacements',
-      'Control panel and timer repairs',
-      'Gas valve and igniter servicing'
-    ]
-  },
-  {
-    id: 'dishwasher-repair',
-    name: 'Dishwasher Repair',
-        description: 'Our Stouffville dishwasher repair services cover all brands and models. We address common issues like poor cleaning performance, leaking, and drainage problems with prompt, reliable repairs throughout the Stouffville community.',
-    commonServices: [
-      'Spray arm repairs and replacements',
-      'Pump and motor servicing',
-      'Water inlet valve repairs',
-      'Drainage system unclogging',
-      'Control board and panel repairs',
-      'Door seal replacements',
-      'Water hardness adjustments'
-    ]
-  },
-  {
-    id: 'oven-repair',
-    name: 'Oven & Stove Repair',
-        description: 'For oven and stove repairs in Stouffville, our technicians are experienced with all types including gas, electric, and induction models. Whether your oven isn\'t heating properly or your burners won\'t light, we provide expert service throughout the Stouffville area.',
-    commonServices: [
-      'Heating element replacements',
-      'Temperature sensor calibration',
-      'Burner and igniter repairs',
-      'Control board troubleshooting',
-      'Door hinge and seal replacements',
-      'Gas line and connection safety checks',
-      'Self-cleaning system repairs'
-    ]
-  }
-];
 
 // Brand data for Stouffville
 const stouffvilleBrands: BrandItem[] = [
@@ -212,6 +137,7 @@ const stouffvilleBrands: BrandItem[] = [
 
 // Stouffville page using the template
 export default function StouffvilleAreaPage() {
+  const stouffvilleServices = createStandardServices(stouffvilleData.name);
   return (
     <ServiceAreaPageTemplate
       areaData={stouffvilleData}
