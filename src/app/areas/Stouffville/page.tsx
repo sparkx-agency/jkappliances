@@ -16,10 +16,10 @@ const stouffvilleData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '6240 Main St',
-    city: 'Whitchurch-Stouffville',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L4A 1G8',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

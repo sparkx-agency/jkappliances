@@ -16,10 +16,10 @@ const eastYorkData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '850 Coxwell Avenue',
-    city: 'Toronto',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'M4C 5R1',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

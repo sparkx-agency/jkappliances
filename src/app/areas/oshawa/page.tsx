@@ -16,10 +16,10 @@ const oshawaData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '80 King St E',
-    city: 'Oshawa',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L1H 1B6',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

@@ -62,8 +62,8 @@ const ContactSection = () => {
                 <div className="ml-6">
                   <h3 className="text-xl font-medium text-gray-900">Office</h3>
                   <p className="mt-2 text-gray-500 font-light">
-                    18 Yonge St<br />
-                    Toronto, ON M5E 1Z8
+                    8 Lorraine Crescent<br />
+                    Brampton, ON L6S 2R7
                   </p>
                   <p className="text-sm text-gray-500 mt-1">By appointment only</p>
                 </div>

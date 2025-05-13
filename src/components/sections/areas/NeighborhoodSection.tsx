@@ -25,7 +25,7 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
   description = "Our appliance repair technicians provide fast, reliable service throughout the Greater Toronto Area. Find your neighborhood below.",
   areas,
   companyName = "JK",
-  companyAddress = "18 Yonge St",
+  companyAddress = "8 Lorraine Crescent",
   showFullMapLink = true
 }) => {
   const [activeArea, setActiveArea] = useState<string | null>(null);

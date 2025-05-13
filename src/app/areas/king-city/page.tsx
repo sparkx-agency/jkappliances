@@ -17,10 +17,10 @@ const kingCityData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '2585 King Road',
-    city: 'King City',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L7B 1A1',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

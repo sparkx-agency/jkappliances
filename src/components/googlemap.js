@@ -185,7 +185,7 @@ const GoogleMapComponent = ({
   width = "100%",
   showCompanyMarker = true,
   companyName = "JK Appliances",
-  companyAddress = "18 Yonge St"
+  companyAddress = "8 Lorraine Crescent"
 }) => {
   const [selectedMarker, setSelectedMarker] = useState(null);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -199,7 +199,7 @@ const GoogleMapComponent = ({
     : defaultCenter;
   
   // Company location (could be configurable)
-  const companyLocation = { lat: 43.6444, lng: -79.3807 }; // 18 Yonge St, Toronto
+  const companyLocation = { lat: 43.6444, lng: -79.3807 }; // 8 Lorraine Crescent, Brampton
   
   // Map styling options
   const mapOptions = {

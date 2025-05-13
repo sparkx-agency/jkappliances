@@ -16,10 +16,10 @@ const miltonData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '55 Ontario St S',
-    city: 'Milton',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L9T 2M3',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

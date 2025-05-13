@@ -15,10 +15,10 @@ const downtownTorontoData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '100 Queen Street West',
-    city: 'Toronto',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'M5H 2N2',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

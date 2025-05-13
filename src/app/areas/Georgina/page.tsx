@@ -17,10 +17,10 @@ const georginaData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '76 The Queensway S',
-    city: 'Keswick',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L4P 2E3',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

@@ -16,10 +16,10 @@ const pickeringData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '1355 Kingston Rd',
-    city: 'Pickering',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L1V 1B8',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

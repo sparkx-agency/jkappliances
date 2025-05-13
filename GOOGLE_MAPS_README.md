@@ -51,7 +51,7 @@ The `GoogleMapComponent` accepts these props:
   width="100%"                 // Width of the map (default: 100%)
   showCompanyMarker={true}     // Whether to show the company marker
   companyName="JK Appliances"  // Name displayed in the info window
-  companyAddress="18 Yonge St" // Address displayed in the info window
+  companyAddress="8 Lorraine Cres" // Address displayed in the info window
 />
 ```
 

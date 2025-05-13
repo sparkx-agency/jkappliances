@@ -16,10 +16,10 @@ const claremontData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '4951 Old Brock Rd',
-    city: 'Claremont',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L1Y 1A9',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

@@ -770,10 +770,10 @@ export default function OvenRepairPage() {
               "name": "JK Appliances",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "18 Yonge St",
-                "addressLocality": "Toronto",
+                "streetAddress": "8 Lorraine Crescent",
+                "addressLocality": "Brampton",
                 "addressRegion": "ON",
-                "postalCode": "M5E 1Z8",
+                "postalCode": "L6S 2R7",
                 "addressCountry": "CA"
               },
               "telephone": "+16475608966"

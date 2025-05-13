@@ -249,7 +249,7 @@ const ServiceAreasSection = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 mr-2 text-blue-500">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-sm font-medium">JK Appliances - 18 Yonge St</span>
+                <span className="text-sm font-medium">JK Appliances - 8 Lorraine Crescent</span>
               </div>
             </div>
             

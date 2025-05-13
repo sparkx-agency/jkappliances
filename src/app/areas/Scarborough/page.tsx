@@ -15,10 +15,10 @@ const scarboroughData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '1900 Eglinton Ave E',
-    city: 'Toronto',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'M1L 2L9',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

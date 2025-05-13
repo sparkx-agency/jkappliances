@@ -16,10 +16,10 @@ const whitbyData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '1615 Dundas St E',
-    city: 'Whitby',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L1N 2L1',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

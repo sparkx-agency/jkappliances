@@ -16,10 +16,10 @@ const thornhillData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '7700 Bathurst St',
-    city: 'Thornhill',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'L4J 7Y3',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details

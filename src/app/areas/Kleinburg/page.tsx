@@ -19,10 +19,10 @@ const kleinburgData: ServiceAreaData = {
   
   // Location information
   address: {
-    street: '18 Yonge St',
-    city: 'Toronto',
+    street: '8 Lorraine Crescent',
+    city: 'Brampton',
     province: 'ON',
-    postalCode: 'M5E 1Z8',
+    postalCode: 'L6S 2R7',
   },
   
   // Service radius and coverage details
