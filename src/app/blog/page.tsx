@@ -12,24 +12,23 @@ export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   // Load blog posts on component mount
   useEffect(() => {
     async function fetchBlogPosts() {
+      setIsLoading(true);
       try {
-        setIsLoading(true);
-        const response = await fetch('/api/blog');
-        const data = await response.json();
-        
-        if (data.posts) {
-          setBlogPosts(data.posts);
-        } else {
-          console.error('No posts received from API');
-          setBlogPosts([]);
+        const response = await fetch('/api/blog/posts');
+        if (!response.ok) {
+          throw new Error('Failed to fetch blog posts');
         }
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-        setBlogPosts([]);
+        const data = await response.json();
+        setBlogPosts(data);
+        setError(null);
+      } catch (err) {
+        console.error('Error fetching blog posts:', err);
+        setError('Failed to load blog posts. Please try again later.');
       } finally {
         setIsLoading(false);
       }
@@ -61,10 +60,31 @@ export default function BlogPage() {
   // Loading state
   if (isLoading) {
     return (
-      <div className="pt-24 pb-24 flex justify-center items-center min-h-[50vh]">
+      <div className="pt-24 pb-24 flex justify-center items-center min-h-[60vh]">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-gray-900 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading blog posts...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className="pt-24 pb-24 flex justify-center items-center min-h-[60vh]">
+        <div className="text-center">
+          <svg className="w-16 h-16 text-red-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">Error</h3>
+          <p className="text-gray-600 mb-6">{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-2 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition-colors"
+          >
+            Retry
+          </button>
         </div>
       </div>
     );
