@@ -50,7 +50,7 @@ const ServiceAreaCoverageSection = ({
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <h3 className="text-3xl font-semibold text-[#1d1d1f] mb-6">Our {areaName} Coverage</h3>
+              <h3 className="text-4xl font-semibold text-[#1d1d1f] mb-6">Our {areaName} Coverage</h3>
               <p className="text-[#424245] mb-6 leading-relaxed">
                 {localInfo.applianceUsage}
               </p>

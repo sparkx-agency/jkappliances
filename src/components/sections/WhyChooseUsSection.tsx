@@ -62,7 +62,7 @@ const WhyChooseUsSection = () => {
             transition={{ duration: 0.7 }}
             className="lg:w-1/2"
           >
-            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight mb-6 text-center lg:text-left">
               Why Choose Our Expert Repair Services
           </h2>
             <p className="text-xl text-gray-500 mb-12 font-light leading-relaxed">
@@ -98,7 +98,7 @@ const WhyChooseUsSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:w-1/2"
         >
-            <div className="relative h-[600px] w-full rounded-3xl overflow-hidden">
+            <div className="relative h-[600px] w-full rounded-3xl overflow-hidden hidden sm:block">
               <Image 
                 src="/images/technician-repairing.jpg"
                 alt="Technician repairing appliance"

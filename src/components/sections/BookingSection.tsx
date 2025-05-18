@@ -61,16 +61,13 @@ const BookingSection = () => {
   
   // Sample coupon codes
   const validCoupons = [
-    { code: 'NEW30', amount: 30, type: 'flat' },
-    { code: 'RETURN15', amount: 15, type: 'flat' },
-    { code: 'SENIOR30', amount: 30, type: 'flat' },
-    { code: 'TRNEW30', amount: 30, type: 'flat' },
-    { code: 'TRRETURN15', amount: 15, type: 'flat' },
-    { code: 'TRSENIOR30', amount: 30, type: 'flat' },
-    { code: 'TRFRIDGE35', amount: 35, type: 'flat', applianceType: 'refrigerator' },
-    { code: 'TRWASH25', amount: 25, type: 'flat', applianceType: 'washer' },
-    { code: 'FRIDGE35', amount: 35, type: 'flat', applianceType: 'refrigerator' },
-    { code: 'WASH25', amount: 25, type: 'flat', applianceType: 'washer' },
+    { code: 'JKNEW30', amount: 30, type: 'flat' },
+    { code: 'JKRETURN15', amount: 15, type: 'flat' },
+    { code: 'JKSENIOR30', amount: 30, type: 'flat' },
+    { code: 'JKFRIDGE35', amount: 35, type: 'flat', applianceType: 'refrigerator' },
+    { code: 'JKWASHER25', amount: 25, type: 'flat', applianceType: 'washer' },
+    { code: 'JKDRYER20', amount: 20, type: 'flat', applianceType: 'dryer' },
+    { code: 'JKDISH30', amount: 30, type: 'flat', applianceType: 'dishwasher' },
     { code: 'SAVE10', amount: 10, type: 'percentage' },
   ];
 
@@ -81,18 +78,18 @@ const BookingSection = () => {
       const couponParam = params.get('coupon');
       
       if (couponParam) {
+        // Set coupon code from URL parameter
         setFormData(prev => ({
           ...prev,
           couponCode: couponParam
         }));
         
-        // Wait for next render cycle to ensure formData is updated
+        // Validate coupon in the next render cycle
         setTimeout(() => {
           validateCoupon(couponParam);
-        }, 0);
+        }, 100);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Calculate estimated price based on appliance type and urgent repair
@@ -148,7 +145,7 @@ const BookingSection = () => {
     
     setIsCouponLoading(true);
     
-    // Simulate API call to validate coupon
+    // Short delay to simulate API call
     setTimeout(() => {
       const coupon = validCoupons.find(c => c.code.toLowerCase() === couponCode.toLowerCase());
       
@@ -161,12 +158,13 @@ const BookingSection = () => {
         setIsCouponValid(false);
         setDiscount(null);
       } else if (coupon.applianceType && !appliance) {
-        // If coupon requires specific appliance but none selected yet
+        // If coupon is appliance-specific but no appliance selected yet
         setCouponMessage('Please select an appliance type first');
         setIsCouponValid(false);
         setDiscount(null);
       } else {
-        setCouponMessage(coupon.type === 'percentage' ? `Coupon applied! ${coupon.amount}% off` : `Coupon applied! $${coupon.amount} off`);
+        const discountText = coupon.type === 'percentage' ? `${coupon.amount}%` : `$${coupon.amount}`;
+        setCouponMessage(`Coupon applied! ${discountText} off your service`);
         setIsCouponValid(true);
         setDiscount(coupon.amount);
       }
@@ -332,13 +330,21 @@ const BookingSection = () => {
     setIsLoading(true);
     
     try {
+      // Include pricing information in the form data
+      const emailData = {
+        ...formData,
+        originalPrice,
+        estimatedPrice,
+        discount: isCouponValid ? discount : null
+      };
+      
       // Send data to API endpoint
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(emailData),
       });
       
       const result = await response.json();
@@ -369,6 +375,8 @@ const BookingSection = () => {
       
       setCurrentStep(1);
       setTouched({});
+      setIsCouponValid(false);
+      setDiscount(null);
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -623,7 +631,7 @@ const BookingSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6"
+              className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-6"
             >
               Book Your Repair
             </motion.h2>

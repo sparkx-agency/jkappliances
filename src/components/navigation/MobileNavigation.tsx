@@ -138,6 +138,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ phoneNumber }) => {
       content: [
         { name: 'Our Story', href: '/about' },
         { name: 'Blog', href: '/blog' },
+        { name: 'Coupons', href: '/coupons' },
         { name: 'FAQs', href: '/faq' },
         { name: 'Testimonials', href: '/testimonials' },
         { name: 'Contact Us', href: '/contact' },

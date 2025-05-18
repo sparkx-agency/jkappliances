@@ -102,7 +102,7 @@ const ServicesSectionArea: React.FC<ServicesSectionAreaProps> = ({ areaName }) =
           className="text-center mb-10 md:mb-16"
         >
           <span className="text-sm uppercase tracking-widest text-gray-500 font-medium">Our Services</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mt-3 mb-4 md:mb-6 tracking-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-semibold text-gray-900 mt-3 mb-4 md:mb-6 tracking-tight">
             Appliances We Repair in {areaName}
           </h2>
           <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto font-light">

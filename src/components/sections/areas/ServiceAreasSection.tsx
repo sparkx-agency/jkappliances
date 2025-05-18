@@ -62,7 +62,7 @@ const ServiceAreasSection = () => {
   };
 
   return (
-    <section className="py-32 bg-white overflow-hidden">
+    <section className="py-10 sm:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Centered Title Section */}
         <motion.div
@@ -107,7 +107,7 @@ const ServiceAreasSection = () => {
                   onScroll={handleScroll}
                   className="flex-1 overflow-y-auto pr-6"
                 >
-                  <div className="grid grid-cols-2 gap-x-12 gap-y-4">
+                  <div className="grid grid-cols-2 gap-x-12 gap-y-4 justify-items-center">
                     {/* Left Column of Areas */}
                     <div>
                       {leftColumn.map((area) => (
@@ -169,7 +169,7 @@ const ServiceAreasSection = () => {
               
               <div className="mt-8">
                 <Link 
-                  href="/service-areas" 
+                  href="/areas" 
                   className="inline-flex items-center text-blue-500 font-medium hover:underline"
                 >
                   View detailed coverage map
@@ -187,7 +187,7 @@ const ServiceAreasSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 hidden sm:block"
           >
             <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[600px] relative">
               {/* This would be replaced with an actual Google Maps integration */}

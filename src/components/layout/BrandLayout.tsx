@@ -70,44 +70,70 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section - Apple-style minimalist hero with large typography */}
-      <section className="pt-32 pb-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="text-center mb-20"
+      <section className="pt-32 pb-20 bg-white overflow-hidden">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
             >
-              <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
+              <h1 className="text-5xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
                 {brandInfo.name} Appliance Repair
               </h1>
               <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
                 Expert repair services for all {brandInfo.name} home appliances by certified technicians.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Link 
-                  href="/book" 
-                  className="px-8 py-4 rounded-full bg-black text-white font-medium transition-all hover:bg-gray-800 shadow-sm text-lg"
-                >
-                  Book a Repair
-                </Link>
-                <Link 
-                  href="tel:647-560-8966" 
-                  className="px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-medium transition-all hover:bg-gray-200 text-lg"
-                >
-                  Call 647-560-8966
-                </Link>
-              </div>
+              <div className="flex flex-nowrap gap-4 justify-center">
+              <Link 
+              href="/book" 
+                className="px-6 sm:px-8 py-4 rounded-full bg-black text-white font-small transition-all hover:bg-gray-800 shadow-sm text-m whitespace-nowrap"
+            >
+                Book a Repair
+              </Link>
+              <Link 
+              href="tel:647-560-8966" 
+                className="px-6 sm:px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-small transition-all hover:bg-gray-200 text-m whitespace-nowrap"
+            >
+                Call Us
+              </Link>
+            </div>
             </motion.div>
             
+            {/* HomeStars Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-6 mb-10 sm:mt-8 flex justify-center"
+            >
+              <Link 
+                href="https://www.homestars.com/profile/2976736-jk-appliance-repair-inc" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center transition-transform hover:scale-105 duration-300 bg-white px-3 sm:px-4 py-1.5 sm:py-2"
+                title="View our HomeStars profile"
+              >
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Image 
+                    src="/images/homestars.svg" 
+                    alt="HomeStars Top Rated Service" 
+                    width={140} 
+                    height={56}
+                    className="h-auto w-auto sm:w-240"
+                    priority
+                  />
+                </div>
+              </Link>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="relative h-[600px] w-full max-w-5xl rounded-3xl overflow-hidden shadow-xl">
+              <div className="py-10 relative w-full max-w-5xl aspect-[16/9] rounded-3xl overflow-hidden shadow-xl">
                 <Image
                   src={`/images/brands/brands-hero.webp`}
                   alt={`${brandInfo.name} Appliances`}
@@ -123,10 +149,10 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
       </section>
 
       {/* Brand Overview - Clean, spacious layout with subtle background */}
-      <section className="py-32 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
+      <section className="py-10 bg-gray-50">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -136,11 +162,11 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
               <Image
                 src={brandInfo.logo}
                 alt={`${brandInfo.name} logo`}
-                width={120}
-                height={60}
-                className="mx-auto mb-12"
+                width={190}
+                height={95}
+                className="mx-auto mb-12 h-auto w-auto"
               />
-              <h2 className="text-5xl font-semibold text-gray-900 mb-12">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-12">
                 About {brandInfo.name} Appliances
               </h2>
             </motion.div>
@@ -171,7 +197,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
       <BrandServicesSection brandName={brandInfo.name} services={services} />
 
       {/* Feature Details - Side-by-side content and image layout */}
-      <section className="py-32 bg-gray-50">
+      <section className="py-10 sm:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             <motion.div
@@ -181,7 +207,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
               transition={{ duration: 0.7 }}
               className="space-y-8"
             >
-              <h2 className="text-4xl font-semibold text-gray-900">
+              <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900">
                 Professional {brandInfo.name} Appliance Technicians
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed font-light">
@@ -207,7 +233,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <div className="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[250px] sm:h-[600px] w-full rounded-3xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/technician-repairing.webp"
                   alt="Technician repairing appliance"
@@ -221,7 +247,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
       </section>
 
       {/* Advantages - Modern, clean card-based layout */}
-      <section className="py-32 bg-white">
+      <section className="py-10 sm:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -230,7 +256,7 @@ const BrandLayout: React.FC<BrandLayoutProps> = ({
             transition={{ duration: 0.7 }}
             className="text-center mb-20"
           >
-            <h2 className="text-5xl font-semibold text-gray-900 mb-8">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-8">
               Why Choose Our {brandInfo.name} Repairs
             </h2>
             <p className="text-xl text-gray-500 max-w-3xl mx-auto font-light">

@@ -42,7 +42,7 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
   };
   
   return (
-    <section className="py-32 bg-white overflow-hidden">
+    <section className="py-10 sm:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Centered Title Section */}
         <motion.div
@@ -61,7 +61,7 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
             >
             
             </motion.div>
-            <h2 className="text-5xl font-semibold text-gray-900 tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight">
               {title}
             </h2>
           </div>
@@ -146,7 +146,7 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
               {showFullMapLink && (
                 <div className="mt-8">
                   <Link 
-                    href="/service-areas" 
+                    href="/areas" 
                     className="inline-flex items-center text-blue-500 font-medium hover:underline"
                   >
                     View detailed coverage map
@@ -165,7 +165,7 @@ const NeighborhoodSection: React.FC<NeighborhoodSectionProps> = ({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 hidden sm:block"
           >
             <div className="bg-gray-50 rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[300px] relative">
               <GoogleMapComponent 

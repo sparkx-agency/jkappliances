@@ -219,6 +219,16 @@ const Header = () => {
           )
         },
         {
+          title: "Coupons",
+          href: "/coupons",
+          description: "Save on repair services",
+          icon: (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+            </svg>
+          )
+        },
+        {
           title: "FAQs",
           href: "/faq",
           description: "Frequently asked questions",
@@ -316,9 +326,9 @@ const Header = () => {
           </div>
 
           {/* Mobile Header Buttons (Message & Call) */}
-          <div className="flex md:hidden items-right gap-5 mr-2">
+          <div className="flex md:hidden items-center justify-end gap-3 ml-auto pr-2">
             <motion.button 
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-black shadow-sm active:shadow-inner border border-gray-200"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-700 shadow-sm active:shadow-inner border border-gray-200"
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -332,7 +342,7 @@ const Header = () => {
             </motion.button>
             <motion.a 
               href={`tel:${phoneNumber.replace(/-/g, '')}`}
-              className="flex items-center justify-center w-10 h-10 rounded-full bg-white text-black shadow-sm active:shadow-inner border border-gray-200"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 text-gray-700 shadow-sm active:shadow-inner border border-gray-200"
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}

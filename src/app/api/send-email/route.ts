@@ -4,7 +4,11 @@ import nodemailer from 'nodemailer';
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
-    const { name, email, phone, address, city, postalCode, appliance, model, issueDescription, preferredDate, preferredTime, urgentRepair } = data;
+    const { 
+      name, email, phone, address, city, postalCode, 
+      appliance, model, issueDescription, preferredDate, preferredTime, 
+      urgentRepair, couponCode, originalPrice, discount, estimatedPrice 
+    } = data;
 
     // Create a transporter with Gmail settings
     const transporter = nodemailer.createTransport({
@@ -14,6 +18,13 @@ export async function POST(req: NextRequest) {
         pass: process.env.GMAIL_APP_PASSWORD
       }
     });
+
+    // Format price information
+    const priceInfo = discount 
+      ? `<p><strong>Original Price:</strong> $${originalPrice || 'N/A'}</p>
+         <p><strong>Discount Applied:</strong> ${couponCode} (${typeof discount === 'number' && discount > 0 && discount < 100 ? discount + '%' : '$' + discount} off)</p>
+         <p><strong>Estimated Price:</strong> $${estimatedPrice || 'N/A'}</p>`
+      : `<p><strong>Estimated Price:</strong> $${originalPrice || 'N/A'}</p>`;
 
     // Prepare email content with HTML formatting for business owner
     const ownerEmailContent = `
@@ -33,6 +44,10 @@ export async function POST(req: NextRequest) {
       <p><strong>Preferred Date:</strong> ${preferredDate || 'Not specified'}</p>
       <p><strong>Preferred Time:</strong> ${preferredTime || 'Not specified'}</p>
       <p><strong>Urgent Repair:</strong> ${urgentRepair ? 'Yes (+$50 fee)' : 'No'}</p>
+      
+      <h2>Pricing:</h2>
+      ${priceInfo}
+      ${couponCode ? `<p><strong>Coupon Code Used:</strong> ${couponCode}</p>` : ''}
     `;
 
     // Prepare email content for customer confirmation
@@ -49,6 +64,8 @@ export async function POST(req: NextRequest) {
           <p><strong>Preferred Date:</strong> ${preferredDate || 'To be scheduled'}</p>
           <p><strong>Preferred Time:</strong> ${preferredTime || 'To be scheduled'}</p>
           <p><strong>Address:</strong> ${address}, ${city}, ${postalCode || ''}</p>
+          ${couponCode ? `<p><strong>Coupon Applied:</strong> ${couponCode}</p>` : ''}
+          ${estimatedPrice ? `<p><strong>Estimated Service Fee:</strong> $${estimatedPrice}</p>` : ''}
         </div>
         
         <div style="margin-bottom: 20px;">
@@ -70,7 +87,7 @@ export async function POST(req: NextRequest) {
         <div style="text-align: center; color: #666; font-size: 14px; margin-top: 30px;">
           <p>Thank you for choosing JK Appliances!</p>
           <p>8 Lorraine Cres, Brampton, ON L6S 2R7</p>
-          <p><a href="https://jkappliances.ca" style="color: #0071e3; text-decoration: none;">jkappliances.ca</a></p>
+          <p><a href="https://jkappliancerepair.ca" style="color: #0071e3; text-decoration: none;">jkappliancerepair.ca</a></p>
         </div>
       </div>
     `;

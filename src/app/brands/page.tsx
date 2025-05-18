@@ -275,9 +275,9 @@ export default function BrandsPage() {
   const otherBrands = filteredBrands.filter(brand => !brand.popular);
 
   return (
-    <div className="pt-32 bg-white min-h-screen">
+    <div className="pt-25 sm:pt-32 bg-white min-h-screen">
       {/* Hero Section - Apple-style clean and minimal hero */}
-      <section className="py-20 bg-white">
+      <section className="py-0 sm:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -285,7 +285,7 @@ export default function BrandsPage() {
             transition={{ duration: 0.7 }}
             className="text-center mb-20"
           >
-            <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
               Brands We Service
             </h1>
             <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
@@ -296,7 +296,7 @@ export default function BrandsPage() {
       </section>
 
       {/* Filter and Search Section - Clean, spacious filters */}
-      <section className="py-8 bg-white border-b border-gray-100">
+      <section className="py-8 bg-white border-b border-gray-100 hidden sm:block">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Category Pills */}
@@ -345,7 +345,7 @@ export default function BrandsPage() {
 
       {/* Popular Brands Section */}
       {popularBrands.length > 0 && (
-        <section className="py-24 bg-white">
+        <section className="py-0 sm:py-24 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}

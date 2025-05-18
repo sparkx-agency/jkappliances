@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 
 const HeroSection = () => {
@@ -14,26 +15,53 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <h1 className="text-6xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
+            <h1 className="text-5xl sm:text-7xl font-semibold text-gray-900 tracking-tight mb-8">
               Expert Appliance<br />Repair Services
             </h1>
             <p className="text-xl sm:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
               Professional, reliable, and affordable repair services for all major home appliances.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-nowrap gap-4 justify-center">
               <Link 
               href="/book" 
-                className="px-8 py-4 rounded-full bg-black text-white font-medium transition-all hover:bg-gray-800 shadow-sm text-lg"
+                className="px-6 sm:px-8 py-4 rounded-full bg-black text-white font-small transition-all hover:bg-gray-800 shadow-sm text-m whitespace-nowrap"
             >
                 Book a Repair
               </Link>
               <Link 
               href="tel:647-560-8966" 
-                className="px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-medium transition-all hover:bg-gray-200 text-lg"
+                className="px-6 sm:px-8 py-4 rounded-full bg-gray-100 text-gray-900 font-small transition-all hover:bg-gray-200 text-m whitespace-nowrap"
             >
-                Call 647-560-8966
+                Call Us
               </Link>
             </div>
+            
+            {/* HomeStars Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-6 sm:mt-8 flex justify-center"
+            >
+              <Link 
+                href="https://www.homestars.com/profile/2976736-jk-appliance-repair-inc" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center transition-transform hover:scale-105 duration-300 bg-white px-3 sm:px-4 py-1.5 sm:py-2"
+                title="View our HomeStars profile"
+              >
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <Image 
+                    src="/images/homestars.svg" 
+                    alt="HomeStars Top Rated Service" 
+                    width={140} 
+                    height={56}
+                    className="h-auto w-auto sm:w-240"
+                    priority
+                  />
+                </div>
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
         
@@ -43,7 +71,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="flex justify-center"
         >
-          <div className="relative h-[400px] w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
+          <div className="relative h-[200px] sm:h-[400px] w-full max-w-6xl rounded-3xl overflow-hidden shadow-xl">
             <OptimizedImage 
               src="/images/hero-image.webp" 
               alt="Appliance repair technician" 

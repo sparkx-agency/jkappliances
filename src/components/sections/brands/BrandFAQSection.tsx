@@ -39,7 +39,7 @@ const BrandFAQSection: React.FC<BrandFAQSectionProps> = ({
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-medium text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">

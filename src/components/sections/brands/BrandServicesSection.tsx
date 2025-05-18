@@ -24,7 +24,7 @@ const BrandServicesSection: React.FC<BrandServicesSectionProps> = ({ brandName, 
   const activeService = services.find(service => service.id === activeTab);
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-10 sm:py-32 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -124,7 +124,7 @@ const BrandServicesSection: React.FC<BrandServicesSectionProps> = ({ brandName, 
               </div>
               
               {/* Image - Takes up 2 columns on large screens */}
-              <div className="lg:col-span-2 order-1 lg:order-2">
+              <div className="lg:col-span-2 order-1 lg:order-2 hidden sm:block">
                 <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-sm">
                   <Image
                     src={activeService.image}
@@ -159,7 +159,7 @@ const BrandServicesSection: React.FC<BrandServicesSectionProps> = ({ brandName, 
         >
           <Link 
             href="/services"
-            className="inline-flex items-center px-8 py-4 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors shadow-sm text-lg"
+            className="inline-flex items-center px-6 sm:px-8 py-4 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-800 transition-colors shadow-sm text-lg"
           >
             View All Our Services
             <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
