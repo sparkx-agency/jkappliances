@@ -81,7 +81,7 @@ const ServiceAreasSection = () => {
             >
             
             </motion.div>
-            <h2 className="text-5xl font-semibold text-gray-900 tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight">
               Areas we serve in GTA
             </h2>
           </div>
