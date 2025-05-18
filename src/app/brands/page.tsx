@@ -72,7 +72,7 @@ const brandsData = [
     popular: false,
   },
   {
-    id: 'bloomberg',
+    id: 'blomberg',
     name: 'Blomberg',
     logo: '/images/brands/blomberg.webp',
     description: 'Expert repairs for all Blomberg appliances with quality parts and service.',

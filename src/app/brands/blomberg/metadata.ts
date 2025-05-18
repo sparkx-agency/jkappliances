@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bloomberg Appliance Repair Services',
-  description: 'Expert Bloomberg appliance repair services for all models. Certified technicians and genuine Bloomberg parts',
+  title: 'Blomberg Appliance Repair Services',
+  description: 'Expert Blomberg appliance repair services for all models. Certified technicians and genuine Blomberg parts',
 };
