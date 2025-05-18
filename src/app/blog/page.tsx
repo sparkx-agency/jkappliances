@@ -1,15 +1,42 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { blogCategories, blogPosts } from '@/data/blogData';
+import { blogCategories, BlogPost } from '@/data/blogData';
 
 // Main Blog Page - Lists all blog posts with filtering options
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Load blog posts on component mount
+  useEffect(() => {
+    async function fetchBlogPosts() {
+      try {
+        setIsLoading(true);
+        const response = await fetch('/api/blog');
+        const data = await response.json();
+        
+        if (data.posts) {
+          setBlogPosts(data.posts);
+        } else {
+          console.error('No posts received from API');
+          setBlogPosts([]);
+        }
+      } catch (error) {
+        console.error('Error fetching blog posts:', error);
+        setBlogPosts([]);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchBlogPosts();
+  }, []);
 
   // Format date to a readable string
   const formatDate = (dateString: string) => {
@@ -26,10 +53,22 @@ export default function BlogPage() {
       return (
         post.title.toLowerCase().includes(searchLower) ||
         post.excerpt.toLowerCase().includes(searchLower) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchLower))
+        post.tags.some((tag: string) => tag.toLowerCase().includes(searchLower))
       );
     })
     .sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="pt-24 pb-24 flex justify-center items-center min-h-[50vh]">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading blog posts...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="pt-24 pb-24">
@@ -122,7 +161,7 @@ export default function BlogPage() {
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   <div className="flex items-center mb-4">
                     <div className="flex space-x-2">
-                      {filteredPosts[0].categories.slice(0, 2).map((categoryId) => {
+                      {filteredPosts[0].categories.slice(0, 2).map((categoryId: string) => {
                         const category = blogCategories.find(c => c.id === categoryId);
                         return (
                           <span 
@@ -177,7 +216,7 @@ export default function BlogPage() {
                 <div className="p-6">
                   <div className="flex items-center mb-4">
                     <div className="flex space-x-2">
-                      {post.categories.slice(0, 2).map((categoryId) => {
+                      {post.categories.slice(0, 2).map((categoryId: string) => {
                         const category = blogCategories.find(c => c.id === categoryId);
                         return (
                           <span 
@@ -233,4 +272,4 @@ export default function BlogPage() {
       </div>
     </div>
   );
-} 
+}

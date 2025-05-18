@@ -5,7 +5,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { BlogPost, blogPosts, blogCategories, getRecentPosts } from '@/data/blogData';
+import { BlogPost, blogCategories } from '@/data/blogData';
+import { markdownToHtml } from '@/utils/markdownToHtml';
 import BlogSection from '@/components/sections/BlogSection';
 
 export default function BlogPostPage() {
@@ -13,39 +14,63 @@ export default function BlogPostPage() {
   const slug = params.slug as string;
   const [post, setPost] = useState<BlogPost | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
-    // Find the post with the matching slug
-    const foundPost = blogPosts.find(p => p.slug === slug);
-    
-    if (foundPost) {
-      setPost(foundPost);
-      
-      // Get related posts based on categories and tags
-      const related = blogPosts
-        .filter(p => p.id !== foundPost.id) // exclude current post
-        .filter(p => {
-          // Check for matching categories or tags
-          const hasMatchingCategory = p.categories.some(cat => foundPost.categories.includes(cat));
-          const hasMatchingTag = p.tags.some(tag => foundPost.tags.includes(tag));
-          const relatedByService = p.relatedServices.some(service => foundPost.relatedServices.includes(service));
-          const relatedByBrand = p.relatedBrands.some(brand => foundPost.relatedBrands.includes(brand));
+    async function fetchBlogPost() {
+      try {
+        setIsLoading(true);
+        
+        // Fetch the blog post
+        const response = await fetch(`/api/blog/${slug}`);
+        const data = await response.json();
+        
+        if (data.post) {
+          // Convert markdown content to HTML
+          const htmlContent = await markdownToHtml(data.post.content);
           
-          return hasMatchingCategory || hasMatchingTag || relatedByService || relatedByBrand;
-        })
-        .sort((a, b) => {
-          // Sort by relevance (number of matching categories and tags)
-          const aMatchingCats = a.categories.filter(cat => foundPost.categories.includes(cat)).length;
-          const aMatchingTags = a.tags.filter(tag => foundPost.tags.includes(tag)).length;
-          const bMatchingCats = b.categories.filter(cat => foundPost.categories.includes(cat)).length;
-          const bMatchingTags = b.tags.filter(tag => foundPost.tags.includes(tag)).length;
+          // Create a new post object with HTML content
+          const postWithHtml = {
+            ...data.post,
+            content: htmlContent
+          };
           
-          return (bMatchingCats + bMatchingTags) - (aMatchingCats + aMatchingTags);
-        })
-        .slice(0, 3); // Get top 3 related posts
-      
-      setRelatedPosts(related);
+          setPost(postWithHtml);
+          
+          // Fetch related posts
+          const relatedResponse = await fetch('/api/blog');
+          const relatedData = await relatedResponse.json();
+          
+          if (relatedData.posts) {
+            // Filter out current post and find related posts by categories or tags
+            const relatedPosts = relatedData.posts
+              .filter((p: BlogPost) => p.id !== data.post.id)
+              .filter((p: BlogPost) => {
+                // Check for matching categories or tags
+                const hasMatchingCategory = p.categories.some(cat => 
+                  data.post.categories.includes(cat));
+                const hasMatchingTag = p.tags.some(tag => 
+                  data.post.tags.includes(tag));
+                const relatedByService = p.relatedServices.some(service => 
+                  data.post.relatedServices.includes(service));
+                const relatedByBrand = p.relatedBrands.some(brand => 
+                  data.post.relatedBrands.includes(brand));
+                
+                return hasMatchingCategory || hasMatchingTag || relatedByService || relatedByBrand;
+              })
+              .slice(0, 3);
+              
+            setRelatedPosts(relatedPosts);
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching blog post:', error);
+      } finally {
+        setIsLoading(false);
+      }
     }
+    
+    fetchBlogPost();
   }, [slug]);
   
   // Format date to a readable string
@@ -53,6 +78,17 @@ export default function BlogPostPage() {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('en-US', options);
   };
+  
+  if (isLoading) {
+    return (
+      <div className="pt-32 pb-24 flex justify-center items-center min-h-[50vh]">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading article...</p>
+        </div>
+      </div>
+    );
+  }
   
   if (!post) {
     return (
@@ -254,7 +290,7 @@ export default function BlogPostPage() {
                       <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2 hover:text-gray-700 transition-colors">
                         {relatedPost.title}
                       </h3>
-                      <p className="text-gray-500 text-sm mb-4 line-clamp-2">
+                      <p className="text-gray-500 text-sm mb-4 line-clamp-3">
                         {relatedPost.excerpt}
                       </p>
                     </div>
@@ -267,28 +303,9 @@ export default function BlogPostPage() {
       )}
       
       {/* CTA Section */}
-      <div className="mt-24 bg-gray-900 py-16">
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h2 className="text-3xl font-semibold text-white mb-6">Need Professional Appliance Repair?</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-10">
-            Our certified technicians are ready to diagnose and fix your appliance issues quickly and affordably. We service all major brands.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              href="/book" 
-              className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors font-medium"
-            >
-              Book a Service
-            </Link>
-            <Link 
-              href="/contact" 
-              className="px-8 py-4 border border-white text-white rounded-full hover:bg-gray-800 transition-colors font-medium"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
+      <div className="mt-24">
+        <BlogSection title="Get Expert Appliance Repair" />
       </div>
     </div>
   );
-} 
+}

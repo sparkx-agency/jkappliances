@@ -29,6 +29,9 @@ Since you want to use vrsabhaya@gmail.com for sending and receiving booking emai
    - Navigate to Security
    - Enable 2-Step Verification if not already enabled
 
+
+   
+
 2. **Create an App Password**
    - Visit https://myaccount.google.com/apppasswords
    - Select "Mail" as the app and "Other" as the device (name it "JK Appliances")

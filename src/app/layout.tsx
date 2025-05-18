@@ -13,9 +13,16 @@ export const metadata: Metadata = {
   title: "JK Appliances | Professional Same Day Appliance Repair Services in GTA",
   description: "JK Appliances provides professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
     apple: [
       { url: '/apple-icon.webp', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'manifest', url: '/site.webmanifest' },
     ],
   },
   keywords: ["appliance repair", "Toronto", "GTA", "refrigerator repair", "washer repair", "dryer repair", "stove repair", "oven repair"],
@@ -41,6 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-icon.webp" />
+        <link rel="manifest" href="/site.webmanifest" />
         <Script
           id="schema-org-localbusiness"
           type="application/ld+json"
