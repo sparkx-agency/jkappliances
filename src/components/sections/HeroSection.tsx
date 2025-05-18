@@ -56,7 +56,7 @@ const HeroSection = () => {
                     alt="HomeStars Top Rated Service" 
                     width={140} 
                     height={56}
-                    className="h-auto w-auto sm:w-240"
+                    className="h-auto w-auto sm:w-160"
                     priority
                   />
                 </div>
