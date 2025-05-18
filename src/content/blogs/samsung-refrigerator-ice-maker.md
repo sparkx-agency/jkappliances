@@ -10,11 +10,6 @@ featuredImage: "/images/blog/ice-maker-issues.jpg"
 categories:
   - "troubleshooting"
   - "repairs"
-tags:
-  - "samsung"
-  - "refrigerator"
-  - "ice maker"
-  - "troubleshooting"
 relatedServices:
   - "refrigerator-repair"
 relatedBrands:

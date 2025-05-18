@@ -1,125 +1,60 @@
-import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import { writeFile, mkdir } from 'fs/promises';
+import { NextResponse } from 'next/server';
+import { saveBlogPost } from '@/lib/blog-utils';
 
-// Define the content directory paths
-const BLOGS_DIRECTORY = path.join(process.cwd(), 'src/content/blogs');
-const IMAGES_DIRECTORY = path.join(process.cwd(), 'public/images/blog');
-
-// Ensure the directories exist
-function ensureDirectoriesExist() {
-  if (!fs.existsSync(BLOGS_DIRECTORY)) {
-    fs.mkdirSync(BLOGS_DIRECTORY, { recursive: true });
-  }
-  
-  if (!fs.existsSync(IMAGES_DIRECTORY)) {
-    fs.mkdirSync(IMAGES_DIRECTORY, { recursive: true });
-  }
-}
-
-// Create a markdown file with frontmatter
-async function createMarkdownFile(data: any, content: string) {
-  const { slug } = data;
-  const filePath = path.join(BLOGS_DIRECTORY, `${slug}.md`);
-  
-  // Create frontmatter
-  const frontmatter = [
-    '---',
-    ...Object.entries(data).map(([key, value]) => {
-      // Handle nested objects and arrays
-      if (typeof value === 'object' && value !== null) {
-        if (Array.isArray(value)) {
-          return `${key}:\n${value.map(item => `  - ${item}`).join('\n')}`;
-        } else {
-          return `${key}:\n${Object.entries(value).map(([k, v]) => `  ${k}: ${v}`).join('\n')}`;
-        }
-      }
-      return `${key}: ${value}`;
-    }),
-    '---',
-    '',
-    content
-  ].join('\n');
-  
-  await writeFile(filePath, frontmatter, 'utf8');
-  return filePath;
-}
-
-// Save an uploaded image
-async function saveImage(file: File, filename: string) {
-  const buffer = Buffer.from(await file.arrayBuffer());
-  const filePath = path.join(IMAGES_DIRECTORY, filename);
-  await writeFile(filePath, buffer);
-  return `/images/blog/${filename}`;
-}
-
-export async function POST(request: NextRequest) {
+export async function POST(request: Request) {
   try {
-    // Ensure directories exist
-    ensureDirectoriesExist();
-    
-    // Parse the form data
+    // Get the form data
     const formData = await request.formData();
     
-    // Extract the blog data
+    // Extract data from form
     const title = formData.get('title') as string;
     const slug = formData.get('slug') as string;
     const excerpt = formData.get('excerpt') as string;
     const content = formData.get('content') as string;
-    const categories = (formData.get('categories') as string).split(',').map(cat => cat.trim());
-    const tags = (formData.get('tags') as string).split(',').map(tag => tag.trim());
+    const categories = formData.get('categories') as string;
+    const tags = formData.get('tags') as string;
     const author = formData.get('author') as string || 'Admin';
     const readTime = parseInt(formData.get('readTime') as string) || 5;
+    const image = formData.get('image') as File | null;
     
-    // Handle the image upload
-    const imageFile = formData.get('image') as File | null;
-    let featuredImage = '/images/blog/default.jpg';
-    
-    if (imageFile) {
-      const fileExtension = imageFile.name.split('.').pop() || 'jpg';
-      const filename = `${slug}.${fileExtension}`;
-      featuredImage = await saveImage(imageFile, filename);
+    // Validate required fields
+    if (!title || !slug || !excerpt || !content) {
+      return NextResponse.json(
+        { success: false, message: 'Missing required fields' },
+        { status: 400 }
+      );
     }
     
-    // Create the blog post data
-    const blogData = {
-      id: slug,
-      title,
+    // Save the blog post
+    const result = await saveBlogPost(
       slug,
+      title,
       excerpt,
-      publishDate: new Date().toISOString().split('T')[0],
-      author: {
-        name: author
-      },
-      featuredImage,
+      content,
+      author,
+      readTime,
       categories,
       tags,
-      relatedServices: [],
-      relatedBrands: [],
-      relatedAreas: [],
-      readTime
-    };
+      image || undefined
+    );
     
-    // Save the markdown file
-    const filePath = await createMarkdownFile(blogData, content);
+    if (!result.success) {
+      return NextResponse.json(
+        { success: false, message: result.message },
+        { status: 500 }
+      );
+    }
     
     return NextResponse.json({
       success: true,
-      message: 'Blog post created successfully',
-      filePath: filePath.replace(process.cwd(), ''),
-      featuredImage
+      message: 'Blog post saved successfully',
+      filePath: result.filePath
     });
-    
-  } catch (error: any) {
-    console.error('Error creating blog post:', error);
-    
+  } catch (error) {
+    console.error('Error saving blog post:', error);
     return NextResponse.json(
-      {
-        success: false,
-        message: error.message || 'An error occurred while creating the blog post'
-      },
+      { success: false, message: 'Failed to save blog post' },
       { status: 500 }
     );
   }
-}
+} 

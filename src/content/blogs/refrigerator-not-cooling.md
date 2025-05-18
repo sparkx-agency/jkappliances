@@ -10,11 +10,6 @@ featuredImage: "/images/blog/refrigerator-not-cooling.jpg"
 categories:
   - "troubleshooting"
   - "maintenance"
-tags:
-  - "refrigerator"
-  - "cooling issues"
-  - "troubleshooting"
-  - "DIY"
 relatedServices:
   - "refrigerator-repair"
 relatedBrands:

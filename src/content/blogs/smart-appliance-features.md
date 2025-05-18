@@ -5,16 +5,11 @@ slug: "smart-appliance-features"
 excerpt: "As appliance repair experts, we analyze which smart features actually improve functionality and which ones may not justify their added cost."
 publishDate: "2023-08-15"
 author:
-  name: "David Chen"
-featuredImage: "/images/blog/smart-appliances.jpg"
+  name: "Vivek S."
+featuredImage: "/images/blog/smart-appliances.webp"
 categories:
   - "buying-guides"
   - "technology"
-tags:
-  - "smart appliances"
-  - "IoT"
-  - "appliance technology"
-  - "energy efficiency"
 relatedServices:
   - "refrigerator-repair"
   - "washer-repair"

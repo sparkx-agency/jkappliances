@@ -11,11 +11,6 @@ categories:
   - "troubleshooting"
   - "maintenance"
   - "repairs"
-tags:
-  - "washing machine"
-  - "vibration"
-  - "DIY repair"
-  - "maintenance"
 relatedServices:
   - "washer-repair"
 relatedBrands:

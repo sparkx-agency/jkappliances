@@ -5,16 +5,11 @@ slug: "energy-efficient-appliances"
 excerpt: "Learn how modern energy-efficient appliances can significantly reduce your monthly utility costs while helping the environment."
 publishDate: "2023-07-12"
 author:
-  name: "Sarah Johnson"
+  name: "Vivek S."
 featuredImage: "/images/blog/energy-efficient-appliances.jpg"
 categories:
   - "energy-efficiency"
   - "buying-guides"
-tags:
-  - "energy savings"
-  - "eco-friendly"
-  - "energy star"
-  - "utility bills"
 relatedServices:
   - "appliance-installation"
   - "energy-audit"

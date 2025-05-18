@@ -10,11 +10,6 @@ featuredImage: "/images/blog/dishwasher-buying-guide.jpg"
 categories:
   - "buying-guides"
   - "technology"
-tags:
-  - "dishwasher"
-  - "buying guide"
-  - "appliance features"
-  - "energy efficiency"
 relatedServices:
   - "dishwasher-repair"
 relatedBrands:
