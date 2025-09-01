@@ -10,8 +10,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "JK Appliances | Professional Same Day Appliance Repair Services in GTA",
-  description: "JK Appliances provides professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
+  title: "ApplianceServicePlus.ca | Professional Same Day Appliance Repair Services in GTA",
+  description: "ApplianceServicePlus.ca provides professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
@@ -26,17 +26,17 @@ export const metadata: Metadata = {
     ],
   },
   keywords: ["appliance repair", "Toronto", "GTA", "refrigerator repair", "washer repair", "dryer repair", "stove repair", "oven repair"],
-  authors: [{ name: "JK Appliances" }],
+  authors: [{ name: "ApplianceServicePlus.ca" }],
   openGraph: {
-    title: "JK Appliances | Professional Same Day Appliance Repair Services in GTA",
+    title: "ApplianceServicePlus.ca | Professional Same Day Appliance Repair Services in GTA",
     description: "Professional repair and installation services for all major appliance brands in Toronto and the Greater Toronto Area.",
-    url: "https://jkappliances.ca",
-    siteName: "JK Appliance Repair",
+    url: "https://applianceserviceplus.ca",
+    siteName: "ApplianceServicePlus.ca",
     locale: "en_CA",
     type: "website",
   },
   alternates: {
-    canonical: 'https://jkappliances.ca',
+    canonical: 'https://applianceserviceplus.ca',
   },
 }
 
@@ -59,9 +59,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "JK Appliance Repair",
-              "image": "https://jkappliances.ca/images/logo.webp",
-              "url": "https://jkappliances.ca",
+              "name": "ApplianceServicePlus.ca",
+              "image": "https://applianceserviceplus.ca/images/logo.webp",
+              "url": "https://applianceserviceplus.ca",
               "telephone": "+1-647-560-8966",
               "address": {
                 "@type": "PostalAddress",
@@ -93,8 +93,8 @@ export default function RootLayout({
               "priceRange": "$$",
               "servesCuisine": "Appliance Repair Services",
               "sameAs": [
-                "https://www.facebook.com/jkappliancesinc",
-                "https://www.instagram.com/jkappliancerepair"
+                "https://www.facebook.com/applianceserviceplus",
+                "https://www.instagram.com/applianceserviceplus"
               ]
             })
           }}

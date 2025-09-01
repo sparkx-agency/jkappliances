@@ -315,7 +315,7 @@ const Header = () => {
               >
                 <Image
                   src="/images/appliances-logo.webp"
-                  alt="JK Appliances"
+                  alt="ApplianceServicePlus.ca"
                   width={200}
                   height={60}
                   priority

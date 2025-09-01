@@ -98,10 +98,10 @@ const ServicesSection = () => {
         >
           <span className="text-sm uppercase tracking-widest text-gray-500 font-medium">Our Services</span>
           <h2 className="text-4xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mt-3 mb-4 md:mb-6 tracking-tight">
-            Appliances We Repair
+            Same-Day Appliance Repair
           </h2>
           <p className="text-lg md:text-xl text-gray-500 max-w-3xl mx-auto font-light">
-            Professional repair services for all major household appliances
+            Professional repair services for all major household appliances with <span className="font-semibold text-blue-600">same-day service available</span>
           </p>
         </motion.div>
 
@@ -157,11 +157,11 @@ const ServicesSection = () => {
                     <h3 className="text-lg font-medium text-gray-900 mb-2">{service.name}</h3>
                     <p className="text-sm text-gray-500 mb-4 font-light line-clamp-2">{service.description}</p>
                     <div className="mt-auto flex justify-between items-center">
-                      <span className="text-blue-500 font-medium text-sm">
-                        See more
+                      <span className="text-blue-600 font-semibold text-sm">
+                        Book Repair
                       </span>
-                      <div className="w-7 h-7 rounded-full bg-blue-50 flex items-center justify-center">
-                        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-blue-500">
+                      <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center">
+                        <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-white">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
@@ -203,8 +203,8 @@ const ServicesSection = () => {
                   <h3 className="text-2xl font-medium text-gray-900 mb-3">{service.name}</h3>
                   <p className="text-gray-500 mb-4 font-light">{service.description}</p>
                   <div className="mt-auto">
-                    <span className="text-black font-medium inline-flex items-center group-hover:underline">
-                      Learn more
+                    <span className="text-blue-600 font-semibold inline-flex items-center group-hover:underline">
+                      Book Same-Day Repair
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
@@ -218,10 +218,10 @@ const ServicesSection = () => {
 
         <div className="text-center mt-10 md:mt-16">
           <Link 
-            href="/services" 
-            className="px-8 py-4 md:px-10 md:py-5 rounded-full bg-gray-900 text-white font-medium transition-all hover:bg-gray-800 shadow-sm inline-block"
+            href="/book" 
+            className="px-8 py-4 md:px-10 md:py-5 rounded-full bg-blue-600 text-white font-semibold transition-all hover:bg-blue-700 shadow-lg hover:shadow-xl inline-block transform hover:scale-105"
           >
-            View All Services
+            Book Same-Day Repair
           </Link>
         </div>
       </div>

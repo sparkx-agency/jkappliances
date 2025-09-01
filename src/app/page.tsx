@@ -8,6 +8,8 @@ import NewsletterSection from '@/components/sections/NewsletterSection';
 import BrandsSliderSection from '@/components/sections/brands/BrandsSliderSection';
 import { popularBrands } from '@/data/brandsData';
 import ModernCTASection from '@/components/sections/common/ModernCTASection';
+import UrgencySection from '@/components/sections/common/UrgencySection';
+import TrustBadgesSection from '@/components/sections/common/TrustBadgesSection';
 
 
 // Dynamically import sections that are below the fold for code splitting
@@ -52,6 +54,8 @@ export default function Home() {
         <WhyChooseUsSection />
       </LazySection>
       
+      <TrustBadgesSection />
+      
       <LazySection offset={200}>
       <TestimonialsSliderSection
         title="What Our Customers Say"
@@ -63,6 +67,8 @@ export default function Home() {
       <LazySection offset={200}>
         <ServiceAreasSection />
       </LazySection>
+      
+      <UrgencySection />
       
       <LazySection offset={200}>
         <CommonCouponSection />
