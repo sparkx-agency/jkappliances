@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ApplianceServicePlus.ca
+
+This is a [Next.js](https://nextjs.org) project for ApplianceServicePlus.ca - Professional Appliance Repair Services in the Greater Toronto Area.
+
+## About
+
+ApplianceServicePlus.ca provides professional repair and installation services for all major appliance brands in Toronto and the surrounding areas. Our certified technicians offer same-day service with transparent pricing and a 1-year parts and labor warranty.
+
+## Features
+
+- Professional appliance repair services
+- Same-day service availability
+- Certified technicians
+- Transparent pricing
+- 1-year warranty on parts and labor
+- Service areas across GTA
+- Online booking system
+- Customer testimonials and reviews
 
 ## Getting Started
 

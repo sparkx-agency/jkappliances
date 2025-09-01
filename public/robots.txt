@@ -9,9 +9,9 @@ Disallow: /private/
 Disallow: /temp/
 
 # Sitemap locations
-Sitemap: https://jkappliances.ca/sitemap.xml
-Sitemap: https://jkappliances.ca/sitemap-index.xml
-Sitemap: https://jkappliances.ca/sitemap-main.xml
-Sitemap: https://jkappliances.ca/sitemap-services.xml
-Sitemap: https://jkappliances.ca/sitemap-brands.xml
-Sitemap: https://jkappliances.ca/sitemap-areas.xml 
+Sitemap: https://applianceserviceplus.ca/sitemap.xml
+Sitemap: https://applianceserviceplus.ca/sitemap-index.xml
+Sitemap: https://applianceserviceplus.ca/sitemap-main.xml
+Sitemap: https://applianceserviceplus.ca/sitemap-services.xml
+Sitemap: https://applianceserviceplus.ca/sitemap-brands.xml
+Sitemap: https://applianceserviceplus.ca/sitemap-areas.xml 

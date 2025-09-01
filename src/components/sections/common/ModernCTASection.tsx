@@ -61,16 +61,16 @@ const ModernCTASection: React.FC<ModernCTASectionProps> = ({
   };
   
   const getPrimaryButtonClass = () => {
-    const baseClass = "transition-all duration-300 inline-flex items-center justify-center px-8 py-4 text-base font-medium";
+    const baseClass = "transition-all duration-300 inline-flex items-center justify-center px-8 py-4 text-base font-semibold transform hover:scale-105";
     
     switch (style) {
       case 'apple':
-        return `${baseClass} rounded-full bg-black text-white hover:bg-gray-800`;
+        return `${baseClass} rounded-full bg-black text-white hover:bg-gray-800 shadow-lg hover:shadow-xl`;
       case 'google':
-        return `${baseClass} rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md hover:shadow-lg`;
+        return `${baseClass} rounded-lg bg-blue-600 text-white hover:bg-blue-700 shadow-lg hover:shadow-xl`;
       case 'hybrid':
       default:
-        return `${baseClass} rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700`;
+        return `${baseClass} rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl`;
     }
   };
   
@@ -104,9 +104,29 @@ const ModernCTASection: React.FC<ModernCTASectionProps> = ({
               <h2 className={`text-4xl md:text-5xl font-semibold mb-6 ${textColor}`}>
                 {title}
               </h2>
-              <p className={`text-lg md:text-xl mb-10 ${subtitleColor} max-w-2xl font-light leading-relaxed`}>
+              <p className={`text-lg md:text-xl mb-6 ${subtitleColor} max-w-2xl font-light leading-relaxed`}>
                 {subtitle}
               </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex items-center gap-2 text-green-600 font-medium">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Same-Day Service
+                </div>
+                <div className="flex items-center gap-2 text-green-600 font-medium">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  1-Year Warranty
+                </div>
+                <div className="flex items-center gap-2 text-green-600 font-medium">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Certified Technicians
+                </div>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <motion.div
                   whileHover={{ scale: 1.03 }}
